@@ -1,0 +1,163 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: comic;
+    src: url(/static/font/comic.ttf);
+}
+body{
+    background-image: url(/static/img/beranda/langit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -250px;
+}
+
+.judul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    width: 320px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    border-radius: 20px;
+    border: 3px solid #000;
+
+}
+
+.jenisemosi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    text-transform: capitalize;
+    width: 420px;
+    height: 100px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    background-color: rgba(43, 43, 43, 0.183); 
+    background-blend-mode: multiply;
+    background-position: -300px -240px;
+    background-size: 1000px;
+    border-radius: 20px;
+    border: 3px solid #007419;
+    padding: 5px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.menu{
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button img{
+    height: 100%;
+    width: 130px;
+    background-size: cover;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+    
+}
+
+.buttonmenu{
+    font-family: comic;
+    color: #fff;
+    letter-spacing: 5px;
+    width: 420px;
+    height: 137px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    background-color: rgba(43, 43, 43, 0.183); 
+    background-blend-mode: multiply;
+    background-position: -300px -220px;
+    background-size: 1000px;
+    border-radius: 20px;
+    border: 3px solid #007419;
+    padding: 5px;
+    
+}
+.buttonemosi{
+    width: 380px;
+    height: 110px;
+    font-family: comic;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    filter: brightness(120%);
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #A47533;
+    padding: 5px;
+    
+}
+
+.buttonmenu a{
+    font-size: 64px;
+    color: #fff;
+    font-family: comic;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.buttonemosi a{
+    font-size: 64px;
+    color: #000;
+    font-family: comic;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform:capitalize;
+    text-align: center;
+}
+
+.kembali{
+    width: 500px;
+    height: auto;
+}
+
+.rombongan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    width: 650px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    border-radius: 20px;
+    border: 3px solid #000;
+
+}
+.buttonsiswa, .buttonnamaemosi{
+    width: 200px;
+    height: 230px;
+    font-family: comic;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    filter: brightness(120%);
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #A47533;
+    padding: 5px 
+}
+.buttonsiswa img{
+    border-radius: 10px;
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.buttonnamaemosi img{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
