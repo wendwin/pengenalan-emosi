@@ -44,14 +44,28 @@ body {
 
 
 /* materi */
-.materi .title button,
-.materi .kembali button {
+.materi .title {
+    font-family: comic;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    border-radius: 10px;
+    border: 3px solid #000;
+}
+
+/* .materi .title button, */
+.materi .back button {
     /* margin: 20px; */
     width: 100px;
     height: 40px;
+    border-radius: 10px;
+    border: 2px solid #007419;
 }
 
-.materi .kembali img {
+.materi .back img {
     width: 40px;
 }
 

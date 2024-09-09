@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="materi vh-100 d-flex flex-column">
+    <div class=" d-flex justify-content-start align-items-start p-3 p-lg-5">
+        <div class="title">
+            <div class="menu-button col d-flex justify-content-between">
+                <a href="{{ url_for('index') }}">
+                    <button class="buttonmenu text-uppercase">materi</button>
+                </a>
+            </div>
+        </div>
+        <div class="">
+
+        </div>
+    </div>
+
+    <div class="menu-btn d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
+        <div class="menu-item d-flex align-items-center gap-4">
+            <div class="button-menu-materi">
+                <a href="{{ url_for('materi_emosi_dasar') }}" class="text-decoration-none">
+                    <button class="text-uppercase">emosi dasar</button>
+                </a>
+            </div>
+        </div>
+        <div class="menu-item d-flex align-items-center gap-4">
+            <div class="button-menu-materi">
+                <a href="{{ url_for('materi_emosi_gabungan') }}" class="text-decoration-none">
+                    <button class="text-uppercase">gabungan</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end align-items-end p-3  p-lg-5">
+        <div class="kembali">
+            <div class="menu-button col d-flex justify-content-between">
+                <a href="{{ url_for('index') }}">
+                    <img src="/static/img/button/reply.png" alt="">
+                    <button class="buttonmenu">KEMBALI</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
