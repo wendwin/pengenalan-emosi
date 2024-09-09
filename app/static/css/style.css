@@ -71,6 +71,57 @@ body {
 
 /* materi */
 
+
+
+/* materi opsion*/
+.materi-option .title-text {
+    font-family: comic;
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    border-radius: 10px;
+    border: 3px solid #000;
+}
+
+.materi-option .title-materi {
+    font-family: comic;
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    border-radius: 10px;
+    border: 3px solid #000;
+}
+
+.materi-option .menu-item button {
+    width: 150px;
+    height: 60px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #A47533;
+}
+
+
+.materi-option .back button {
+    /* margin: 20px; */
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #007419;
+}
+
+.materi-option .back img {
+    width: 40px;
+}
+
+/* materi opsion*/
+
 /* Layar besar (desktop) */
 @media (min-width: 1200px) {
     /* Gaya khusus untuk layar besar */
@@ -87,4 +138,13 @@ body {
         height: 60px;
         border-radius: 12px;
     }
+
+    /* materi options */
+    .materi-option .menu-item button {
+        width: 200px;
+        height: 70px;
+    }
+
+    /* materi options */
+
 }
