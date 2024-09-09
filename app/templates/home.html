@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="">
+    <div class="menu vh-100 d-flex flex-column justify-content-center align-items-center gap-4 text-center">
+        <div class="menu-item d-flex align-items-center gap-4">
+            <img src="{{ url_for('static', filename='img/beranda/materi.png') }}" alt="">
+            <div class="button-menu">
+                <a href="{{ url_for('materi') }}" class="text-decoration-none">
+                    <button class="text-uppercase">materi</button>
+                </a>
+            </div>
+        </div>
+        <div class="menu-item d-flex align-items-center gap-4">
+            <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
+            <div class="button-menu">
+                <a href="{{ url_for('materi') }}" class="text-decoration-none">
+                    <button class="text-uppercase">latihan</button>
+                </a>
+            </div>
+        </div>
+        <div class="menu-item d-flex align-items-center gap-4">
+            <img src="{{ url_for('static', filename='img/beranda/laporan.png') }}" alt="">
+            <div class="button-menu">
+                <a href="{{ url_for('materi') }}" class="text-decoration-none">
+                    <button class="text-uppercase">laporan</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
