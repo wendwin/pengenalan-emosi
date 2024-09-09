@@ -28,26 +28,14 @@ body {
     font-weight: 600;
 }
 
-.button-menu-materi button {
-    font-family: comic;
-    width: 170px;
-    height: 50px;
-    background-color: #0fd40f;
-    border-radius: 10px;
-    border: none;
-    padding: 5px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
 /* home */
 
 
 /* materi */
 .materi .title {
     font-family: comic;
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     background-color: #fff;
     text-align: center;
     font-size: 18px;
@@ -56,9 +44,21 @@ body {
     border: 3px solid #000;
 }
 
-/* .materi .title button, */
+
+.button-menu-materi button {
+    font-family: comic;
+    width: 170px;
+    height: 50px;
+    background-color: #0fd40f;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3px solid #007419;
+}
+
 .materi .back button {
-    /* margin: 20px; */
+    font-size: 16px;
     width: 100px;
     height: 40px;
     border-radius: 10px;
@@ -70,8 +70,6 @@ body {
 }
 
 /* materi */
-
-
 
 /* materi opsion*/
 .materi-option .title-text {
@@ -107,7 +105,6 @@ body {
     border: 3px solid #A47533;
 }
 
-
 .materi-option .back button {
     /* margin: 20px; */
     width: 100px;
@@ -138,6 +135,30 @@ body {
         height: 60px;
         border-radius: 12px;
     }
+
+    /* materi */
+    .materi .title {
+        width: 130px;
+    }
+
+    .button-menu-materi button {
+        width: 180px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .materi .back button {
+        width: 110px;
+        height: 45px;
+        font-size: 18px;
+
+    }
+
+    .materi .back img {
+        width: 45px;
+    }
+
+    /* materi */
 
     /* materi options */
     .materi-option .menu-item button {

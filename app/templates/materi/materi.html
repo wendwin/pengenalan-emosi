@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class="materi vh-100 d-flex flex-column">
-    <div class="title m-3 m-lg-5 d-flex justify-content-center align-items-center">
+    <div class="title m-3 m-md-5 d-flex justify-content-center align-items-center">
         <div class="">Materi</div>
     </div>
 
-    <div class=" menu-btn d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
+    <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
         <div class="menu-item d-flex align-items-center gap-4">
             <div class="button-menu-materi">
                 <a href="{{ url_for('materi_emosi_dasar') }}" class="text-decoration-none">
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="back d-flex justify-content-end align-items-end p-3  p-lg-5">
+    <div class="back d-flex justify-content-end align-items-end m-3 m-md-5">
         <a href="{{ url_for('index') }}">
             <div class="menu-back">
                 <img src="/static/img/button/reply.png" alt="">
