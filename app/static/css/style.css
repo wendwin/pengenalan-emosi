@@ -1,0 +1,76 @@
+@font-face {
+    font-family: comic;
+    src: url(/static/font/comic.ttf);
+}
+
+body {
+    background-image: url(/static/img/beranda/langit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* home */
+.menu .menu-item img {
+    width: 70px;
+}
+
+.button-menu button {
+    font-family: comic;
+    width: 110px;
+    height: 50px;
+    background-color: #0fd40f;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button-menu-materi button {
+    font-family: comic;
+    width: 170px;
+    height: 50px;
+    background-color: #0fd40f;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* home */
+
+
+/* materi */
+.materi .title button,
+.materi .kembali button {
+    /* margin: 20px; */
+    width: 100px;
+    height: 40px;
+}
+
+.materi .kembali img {
+    width: 40px;
+}
+
+/* materi */
+
+/* Layar besar (desktop) */
+@media (min-width: 1200px) {
+    /* Gaya khusus untuk layar besar */
+}
+
+/* Layar sedang (tablet atau desktop kecil) */
+@media (min-width: 768px) {
+    .menu .menu-item img {
+        width: 80px;
+    }
+
+    .button-menu button {
+        width: 130px;
+        height: 60px;
+        border-radius: 12px;
+    }
+}
