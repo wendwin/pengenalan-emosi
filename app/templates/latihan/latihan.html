@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="materi vh-100 d-flex flex-column">
+    <div class="title m-3 m-md-5 d-flex justify-content-center align-items-center">
+        <div class="text-uppercase">latihan</div>
+    </div>
+
+    <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
+        <div class="menu-item d-flex align-items-center gap-4">
+            <div class="button-menu-materi">
+                <form action="{{ url_for('latihan_rombel') }}" method="post">
+                    <input type="hidden" name="jenisEmosi" value="dasar">
+                    <button class="text-uppercase" type="submit">emosi dasar</button>
+                </form>
+            </div>
+        </div>
+        <div class="menu-item d-flex align-items-center gap-4">
+            <div class="button-menu-materi">
+                <form action="{{ url_for('latihan_rombel') }}" method="post">
+                    <input type="hidden" name="jenisEmosi" value="gabungan">
+                    <button class="text-uppercase" type="submit">emosi gabungan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="back d-flex justify-content-end align-items-end m-3 m-md-5">
+        <a href="{{ url_for('index') }}">
+            <div class="menu-back">
+                <img src="/static/img/button/reply.png" alt="">
+                <button class="buttonmenu">KEMBALI</button>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

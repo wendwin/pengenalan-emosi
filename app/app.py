@@ -1,6 +1,7 @@
 from flask import Flask,render_template, session, request, redirect, url_for
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'KaVGm31asLwNAlaoG'
 
 @app.route('/')
 def index():
@@ -22,11 +23,13 @@ def materi_emosi_gabungan():
 
 @app.route('/latihan')
 def latihan():
-    return render_template('latihan.html')
+    return render_template('latihan/latihan.html')
 
-@app.route('/laporan/rombongan')
-def laporan_rombongan():
-    return render_template('laporanrombongan.html')
+@app.route('/latihan/rombel', methods=["POST"])
+def latihan_rombel():
+    jenisEmosi=request.form['jenisEmosi']
+    session['jenisEmosi']=jenisEmosi
+    return render_template('latihan/latihan-emosi.html', jenisemosi=jenisEmosi)
 
 
 if __name__ == '__main__':
