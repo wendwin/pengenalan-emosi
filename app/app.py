@@ -18,7 +18,7 @@ def materi_emosi_dasar():
 
 @app.route('/materi/emosi-gabungan')
 def materi_emosi_gabungan():
-    return render_template('materiemosigabungan.html')
+    return render_template('materi/materi-emosi-gabungan.html')
 
 @app.route('/latihan')
 def latihan():

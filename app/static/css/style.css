@@ -1,197 +1,191 @@
 @font-face {
-    font-family: comic;
-    src: url(/static/font/comic.ttf);
+  font-family: comic;
+  src: url(/static/font/comic.ttf);
 }
 
 body {
-    background-image: url(/static/img/beranda/langit.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-sizing: border-box;
+  background-image: url(/static/img/beranda/langit.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
 }
 
 /* home */
 .menu .menu-item img {
-    width: 70px;
+  width: 70px;
 }
 
 .button-menu button {
-    font-family: comic;
-    width: 110px;
-    height: 50px;
-    background-color: #0fd40f;
-    border-radius: 10px;
-    border: none;
-    padding: 5px;
-    font-size: 18px;
-    font-weight: 600;
+  font-family: comic;
+  width: 110px;
+  height: 50px;
+  background-color: #0fd40f;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* home */
 
-
 /* materi */
 .materi .title {
-    font-family: comic;
-    width: 120px;
-    height: 50px;
-    background-color: #fff;
-    text-align: center;
-    font-size: 18px;
-    color: #000;
-    border-radius: 10px;
-    border: 3px solid #000;
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
 }
 
-
 .button-menu-materi button {
-    font-family: comic;
-    width: 170px;
-    height: 50px;
-    background-color: #0fd40f;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    border: 3px solid #007419;
+  font-family: comic;
+  width: 170px;
+  height: 50px;
+  background-color: #0fd40f;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border: 3px solid #007419;
 }
 
 .materi .back button {
-    font-size: 16px;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    border: 2px solid #007419;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #007419;
 }
 
 .materi .back img {
-    width: 40px;
+  width: 40px;
 }
 
 /* materi */
 
-/* materi opsion*/
+/* materi options*/
 .materi-option .title-text {
-    font-family: comic;
-    width: 120px;
-    height: 50px;
-    background-color: #fff;
-    text-align: center;
-    font-size: 16px;
-    color: #000;
-    border-radius: 10px;
-    border: 3px solid #000;
-    text-transform: uppercase;
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
+  text-transform: uppercase;
 }
 
 .materi-option .title-materi {
-    text-transform: uppercase;
-    font-family: comic;
-    width: 150px;
-    height: 50px;
-    background-color: #fff;
-    text-align: center;
-    font-size: 16px;
-    color: #000;
-    border-radius: 10px;
-    border: 3px solid #000;
+  text-transform: uppercase;
+  font-family: comic;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
 }
 
 .materi-option .menu-item button {
-    width: 150px;
-    height: 60px;
-    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
-    background-size: cover;
-    background-position: center;
-    border: 3px solid #A47533;
+  width: 150px;
+  height: 60px;
+  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #a47533;
 }
 
 .materi-option .back button {
-    font-size: 16px;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    border: 2px solid #007419;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #007419;
 }
 
 .materi-option .back img {
-    width: 40px;
+  width: 40px;
 }
-
 
 /* materi opsion*/
 
 /* Layar besar (desktop) */
 @media (min-width: 1200px) {
-    /* Gaya khusus untuk layar besar */
+  /* Gaya khusus untuk layar besar */
 }
 
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
-    .menu .menu-item img {
-        width: 80px;
-    }
+  .menu .menu-item img {
+    width: 80px;
+  }
 
-    .button-menu button {
-        width: 130px;
-        height: 60px;
-        border-radius: 12px;
-    }
+  .button-menu button {
+    width: 130px;
+    height: 60px;
+    border-radius: 12px;
+  }
 
-    /* materi */
-    .materi .title {
-        width: 130px;
-    }
+  /* materi */
+  .materi .title {
+    width: 130px;
+  }
 
-    .button-menu-materi button {
-        width: 180px;
-        height: 60px;
-        font-size: 18px;
-    }
+  .button-menu-materi button {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+  }
 
-    .materi .back button {
-        width: 110px;
-        height: 45px;
-        font-size: 18px;
+  .materi .back button {
+    width: 110px;
+    height: 45px;
+    font-size: 18px;
+  }
 
-    }
+  .materi .back img {
+    width: 45px;
+  }
 
-    .materi .back img {
-        width: 45px;
-    }
+  /* materi */
 
-    /* materi */
+  /* materi options */
+  .materi-option .title-text {
+    width: 130px;
+    height: 60px;
+    font-size: 18px;
+  }
 
-    /* materi options */
-    .materi-option .title-text {
-        width: 130px;
-        height: 60px;
-        font-size: 18px;
-    }
+  .materi-option .title-materi {
+    font-size: 18px;
+    width: 160px;
+    height: 60px;
+  }
 
-    .materi-option .title-materi {
-        font-size: 18px;
-        width: 160px;
-        height: 60px;
-    }
+  .materi-option .menu-item button {
+    width: 200px;
+    height: 70px;
+  }
 
-    .materi-option .menu-item button {
-        width: 200px;
-        height: 70px;
-    }
+  .materi-option .back button {
+    font-size: 18px;
+    width: 110px;
+    height: 45px;
+  }
 
+  .materi-option .back img {
+    width: 45px;
+  }
 
-    .materi-option .back button {
-        font-size: 18px;
-        width: 110px;
-        height: 45px;
-    }
-
-    .materi-option .back img {
-        width: 45px;
-    }
-
-    /* materi options */
-
+  /* materi options */
 }
