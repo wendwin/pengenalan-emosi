@@ -74,20 +74,22 @@ body {
 /* materi opsion*/
 .materi-option .title-text {
     font-family: comic;
-    width: 150px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     background-color: #fff;
     text-align: center;
     font-size: 16px;
     color: #000;
     border-radius: 10px;
     border: 3px solid #000;
+    text-transform: uppercase;
 }
 
 .materi-option .title-materi {
+    text-transform: uppercase;
     font-family: comic;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background-color: #fff;
     text-align: center;
     font-size: 16px;
@@ -106,7 +108,7 @@ body {
 }
 
 .materi-option .back button {
-    /* margin: 20px; */
+    font-size: 16px;
     width: 100px;
     height: 40px;
     border-radius: 10px;
@@ -116,6 +118,7 @@ body {
 .materi-option .back img {
     width: 40px;
 }
+
 
 /* materi opsion*/
 
@@ -161,9 +164,32 @@ body {
     /* materi */
 
     /* materi options */
+    .materi-option .title-text {
+        width: 130px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .materi-option .title-materi {
+        font-size: 18px;
+        width: 160px;
+        height: 60px;
+    }
+
     .materi-option .menu-item button {
         width: 200px;
         height: 70px;
+    }
+
+
+    .materi-option .back button {
+        font-size: 18px;
+        width: 110px;
+        height: 45px;
+    }
+
+    .materi-option .back img {
+        width: 45px;
     }
 
     /* materi options */
