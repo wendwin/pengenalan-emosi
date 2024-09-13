@@ -5,13 +5,11 @@ app.config['SECRET_KEY'] = 'KaVGm31asLwNAlaoG'
 
 @app.route('/')
 def index():
-    css = 'beranda.css' 
-    return render_template('home.html', css=css)
+    return render_template('index.html')
 
 @app.route('/materi')
 def materi():
-    css = 'beranda.css'
-    return render_template('materi/materi.html', css=css)
+    return render_template('materi/materi.html')
 
 @app.route('/materi/emosi-dasar')
 def materi_emosi_dasar():
