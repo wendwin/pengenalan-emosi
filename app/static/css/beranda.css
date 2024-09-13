@@ -1,0 +1,316 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: comic;
+    src: url(/static/font/comic.ttf);
+}
+body{
+    background-image: url(/static/img/beranda/langit.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -250px;
+}
+
+.judul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    width: 320px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    border-radius: 20px;
+    border: 3px solid #000;
+
+}
+
+.jenisemosi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    text-transform: capitalize;
+    width: 420px;
+    height: 100px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    background-color: rgba(43, 43, 43, 0.183); 
+    background-blend-mode: multiply;
+    background-position: -350px -700px;
+    background-size: 1000px;
+    border-radius: 20px;
+    border: 3px solid #007419;
+    padding: 5px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.menu{
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-button img{
+    height: 100%;
+    width: 150px;
+    background-size: cover;
+    position: relative;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.buttonmenu{
+    font-family: comic;
+    color: #fff;
+    letter-spacing: 5px;
+    width: 420px;
+    height: 137px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    background-color: rgba(43, 43, 43, 0.183); 
+    background-blend-mode: multiply;
+    background-position: -120px -160px;
+    background-size: 800px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    font-size: 64px;
+    border: 3px solid #007419;
+    
+}
+
+.buttonemosi{
+    width: 380px;
+    height: 110px;
+    font-family: comic;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    filter: brightness(120%);
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #A47533;
+    padding: 5px;
+    
+}
+/* .buttonmenu{
+    position: relative;
+}
+
+.buttonmenu img{
+    transform: rotate(10deg);
+    height: 160px;
+    width: 450px;
+} */
+
+.buttonmenu a{
+    font-size: 64px;
+    color: #fff;
+    font-family: comic;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+}
+.buttonmenu p{
+    position: absolute;
+    font-size: 44px;
+    color: #fff;
+    font-family: comic;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+    top: 35%;
+    right: 20%;
+}
+
+.buttonemosi a{
+    font-size: 64px;
+    color: #000;
+    font-family: comic;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform:capitalize;
+    text-align: center;
+}
+
+.kembali{
+    width: 500px;
+    height: auto;
+}
+.kembali .menu-button a{
+    text-decoration: none;
+}
+.kembali .menu-button button{
+    font-size: 50px;
+}
+
+.rombongan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    width: 650px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    border-radius: 20px;
+    border: 3px solid #000;
+
+}
+.namaemosi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    text-transform: capitalize;
+    width: 220px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #000;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+}
+
+.buttonsiswa, .buttonnamaemosi{
+    width: 170px;
+    height: 200px;
+    font-family: comic;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    filter: brightness(120%);
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid #A47533;
+    padding: 5px 
+}
+.buttonsiswa img{
+    border-radius: 10px;
+    width: 110px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.buttonnamaemosi img{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+.buttonnamaemosi:disabled{
+    filter: grayscale(100%) contrast(100%);
+}
+.buttonpilihgambar{
+    width: 300px;
+    height: 200px;
+    font-family: comic;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #A47533;
+}
+.buttonpilihgambar img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 17px;
+}
+
+.modal p{
+    text-align: center;
+    font-size: 45px;
+    font-family: comic;
+}
+
+.modal-content{
+    background: url(/static/img/background/jawabanbenar.png) no-repeat center;
+}
+.buttonselanjutnya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: comic;
+    text-transform: capitalize;
+    width: 320px;
+    height: 100px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    background-color: rgba(43, 43, 43, 0.183); 
+    background-blend-mode: multiply;
+    background-position: -300px -620px;
+    background-size: 900px;
+    border-radius: 20px;
+    border: 3px solid #007419;
+    padding: 5px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+.timer-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+.timer-bar {
+    background-color: #30FF2B;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: width 1s linear, background-color 0.5s ease;
+}
+
+.laporan-field{
+    position: relative;
+    width: 950px;
+    height: 800px;
+    background-image: url(/static/img/background/backgroundkayu.png);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: comic ;
+}
+
+.laporan-field h4{
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    color: #000;
+    top: 15%;
+    right: 45%;
+}
+.emosilaporan-field{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.jenisemosilaporan h5{
+    color: #000;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.statuslatihan h6,p{
+    color: #000;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.statuslatihan h6{
+    width: 250px;
+    height: auto;
+}

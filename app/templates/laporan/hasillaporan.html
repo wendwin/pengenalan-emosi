@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji</title>
+    <link rel="stylesheet" href="/static/css/beranda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="m-4">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-start">
+                <div class="judul">
+                    LATIHAN
+                </div>
+            </div>
+            
+            <div class="col-md-6 d-flex justify-content-end">
+                <div class="rombongan">
+                    ROMBONGAN BELAJAR {{rombongan}}
+                </div>
+            </div>
+        </div>
+        <div class="laporan-field m-auto my-5">
+            <div class="nama">
+                <h4>{{nama}}</h4>
+            </div>
+            <div class="emosilaporan-field">
+                <div class="emosidasar d-flex">
+                    <div class="jenisemosilaporan">
+                        <h5>Emosi <br> {{jenisemosidasar}}</h5>
+                    </div>
+                    <div class="">
+                        <p class="mx-4">></p>
+                    </div>
+                    <div class="d-flex flex-column">
+
+                        <div class="statuslatihan">
+                            {%for emosidasar in list_statuslatihandasar%}
+                            <div class="d-flex align-items-center" style="margin: 0px 0px -20px 0px;">
+                                <h6>{{emosidasar.namaemosi}}</h6>
+                                {% if emosidasar.statuslatihan == 'berhasil'%}
+                                <p style="color: #19B619;">{{emosidasar.statuslatihan}}</p>
+                                {% elif emosidasar.statuslatihan == 'belum berhasil'%}
+                                <p style="color: #FF0000;">{{emosidasar.statuslatihan}}</p>
+                                {%endif%}
+                            </div>
+                            {%endfor%}
+                        </div>
+                        <div class="statuslatihan">
+                            {%for emosidasar in list_statuslatihandasar%}
+                            <div class="d-flex align-items-center" style="margin: 0px 0px -20px 0px;">
+                                <h6>{{emosidasar.namaemosi}}</h6>
+                                {% if emosidasar.statuslatihan == 'berhasil'%}
+                                <p style="color: #19B619;">{{emosidasar.statuslatihan}}</p>
+                                {% elif emosidasar.statuslatihan == 'belum berhasil'%}
+                                <p style="color: #FF0000;">{{emosidasar.statuslatihan}}</p>
+                                {%endif%}
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+                <div class="emosigabungan d-flex mt-5">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end align-items-end">
+            <div class="kembali">
+                <div class="menu-button col d-flex justify-content-between" >
+                    <a href="{{ url_for('laporanrombongan') }}" style="font-size: 50px;">
+                    <img style="width: 100px;   " src="/static/img/button/reply.png" alt="">
+                    <button class="buttonmenu" style="width: 360px; height: 110px;">KEMBALI</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
