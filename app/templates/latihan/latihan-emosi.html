@@ -1,4 +1,68 @@
-<div class="jenisemosi">
-    emosi {%if jenisemosi == 'dasar'%}dasar
-    {%elif jenisemosi == 'gabungan'%}gabungan{%endif%}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="latihan-option vh-100 d-flex flex-column">
+    <div class="title m-3 m-md-5 d-flex flex-wrap justify-content-around align-items-center gap-3">
+        <div class="title-text d-flex justify-content-center align-items-center">Materi</div>
+        <div class="title-materi d-flex justify-content-center align-items-center">emosi {%if jenisemosi ==
+            'dasar'%}dasar {%elif jenisemosi == 'gabungan'%}gabungan{%endif%}</div>
+        <div class="title-materi d-flex justify-content-center align-items-center">rombongan belajar</div>
+    </div>
+
+    <div class="menu-btn m-auto d-flex justify-content-center">
+        <div class="rombel m-auto d-md-flex flex-wrap justify-content-center align-items-center gap-4">
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center ">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="card">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <h5 class="card-title">1</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back d-flex justify-content-end align-items-end m-3 m-md-5">
+        <a href="{{ url_for('latihan') }}">
+            <div class="menu-back">
+                <img src="/static/img/button/reply.png" alt="">
+                <button class="buttonmenu">KEMBALI</button>
+            </div>
+        </a>
+    </div>
 </div>
+{% endblock %}

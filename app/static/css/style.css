@@ -119,9 +119,76 @@ body {
 
 /* materi opsion*/
 
+/* latihan options */
+
+.latihan-option .title-text {
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
+  text-transform: uppercase;
+}
+
+.latihan-option .title-materi {
+  text-transform: uppercase;
+  font-family: comic;
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+
+.latihan-option .card {
+  width: 150px;
+  margin-bottom: 10px;
+  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #a47533;
+}
+
+.latihan-option .rombel {
+  width: 100%;
+  padding: 20px;
+}
+
+.latihan-option .menu-item button {
+  width: 150px;
+  height: 60px;
+  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #a47533;
+}
+
+.latihan-option .back button {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #007419;
+}
+
+.latihan-option .back img {
+  width: 40px;
+}
+
+/* latihan options */
+
 /* Layar besar (desktop) */
 @media (min-width: 1200px) {
+
   /* Gaya khusus untuk layar besar */
+
 }
 
 /* Layar sedang (tablet atau desktop kecil) */
@@ -188,4 +255,38 @@ body {
   }
 
   /* materi options */
+
+  /* latihan options */
+  .latihan-option .title-text {
+    width: 130px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .latihan-option .title-materi {
+    font-size: 18px;
+    width: 160px;
+    height: 60px;
+  }
+
+  .latihan-option .rombel {
+    width: 60%;
+  }
+
+  .latihan-option .menu-item button {
+    width: 200px;
+    height: 70px;
+  }
+
+  .latihan-option .back button {
+    font-size: 18px;
+    width: 110px;
+    height: 45px;
+  }
+
+  .latihan-option .back img {
+    width: 45px;
+  }
+
+  /* latihan options */
 }
