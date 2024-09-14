@@ -31,11 +31,22 @@ body {
 /* home */
 
 /* components */
-
 .header .title {
   background-color: #0fd40f;
   margin: 15px 10px;
   padding: 10px;
+}
+
+.btn-menu button {
+  font-family: comic;
+  width: 170px;
+  height: 50px;
+  background-color: #0fd40f;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border: 3px solid #007419;
 }
 
 .footer-back {
@@ -74,19 +85,6 @@ body {
   border-radius: 10px;
   border: 3px solid #000;
 }
-
-.btn-materi button {
-  font-family: comic;
-  width: 170px;
-  height: 50px;
-  background-color: #0fd40f;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  border: 3px solid #007419;
-}
-
 /* materi */
 
 /* materi options*/
@@ -113,7 +111,6 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
-
 /* materi opsion*/
 
 /* latihan options */
@@ -203,6 +200,12 @@ body {
     padding: 20px;
   }
 
+  .btn-menu button {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+  }
+
   .footer-back {
     background-color: #0fd40f;
     margin: 30px 20px;
@@ -225,12 +228,6 @@ body {
   /* materi */
   .title .title-text {
     width: 130px;
-    height: 60px;
-    font-size: 18px;
-  }
-
-  .btn-materi button {
-    width: 180px;
     height: 60px;
     font-size: 18px;
   }
