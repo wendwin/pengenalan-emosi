@@ -30,52 +30,20 @@ body {
 
 /* home */
 
-/* components */
-
-.header .title {
-  background-color: #0fd40f;
-  margin: 15px 10px;
-  padding: 10px;
-}
-
-.footer-back {
-  background-color: #0fd40f;
-  margin: 15px 10px;
-  padding: 10px;
-}
-
-.footer-back a {
-  text-decoration: none;
-}
-
-.footer-back img {
-  width: 40px;
-}
-
-.footer-back button {
-  font-size: 16px;
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  border: 2px solid #007419;
-}
-
-/* components */
-
 /* materi */
-.title .title-text {
+.materi .title {
   font-family: comic;
   width: 120px;
   height: 50px;
-  font-size: 16px;
   background-color: #fff;
   text-align: center;
+  font-size: 18px;
   color: #000;
   border-radius: 10px;
   border: 3px solid #000;
 }
 
-.btn-materi button {
+.button-menu-materi button {
   font-family: comic;
   width: 170px;
   height: 50px;
@@ -87,10 +55,36 @@ body {
   border: 3px solid #007419;
 }
 
+.materi .back button {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #007419;
+}
+
+.materi .back img {
+  width: 40px;
+}
+
 /* materi */
 
 /* materi options*/
-.title .title-materi {
+.materi-option .title-text {
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  border-radius: 10px;
+  border: 3px solid #000;
+  text-transform: uppercase;
+}
+
+.materi-option .title-materi {
+  text-transform: uppercase;
   font-family: comic;
   width: 150px;
   height: 50px;
@@ -102,21 +96,31 @@ body {
   border: 3px solid #000;
 }
 
-.btn-materi-opsi button {
+.materi-option .menu-item button {
   width: 150px;
   height: 60px;
   background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
   background-size: cover;
   background-position: center;
   border: 3px solid #a47533;
-  border-radius: 10px;
+}
+
+.materi-option .back button {
   font-size: 16px;
-  font-weight: 600;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #007419;
+}
+
+.materi-option .back img {
+  width: 40px;
 }
 
 /* materi opsion*/
 
 /* latihan options */
+
 .latihan-option .title-text {
   font-family: comic;
   width: 120px;
@@ -182,7 +186,9 @@ body {
 
 /* Layar besar (desktop) */
 @media (min-width: 1200px) {
+
   /* Gaya khusus untuk layar besar */
+
 }
 
 /* Layar sedang (tablet atau desktop kecil) */
@@ -197,57 +203,55 @@ body {
     border-radius: 12px;
   }
 
-  /* components */
-  .header .title {
-    margin: 30px 20px;
-    padding: 20px;
-  }
-
-  .footer-back {
-    background-color: #0fd40f;
-    margin: 30px 20px;
-    padding: 20px;
-  }
-
-  .footer-back button {
-    width: 130px;
-    height: 50px;
-    font-size: 18px;
-    font-family: comic;
-  }
-
-  .footer-back img {
-    width: 45px;
-  }
-
-  /* components */
-
   /* materi */
-  .title .title-text {
+  .materi .title {
     width: 130px;
-    height: 60px;
-    font-size: 18px;
   }
 
-  .btn-materi button {
+  .button-menu-materi button {
     width: 180px;
     height: 60px;
     font-size: 18px;
   }
 
+  .materi .back button {
+    width: 110px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .materi .back img {
+    width: 45px;
+  }
+
   /* materi */
 
   /* materi options */
-  .tiele .title-materi {
+  .materi-option .title-text {
+    width: 130px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .materi-option .title-materi {
     font-size: 18px;
     width: 160px;
     height: 60px;
   }
 
-  .btn-materi-opsi button {
+  .materi-option .menu-item button {
     width: 200px;
     height: 70px;
+  }
+
+  .materi-option .back button {
     font-size: 18px;
+    width: 110px;
+    height: 45px;
+  }
+
+  .materi-option .back img {
+    width: 45px;
   }
 
   /* materi options */

@@ -1,34 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="materi vh-100 d-flex flex-column">
-    <div class="title m-3 m-md-5 d-flex justify-content-center align-items-center">
-        <div class="">Materi</div>
-    </div>
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title">
+            <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                <p class="mt-3">materi</p>
+            </div>
+        </div>
 
-    <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
-        <div class="menu-item d-flex align-items-center gap-4">
-            <div class="button-menu-materi">
-                <a href="{{ url_for('materi_emosi_dasar') }}" class="text-decoration-none">
-                    <button class="text-uppercase">emosi dasar</button>
-                </a>
+        <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
+            <div class="menu-item d-flex align-items-center gap-4">
+                <div class="btn-materi">
+                    <a href="{{ url_for('materi_emosi_dasar') }}" class="text-decoration-none">
+                        <button class="text-uppercase">emosi dasar</button>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-item d-flex align-items-center gap-4">
+                <div class="btn-materi">
+                    <a href="{{ url_for('materi_emosi_gabungan') }}" class="text-decoration-none">
+                        <button class="text-uppercase">gabungan</button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="menu-item d-flex align-items-center gap-4">
-            <div class="button-menu-materi">
-                <a href="{{ url_for('materi_emosi_gabungan') }}" class="text-decoration-none">
-                    <button class="text-uppercase">gabungan</button>
-                </a>
-            </div>
+        <div class="footer-back d-flex justify-content-end align-items-end">
+            <a href="{{ url_for('index') }}">
+                <div class="menu-back d-flex align-items-center">
+                    <img src="/static/img/button/reply.png" alt="">
+                    <button class="text-uppercase ">kembali</button>
+                </div>
+            </a>
         </div>
-    </div>
-    <div class="back d-flex justify-content-end align-items-end m-3 m-md-5">
-        <a href="{{ url_for('index') }}">
-            <div class="menu-back">
-                <img src="/static/img/button/reply.png" alt="">
-                <button class="buttonmenu">KEMBALI</button>
-            </div>
-        </a>
     </div>
 </div>
 {% endblock %}
