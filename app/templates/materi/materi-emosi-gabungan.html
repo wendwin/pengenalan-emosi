@@ -1,43 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="materi-option vh-100 d-flex flex-column">
-    <div class="title m-3 m-md-5 d-flex justify-content-around align-items-center">
-        <div class="title-text d-flex justify-content-center align-items-center">Materi</div>
-        <div class="title-materi d-flex justify-content-center align-items-center">emosi <br>gabungan</div>
-    </div>
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title  d-flex justify-content-around align-items-center">
+            <div class="title-text d-flex justify-content-center align-items-center text-uppercase">Materi</div>
+            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi <br>gabungan
+            </div>
+        </div>
 
-    <div class="menu-btn m-auto d-flex flex-column gap-5 flex-lg-row">
-        <div class="menu-item">
-            <div class="button-menu-materi">
-                <a href="" class="text-decoration-none">
-                    <button class="text-uppercase">marah</button>
-                </a>
+        <div class="menu m-auto d-flex flex-column gap-5 flex-lg-row">
+            <div class="menu-item">
+                <div class="btn-materi-opsi">
+                    <a href="" class="text-decoration-none">
+                        <button class="text-uppercase">marah</button>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-item ">
+                <div class="btn-materi-opsi">
+                    <a href="" class="text-decoration-none">
+                        <button class="text-uppercase">marah</button>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-item ">
+                <div class="btn-materi-opsi">
+                    <a href="" class="text-decoration-none">
+                        <button class="text-uppercase">marah</button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="menu-item ">
-            <div class="button-menu-materi">
-                <a href="" class="text-decoration-none">
-                    <button class="text-uppercase">marah</button>
-                </a>
-            </div>
-        </div>
-        <div class="menu-item ">
-            <div class="button-menu-materi">
-                <a href="" class="text-decoration-none">
-                    <button class="text-uppercase">marah</button>
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <div class="back d-flex justify-content-end align-items-end m-3 m-md-5">
-        <a href="{{ url_for('materi') }}">
-            <div class="menu-back">
-                <img src="/static/img/button/reply.png" alt="">
-                <button class="buttonmenu">KEMBALI</button>
-            </div>
-        </a>
+        <div class="footer-back d-flex justify-content-end align-items-end">
+            <a href="{{ url_for('materi') }}">
+                <div class="menu-back">
+                    <img src="/static/img/button/reply.png" alt="">
+                    <button class="text-uppercase">KEMBALI</button>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}
