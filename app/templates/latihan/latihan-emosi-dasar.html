@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title d-flex flex-wrap justify-content-around align-items-center gap-3">
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <div class="title-text d-flex justify-content-center align-items-center text-uppercase">latihan
+                </div>
+                <div class="title-materi d-flex justify-content-center align-items-center">emosi dasar</div>
+            </div>
+            <div class="title-materi d-flex justify-content-center align-items-center">rombongan belajar</div>
+        </div>
+
+        {% include 'components/rombel.html' %}
+
+        <div class="footer-back d-flex justify-content-end align-items-end m-3 m-md-5">
+            <a href="{{ url_for('latihan') }}">
+                <div class="menu-back">
+                    <img src="/static/img/button/reply.png" alt="">
+                    <button class="text-uppercase">kembali</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

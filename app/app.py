@@ -23,12 +23,13 @@ def materi_emosi_gabungan():
 def latihan():
     return render_template('latihan/latihan.html')
 
-@app.route('/latihan/rombel', methods=["POST"])
-def latihan_rombel():
-    jenisEmosi=request.form['jenisEmosi']
-    session['jenisEmosi']=jenisEmosi
-    return render_template('latihan/latihan-emosi.html', jenisemosi=jenisEmosi)
+@app.route('/latihan/rombel/emosi-dasar')
+def latihan_rombel_dasar():
+    return render_template('latihan/latihan-emosi-dasar.html')
 
+@app.route('/latihan/rombel/emosi-gabungan')
+def latihan_rombel_gabungan():
+    return render_template('latihan/latihan-emosi-gabungan.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
