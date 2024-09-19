@@ -1,26 +1,25 @@
 from flask import Flask,render_template, session, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 import pymysql
 # pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'KaVGm31asLwNAlaoG'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emoji'
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emoji'
+# app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+# db = SQLAlchemy(app)
+# migrate = Migrate(app, db)
 
 
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(128))
-    rombongan = db.Column(db.String(2))
-    gambar = db.Column(db.String(100))
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(128))
+#     rombongan = db.Column(db.String(2))
+#     gambar = db.Column(db.String(100))
 
 @app.route('/')
 def index():
@@ -49,6 +48,10 @@ def latihan_rombel_dasar():
 @app.route('/latihan/rombel/emosi-gabungan')
 def latihan_rombel_gabungan():
     return render_template('latihan/latihan-emosi-gabungan.html')
+
+@app.route('/latihan/rombel/emosi/siswa/pilih-emosi')
+def latiha_pilih_emosi():
+    return render_template('latihan/latihan-pemilihan-emosi.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

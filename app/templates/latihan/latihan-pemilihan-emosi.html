@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title d-flex flex-wrap justify-content-around align-items-center gap-3">
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <div class="title-text d-flex justify-content-center align-items-center text-uppercase">latihan
+                </div>
+                <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi gabungan
+                </div>
+            </div>
+            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">rombongan belajar
+            </div>
+        </div>
+
+        {% include 'components/emosi.html' %}
+
+    </div>
+</div>
+{% endblock %}
