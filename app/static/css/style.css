@@ -116,6 +116,10 @@ body {
 /* materi opsion*/
 
 /* latihan options */
+.card .card-title{
+  font-family: comic;
+}
+
 .header .title-text {
   font-family: comic;
   width: 120px;
@@ -150,6 +154,10 @@ body {
   border: 3px solid #a47533;
 }
 
+.header a{
+  text-decoration: none;
+}
+
 .header .rombel {
   width: 100%;
   padding: 20px;
@@ -166,11 +174,15 @@ body {
 
 /* latihan options */
 
-/* Layar besar (desktop) */
-@media (min-width: 1200px) {
-  /* Gaya khusus untuk layar besar */
-}
+/* latihan pilih emosi */
 
+ .header .emosi img{
+  width: 70px;
+  height: 100%;
+ }
+
+
+/* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
   .menu .menu-item img {
@@ -239,6 +251,11 @@ body {
   /* materi options */
 
   /* latihan options */
+
+  .card .card-title{
+    font-size: 25px;
+  }
+
   .header .title-text {
     width: 130px;
     height: 60px;
@@ -260,4 +277,43 @@ body {
   }
 
   /* latihan options */
+
+  /*latihan pilih emosi*/
+
+  
+  .header .emosi .card {
+    width: 170px;
+    margin-bottom: 10px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #a47533;
+  }
+
+  .header .emosi .card {
+    margin: 0px 10px;
+  }
+
+  .header .emosi img{
+    width: 130px;
+    height: 100%;
+  }
+
+  .header .emosi .card .card-title{
+    margin-top: 5px;
+  }
+  /*latihan pilih emsi*/
+
+}
+@media (min-width: 1200px) {
+  /* Gaya khusus untuk layar besar */
+
+  .header .emosi{
+    width: 900px;
+  }
+
+  .header .emosi .card {
+    margin: 0px 30px;
+  }
+
 }

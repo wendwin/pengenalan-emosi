@@ -1,6 +1,6 @@
 from flask import Flask,render_template, session, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 import pymysql
 # pymysql.install_as_MySQLdb()
 
@@ -62,6 +62,10 @@ def latihan_rombel_gabungan():
 def latihan_rombel(rombongan):
     users = User.query.filter_by(rombel_id=rombongan).all()
     return render_template('latihan/latihan-rombel.html', users=users)
+
+@app.route('/latihan/rombel/emosi/siswa/pilih-emosi')
+def latiha_pilih_emosi():
+    return render_template('latihan/latihan-pemilihan-emosi.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
