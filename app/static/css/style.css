@@ -116,7 +116,7 @@ body {
 /* materi opsion*/
 
 /* latihan options */
-.card .card-title{
+.card .card-title {
   font-family: comic;
 }
 
@@ -154,7 +154,7 @@ body {
   border: 3px solid #a47533;
 }
 
-.header a{
+.header a {
   text-decoration: none;
 }
 
@@ -176,11 +176,17 @@ body {
 
 /* latihan pilih emosi */
 
- .header .emosi img{
+.header .emosi img {
   width: 70px;
   height: 100%;
- }
+}
 
+/* pilih user */
+
+
+.header .pilih-user img {
+  width: 50px;
+}
 
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
@@ -252,7 +258,7 @@ body {
 
   /* latihan options */
 
-  .card .card-title{
+  .card .card-title {
     font-size: 25px;
   }
 
@@ -280,7 +286,6 @@ body {
 
   /*latihan pilih emosi*/
 
-  
   .header .emosi .card {
     width: 170px;
     margin-bottom: 10px;
@@ -294,21 +299,25 @@ body {
     margin: 0px 10px;
   }
 
-  .header .emosi img{
+  .header .emosi img {
     width: 130px;
     height: 100%;
   }
 
-  .header .emosi .card .card-title{
-    margin-top: 5px;
-  }
   /*latihan pilih emsi*/
 
+  /* pilih user */
+  .header .pilih-user img {
+    width: 80px;
+  }
+
+  /* pilih user */
 }
+
 @media (min-width: 1200px) {
   /* Gaya khusus untuk layar besar */
 
-  .header .emosi{
+  .header .emosi {
     width: 900px;
   }
 
@@ -316,4 +325,9 @@ body {
     margin: 0px 30px;
   }
 
+  /* pilih user */
+  .header .menu-btn {
+    width: 90%;
+    /* pilih user */
+  }
 }

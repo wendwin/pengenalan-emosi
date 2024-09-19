@@ -61,10 +61,10 @@ def latihan_rombel_gabungan():
 @app.route('/latihan/emosi-dasar/rombel/<rombongan>')
 def latihan_rombel(rombongan):
     users = User.query.filter_by(rombel_id=rombongan).all()
-    return render_template('latihan/latihan-rombel.html', users=users)
+    return render_template('latihan/latihan-rombel-user.html', users=users)
 
 @app.route('/latihan/rombel/emosi/siswa/pilih-emosi')
-def latiha_pilih_emosi():
+def latihan_pilih_emosi():
     return render_template('latihan/latihan-pemilihan-emosi.html')
 
 if __name__ == '__main__':
