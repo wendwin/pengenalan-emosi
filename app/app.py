@@ -15,12 +15,18 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
+class rombel(db.Model):
+    __tablename__ = 'rombel'
+    id = db.Column(db.Integer, primary_key=True)
+    nama = db.Column(db.String(50), nullable=False)
 
 class User(db.Model):
+    __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(128))
-    rombongan = db.Column(db.String(2))
-    gambar = db.Column(db.String(100))
+    nama = db.Column(db.String(50))
+    rombel_id = db.Column(db.Integer, db.ForeignKey('rombel.id'), nullable=False)
+    gambar = db.Column(db.String(50))
+
 
 @app.route('/')
 def index():
