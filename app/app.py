@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-class rombel(db.Model):
+class Rombel(db.Model):
     __tablename__ = 'rombel'
     id = db.Column(db.Integer, primary_key=True)
     nama = db.Column(db.String(50), nullable=False)
@@ -50,11 +50,18 @@ def latihan():
 
 @app.route('/latihan/rombel/emosi-dasar')
 def latihan_rombel_dasar():
-    return render_template('latihan/latihan-emosi-dasar.html')
+    rombel = Rombel.query.all()
+    return render_template('latihan/latihan-emosi-dasar.html', rombel=rombel)
 
 @app.route('/latihan/rombel/emosi-gabungan')
 def latihan_rombel_gabungan():
-    return render_template('latihan/latihan-emosi-gabungan.html')
+    rombel = Rombel.query.all()
+    return render_template('latihan/latihan-emosi-gabungan.html', rombel=rombel)
+
+@app.route('/latihan/emosi-dasar/rombel/<rombongan>')
+def latihan_rombel(rombongan):
+    users = User.query.filter_by(rombel_id=rombongan).all()
+    return render_template('latihan/latihan-rombel.html', users=users)
 
 if __name__ == '__main__':
     app.run(debug=True)
