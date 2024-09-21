@@ -82,15 +82,17 @@ def materi_emosi(emosi):
 def latihan():
     return render_template('latihan/latihan.html')
 
-@app.route('/latihan/emosi-dasar/rombel')
-def latihan_rombel_dasar():
-    rombel = Rombel.query.all()
-    return render_template('latihan/latihan-emosi-dasar.html', rombel=rombel)
+@app.route('/latihan/<jenisEmosi>/rombel')
+def latihan_jenis_emosi(jenisEmosi):
+    jenisEmosi_split = jenisEmosi.split('-')[1]  # Split jika diperlukan
+    session['jenisEmosi'] = jenisEmosi_split.capitalize()
 
-@app.route('/latihan/emosi-gabungan/rombel')
-def latihan_rombel_gabungan():
     rombel = Rombel.query.all()
-    return render_template('latihan/latihan-emosi-gabungan.html', rombel=rombel)
+    
+    if jenisEmosi == 'emosi-dasar':
+        return render_template('latihan/latihan-emosi-dasar.html', rombel=rombel)
+    else:
+        return render_template('latihan/latihan-emosi-gabungan.html', rombel=rombel)
 
 @app.route('/latihan/emosi-dasar/rombel/<rombongan>')
 def latihan_rombel(rombongan):

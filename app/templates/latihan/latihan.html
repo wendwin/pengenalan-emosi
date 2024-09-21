@@ -12,14 +12,16 @@
         <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
             <div class="menu-item d-flex align-items-center gap-4">
                 <div class="btn-menu">
-                    <a href="{{ url_for('latihan_rombel_dasar') }}" class="text-decoration-none">
+                    <a href="{{ url_for('latihan_jenis_emosi', jenisEmosi='emosi-dasar') }}"
+                        class="text-decoration-none">
                         <button class="text-uppercase">emosi dasar</button>
                     </a>
                 </div>
             </div>
             <div class="menu-item d-flex align-items-center gap-4">
                 <div class="btn-menu">
-                    <a href="{{ url_for('latihan_rombel_gabungan') }}" class="text-decoration-none">
+                    <a href="{{ url_for('latihan_jenis_emosi', jenisEmosi='emosi-gabungan') }}"
+                        class="text-decoration-none">
                         <button class="text-uppercase">emosi gabungan</button>
                     </a>
                 </div>
