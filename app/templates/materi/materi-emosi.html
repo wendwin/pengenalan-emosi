@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title d-flex flex-wrap justify-content-around align-items-center gap-3">
+            <div class="title-text d-flex justify-content-center align-items-center text-uppercase">materi</div>
+            <div class="title-materi d-flex justify-content-center align-items-center">{{ emosi }}</div>
+        </div>
+
+        <div
+            class="materi-emosi d-flex flex-column justify-content-center align-items-center gap-5 flex-lg-row justify-content-md-around  flex-grow-1">
+            {% for m in materi %}
+            <div class="materi-img d-flex gap-4 gap-md-5">
+                <div class="frame-img">
+                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.gambar_satu}}" alt="">
+                </div>
+                <div class="frame-img">
+                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.gambar_dua}}" alt="">
+                </div>
+            </div>
+            <div class="materi-video">
+                <video controls>
+                    <source src="/static/video/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.vidio}}"
+                        type="video/mp4">
+                </video>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="footer-back d-flex justify-content-end align-items-end">
+            <a href="{{ url_for('materi_emosi_dasar') }}">
+                <div class="menu-back d-flex align-items-center">
+                    <img src="/static/img/button/reply.png" alt="">
+                    <button class="text-uppercase ">kembali</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

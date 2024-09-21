@@ -11,52 +11,53 @@
         <div
             class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
             <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
-                        <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
+                <a href="{{ url_for('materi_emosi', emosi='bahagia') }}">
+                    <div class="btn-materi-opsi">
+                        <button class="text-uppercase">bahagia</button>
+                    </div>
+                </a>
             </div>
             <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
-                        <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div
-            class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
-            <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
-                        <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
-            </div>
-            <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
-                        <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
+                <a href="{{ url_for('materi_emosi', emosi='jijik') }}">
+                    <div class="btn-materi-opsi">
+                        <button class="text-uppercase">jijik</button>
+                    </div>
+
+                </a>
             </div>
         </div>
         <div
             class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
             <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
+                <a href="{{ url_for('materi_emosi', emosi='marah') }}">
+                    <div class="btn-materi-opsi">
                         <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             <div class="menu-item d-flex align-items-center">
-                <div class="btn-materi-opsi">
-                    <a href="" class="text-decoration-none">
-                        <button class="text-uppercase">marah</button>
-                    </a>
-                </div>
+                <a href="{{ url_for('materi_emosi', emosi='sedih') }}">
+                    <div class="btn-materi-opsi">
+                        <button class="text-uppercase">sedih</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div
+            class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
+            <div class="menu-item d-flex align-items-center">
+                <a href="{{ url_for('materi_emosi', emosi='takut') }}">
+                    <div class="btn-materi-opsi">
+                        <button class="text-uppercase">takut</button>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-item d-flex align-items-center">
+                <a href="{{ url_for('materi_emosi', emosi='terkejut') }}">
+                    <div class="btn-materi-opsi">
+                        <button class="text-uppercase">terkejut</button>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="footer-back d-flex justify-content-end align-items-end">

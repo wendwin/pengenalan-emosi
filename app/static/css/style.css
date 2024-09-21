@@ -32,9 +32,11 @@ body {
 
 /* components */
 .header .title {
-  background-color: #0fd40f;
+  /* background-color: #98eca8; */
   margin: 15px 10px;
   padding: 10px;
+  border-radius: 20px;
+  /* border: 3px solid #0fd40f;r */
 }
 
 .btn-menu button {
@@ -50,7 +52,7 @@ body {
 }
 
 .footer-back {
-  background-color: #0fd40f;
+  /* background-color: #0fd40f; */
   margin: 15px 10px;
   padding: 10px;
 }
@@ -114,6 +116,33 @@ body {
 }
 
 /* materi opsion*/
+
+/* materi emosi */
+/* .materi-emosi {
+  background-color: #0fd40f;
+} */
+
+.materi-emosi .materi-img .frame-img {
+  width: 150px;
+  height: 150px;
+}
+
+.materi-emosi .frame-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #A47533;
+}
+
+.materi-emosi .materi-video video {
+  width: 330px;
+  border-radius: 20px;
+  border: 3px solid #A47533;
+}
+
+/* materi emosi */
 
 /* latihan options */
 .card .card-title {
@@ -183,7 +212,6 @@ body {
 
 /* pilih user */
 
-
 .header .pilih-user img {
   width: 50px;
 }
@@ -214,7 +242,7 @@ body {
   }
 
   .footer-back {
-    background-color: #0fd40f;
+    /* background-color: #0fd40f; */
     margin: 30px 20px;
     padding: 20px;
   }
@@ -255,6 +283,26 @@ body {
   }
 
   /* materi options */
+
+  /* materi opsion*/
+
+  /* materi emosi */
+  .materi-emosi .materi-img .frame-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .materi-emosi .frame-img img {
+    width: 200px;
+    height: 200px;
+
+  }
+
+  .materi-emosi .materi-video video {
+    width: 480px;
+  }
+
+  /* materi emosi */
 
   /* latihan options */
 
@@ -330,4 +378,18 @@ body {
     width: 90%;
     /* pilih user */
   }
+
+  /* materi-emosi */
+  .materi-emosi .materi-img .frame-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .materi-emosi .frame-img img {
+    width: 250px;
+    height: 250px;
+
+  }
+
+  /* materi-emosi */
 }

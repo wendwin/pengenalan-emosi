@@ -50,6 +50,8 @@ class Materi(db.Model):
     gambar_dua = db.Column(db.String(50))
     vidio = db.Column(db.String(50))
 
+    jenis_emosi_rel = db.relationship('JenisEmosi', backref='materis')
+
     def __repr__(self):
         return f'{self.jenis_emosi} - {self.nama_emosi}'
 
@@ -69,6 +71,12 @@ def materi_emosi_dasar():
 @app.route('/materi/emosi-gabungan')
 def materi_emosi_gabungan():
     return render_template('materi/materi-emosi-gabungan.html')
+
+@app.route('/materi/emosi-dasar/<emosi>')
+def materi_emosi(emosi):
+    emosi = emosi.capitalize()
+    materi = Materi.query.filter_by(nama_emosi=emosi)
+    return render_template('materi/materi-emosi.html', emosi=emosi, materi=materi)
 
 @app.route('/latihan')
 def latihan():
