@@ -18,11 +18,15 @@ body {
 
 .button-menu button {
   font-family: comic;
+  letter-spacing: 3px;
   width: 110px;
   height: 50px;
-  background-color: #0fd40f;
+  background-image: url(/static/img/button/flat-design-leaves-collection.png);
+  border: 3px solid #007419;
+  filter: brightness(120%);
+  background-position: 200px 110px;
+  background-size: 300px;
   border-radius: 10px;
-  border: none;
   padding: 5px;
   font-size: 18px;
   font-weight: 600;
@@ -41,9 +45,9 @@ body {
 
 .btn-menu button {
   font-family: comic;
+  letter-spacing: 3px;
   width: 170px;
   height: 50px;
-  background-color: #0fd40f;
   border-radius: 10px;
   border: none;
   font-size: 16px;
@@ -70,7 +74,7 @@ body {
   width: 100px;
   height: 40px;
   border-radius: 10px;
-  border: 2px solid #007419;
+  border: 2px solid #000;
 }
 
 /* components */
@@ -104,9 +108,12 @@ body {
 }
 
 .btn-materi-opsi button {
+  font-family: comic;
+  letter-spacing: 3px;
   width: 150px;
   height: 60px;
   background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+  filter: brightness(110%);
   background-size: cover;
   background-position: center;
   border: 3px solid #a47533;
@@ -192,13 +199,14 @@ body {
   padding: 20px;
 }
 
-.header .menu-item button {
+.header .menu-item .btn-menu button {
   width: 150px;
   height: 60px;
-  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
-  background-size: cover;
-  background-position: center;
-  border: 3px solid #a47533;
+  background-image: url(/static/img/button/flat-design-leaves-collection.png);
+  filter: brightness(120%);
+  background-position: 200px 110px;
+  background-size: 300px;
+  border: 3px solid #007419;
 }
 
 /* latihan options */
@@ -348,13 +356,16 @@ body {
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
   .menu .menu-item img {
-    width: 80px;
+    width: 110px;
   }
 
   .button-menu button {
-    width: 130px;
-    height: 60px;
-    border-radius: 12px;
+    background-position: 260px 130px;
+    background-size: 350px;
+    width: 180px;
+    height: 80px;
+    border-radius: 17px;
+    font-size: 25px;
   }
 
   /* components */
@@ -363,10 +374,12 @@ body {
     padding: 20px;
   }
 
-  .btn-menu button {
-    width: 180px;
-    height: 60px;
-    font-size: 18px;
+  .header .menu-item .btn-menu button {
+    width: 220px;
+    height: 80px;
+    font-size: 23px;
+    background-position: 290px 110px;
+    background-size: 350px;
   }
 
   .footer-back {
@@ -376,14 +389,14 @@ body {
   }
 
   .footer-back button {
-    width: 130px;
-    height: 50px;
-    font-size: 18px;
+    width: 160px;
+    height: 70px;
+    font-size: 23px;
     font-family: comic;
   }
 
   .footer-back img {
-    width: 45px;
+    width: 55px;
   }
 
   /* components */
@@ -404,10 +417,13 @@ body {
     height: 60px;
   }
 
-  .btn-materi-opsi button {
+  .menu .btn-materi-opsi button {
     width: 200px;
     height: 70px;
-    font-size: 18px;
+    font-size: 23px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    filter: brightness(110%);
+    border: 3px solid #a47533;
   }
 
   /* materi options */
@@ -438,15 +454,15 @@ body {
   }
 
   .header .title-text {
-    width: 130px;
-    height: 60px;
-    font-size: 18px;
+    width: 160px;
+    height: 70px;
+    font-size: 23px;
   }
 
   .header .title-materi {
-    font-size: 18px;
-    width: 160px;
-    height: 60px;
+    font-size: 23px;
+    width: 190px;
+    height: 70px;
   }
 
   .header .rombel {
@@ -529,6 +545,15 @@ body {
 @media (min-width: 1200px) {
   /* Gaya khusus untuk layar besar */
 
+  .button-menu button {
+    background-position: 270px 140px;
+    background-size: 370px;
+    width: 200px;
+    height: 90px;
+    border-radius: 17px;
+    font-size: 25px;
+  }
+
   .header .emosi {
     width: 900px;
   }
@@ -542,6 +567,15 @@ body {
     width: 90%;
     /* pilih user */
   }
+  /* materi-opsi*/
+    .header .menu-item .btn-menu button {
+    width: 240px;
+    height: 80px;
+    font-size: 23px;
+  }
+  
+  /* materi-opsi */
+
 
   /* materi-emosi */
   .materi-emosi .materi-img .frame-img {
