@@ -49,6 +49,7 @@ class Materi(db.Model):
     gambar_satu = db.Column(db.String(50))
     gambar_dua = db.Column(db.String(50))
     vidio = db.Column(db.String(50))
+    emoji = db.Column(db.String(50))
 
     jenis_emosi_rel = db.relationship('JenisEmosi', backref='materis')
 
@@ -96,18 +97,50 @@ def latihan_jenis_emosi(jenisEmosi):
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>')
 def latihan_rombel(jenisEmosi, rombongan):
     session['rombongan'] = rombongan
+    jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
+    jenisEmosi = jenisEmosi 
     users = User.query.filter_by(rombel_id=rombongan).all()
-
+    
     if jenisEmosi == 'emosi-dasar':
-        return render_template('latihan/latihan-rombel-dasar-user.html', users=users, jenisEmosi=jenisEmosi, rombongan=rombongan)
+        return render_template('latihan/latihan-pemilihan-user.html',
+                               users=users, 
+                               rombongan=rombongan,
+                               jenisEmosi=jenisEmosi,
+                               jenisEmosiSplit=jenisEmosiSplit)
     else:
-        return render_template('latihan/latihan-rombel-gabungan-user.html', users=users, jenisEmosi=jenisEmosi, rombongan=rombongan)
+        return render_template('latihan/latihan-pemilihan-user.html',
+                               users=users, rombongan=rombongan,
+                               jenisEmosi=jenisEmosi,
+                               jenisEmosiSplit=jenisEmosiSplit)
 
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>/<user>')
 def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     session['user'] = user.capitalize()
+    jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
+    jenisEmosi = jenisEmosi 
+
+    if jenisEmosi == 'emosi-dasar':
+        jenisLatihan =  Materi.query.filter_by(jenis_emosi=1).all()
+        return render_template('latihan/latihan-pemilihan-emosi.html', 
+                               rombongan=rombongan,
+                               jenisLatihan=jenisLatihan,
+                               jenisEmosi=jenisEmosi,
+                               jenisEmosiSplit=jenisEmosiSplit
+                               )
+    else:
+        jenisLatihan =  Materi.query.filter_by(jenis_emosi=2).all()
+        return render_template('latihan/latihan-pemilihan-emosi.html',
+                               rombongan=rombongan,
+                               jenisLatihan=jenisLatihan,
+                               jenisEmosiSplit=jenisEmosiSplit,
+                               jenisEmosi=jenisEmosi)
     
-    return render_template('latihan/latihan-pemilihan-emosi.html')
+@app.route('/latihan/emosi-dasar/rombel/<rombongan>/<user>/<emosi>')
+def latihan_emosi(user, rombongan, emosi):
+    session['emosi'] = emosi.capitalize()
+
+    return render_template('latihan/latihan-rombel-dasar-emosi.html')
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
