@@ -133,13 +133,13 @@ body {
   border-radius: 20px;
   object-fit: cover;
   border-radius: 20px;
-  border: 3px solid #A47533;
+  border: 3px solid #a47533;
 }
 
 .materi-emosi .materi-video video {
   width: 330px;
   border-radius: 20px;
-  border: 3px solid #A47533;
+  border: 3px solid #a47533;
 }
 
 /* materi emosi */
@@ -210,11 +210,139 @@ body {
   height: 100%;
 }
 
+.header .emosi .card:hover {
+  border: 3px solid #282b28;
+  color: #ffffff;
+}
+
+.buttonnamaemosi:disabled {
+  filter: grayscale(100%) contrast(100%);
+}
+
 /* pilih user */
 
 .header .pilih-user img {
   width: 50px;
 }
+
+/* latihan emosi */
+.timer-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.timer-bar {
+  background-color: #30FF2B;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: width 1s linear, background-color 0.5s ease;
+}
+
+.latihan-emosi .frame-img {
+  width: 140px;
+  height: 140px;
+  background-color: #a47533;
+  border-radius: 20px;
+}
+
+.latihan-emosi .frame-img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #a47533;
+}
+
+
+.buttonpilihgambar {
+  width: 140px;
+  height: 140px;
+}
+
+
+.button-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.buttonpilihgambar.flipped .button-inner {
+  transform: rotateY(180deg);
+}
+
+.button-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.button-front {
+  border: 3px solid #A47533;
+  background-color: #dfa24e;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.buttonpilihgambar img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.button-back {
+  border: 3px solid #A47533;
+  transform: rotateY(180deg);
+}
+
+
+#emosigabungan img {
+  object-fit: cover;
+  background-size: cover;
+}
+
+.modal .modal-content {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.modal .modal-content img {
+  width: 60%;
+}
+
+.modal .modal-content p {
+  font-family: comic;
+  font-size: 18px;
+}
+
+.modal .modal-content button {
+  width: 150px;
+  height: 60px;
+  background-color: #63df63;
+  border-radius: 10px;
+  border: 2px solid #000;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: comic;
+  letter-spacing: 1px;
+}
+
+/* latihan emosi */
 
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
@@ -295,7 +423,6 @@ body {
   .materi-emosi .frame-img img {
     width: 200px;
     height: 200px;
-
   }
 
   .materi-emosi .materi-video video {
@@ -360,6 +487,43 @@ body {
   }
 
   /* pilih user */
+
+  /* latihan emosi */
+
+  .buttonpilihgambar {
+    width: 170px;
+    height: 170px;
+  }
+
+  .buttonpilihgambar img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .latihan-emosi .frame-img {
+    width: 170px;
+    height: 170px;
+    background-color: #0fd40f;
+  }
+
+  .latihan-emosi .frame-img img {
+    width: 170px;
+    height: 170px;
+  }
+
+  /* .modal .modal-content {
+    padding: 50px 30px;
+  }
+
+  .modal .modal-content img {
+    width: 70%;
+  }
+
+  .modal .modal-content p {
+    font-size: 20px;
+  } */
+
+  /* latihan emosi */
 }
 
 @media (min-width: 1200px) {
@@ -388,8 +552,44 @@ body {
   .materi-emosi .frame-img img {
     width: 250px;
     height: 250px;
-
   }
 
   /* materi-emosi */
+
+  /* latihan emosi */
+
+  /* .timer-bar {
+    background-color: #30FF2B;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: width 1s linear, background-color 0.5s ease;
+  } */
+
+  .header .container-latihan {
+    width: 60%;
+  }
+
+  .buttonpilihgambar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .buttonpilihgambar img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* .latihan-emosi .latihan-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .latihan-emosi .frame-img img {
+    width: 180px;
+    height: 180px;
+  } */
+
+  /* latihan emosi */
 }

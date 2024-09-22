@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header vh-100 d-flex flex-column">
+        <div class="title d-flex flex-wrap justify-content-around align-items-center gap-3">
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <div class="title-text d-flex justify-content-center align-items-center text-uppercase">latihan
+                </div>
+                <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi {{
+                    jenisEmosi }}
+                </div>
+                <div class=" d-none  title-materi d-md-flex justify-content-center align-items-center text-uppercase">
+                    {{ emosi }}
+                </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <div class="title-materi d-flex d-md-none justify-content-center align-items-center text-uppercase"> {{
+                    emosi }}
+                </div>
+                <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">rombongan
+                    belajar
+                    {{ rombongan }}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-latihan m-auto d-flex justify-content-center">
+            <div class="latihan-emosi m-auto d-flex flex-wrap justify-content-center align-items-center gap-4 gap-lg-5">
+                {% for emosi in list_emosi %}
+                <div class="">
+                    <div class=" buttonpilihgambar" data-emotion="{{ emosi.nama_emosi }}" onclick="checkEmosi(this)">
+                        <div class="button-inner">
+                            <div class="button-face button-front">
+                                <div class="background-flashcard"></div>
+                            </div>
+                            <div class="button-face button-back">
+                                <img src="/static/img/emosi/{{ emosi.jenis_emosi.lower() }}/{{ emosi.nama_emosi }}/{{ emosi.gambar_emosi }}"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="footer-back m-3 mb-5 m-md-5">
+            <div class="timer-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+        </div>
+
+        <canvas id="confetti"></canvas>
+
+        <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="/static/img/emoji/timer.png" alt="">
+                        <p class="text-center">Kamu punya 10 detik untuk menjawab, ya! <br> kamu pasti bisa!</p>
+                        <div class="text-center">
+                            <button type="button" class="buttonselanjutnya mt-2" data-bs-dismiss="modal"
+                                id="startButton">Mulai Latihan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content w-1000">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <div class="d-flex flex-column align-items-center justify-content-center" method="post">
+                            {% if jenisEmosi == 'Dasar' %}
+                            <img class="m-auto" id="emojijawaban" src="" style="width: 300px; height: 100%;">
+                            {% elif jenisEmosi == 'Gabungan' %}
+                            <div id="emosigabungan" class="">
+                                <p class="text-center">{{nama_emosi}}</p>
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <div class="text-center">
+                                        <p>{{ list_emosi_gabungan[0].nama_emosi }}</p>
+                                        <img src="/static/img/emosi/{{ list_emosi_gabungan[0].jenisemosi }}/{{ list_emosi_gabungan[0].nama_emosi }}/{{ list_emosi_gabungan[0].gambaremosi }}"
+                                            alt="Emosi Gabungan 1" style="width: 150px; height: 200px;">
+                                    </div>
+                                    <p style="font-size: 40px; margin: 0px 10px;">+</p>
+                                    <div class="text-center">
+                                        <p>{{ list_emosi_gabungan[1].nama_emosi }}</p>
+                                        <img src="/static/img/emosi/{{ list_emosi_gabungan[1].jenisemosi }}/{{ list_emosi_gabungan[1].nama_emosi }}/{{ list_emosi_gabungan[1].gambaremosi }}"
+                                            alt="Emosi Gabungan 2" style="width: 150px; height: 200px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="m-auto" id="emojijawaban" src="" style="width: 300px; height: 100%;">
+                            {% endif %}
+                            <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
+                            <p class="m-auto" id="katajawaban"></p>
+                            <a
+                                href="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}">
+                                <button class="buttonselanjutnya mt-2" data-bs-dismiss="modal">Selanjutnya</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+</div>
+{% endblock %}
