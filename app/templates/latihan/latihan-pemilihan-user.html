@@ -20,8 +20,8 @@
                 <a
                     href="{{ url_for('latihan_pilih_emosi', jenisEmosi=jenisEmosi, rombongan=rombongan, user=user.nama.lower()) }}">
                     <div class="card">
-                        <div class="d-flex flex-column justify-content-center align-items-center ">
-                            <img src="/static/img/user/siswa.png" alt="">
+                        <div class="d-flex flex-column justify-content-center align-items-center pt-2">
+                            <img src="/static/img/user/{{ user.gambar }}" alt="">
                             <h5 class=" card-title mt-1 mt-md-3">{{ user.nama }}</h5>
                         </div>
                     </div>

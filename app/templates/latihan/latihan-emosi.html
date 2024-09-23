@@ -34,12 +34,12 @@
                     <div class="buttonpilihgambar" data-emotion="{{ emosi.nama_emosi }}" onclick="checkEmosi(this)">
                         <div class="button-inner">
                             <div class="button-face button-front">
-                                <div class="background-flashcard"></div>
+                                <!-- <div class="background-flashcard"></div> -->
                             </div>
-                            <div class="button-face button-back">
-                                <img src="/static/img/emosi/{{ emosi.jenis_emosi.lower() }}/{{ emosi.nama_emosi }}/{{ emosi.gambar_emosi }}"
-                                    alt="">
-                            </div>
+                            <!-- <div class="button-face button-back"> -->
+                            <img src="/static/img/emosi/{{ emosi.jenis_emosi.lower() }}/{{ emosi.nama_emosi }}/{{ emosi.gambar_emosi }}"
+                                alt="">
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -98,12 +98,14 @@
                             </div>
                             <img class="m-auto" id="emojijawaban" src="">
                             {% endif %}
-                            <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
-                            <p class="m-auto my-2" id="katajawaban"></p>
-                            <a
-                                href="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}">
-                                <button class="buttonselanjutnya mt-2" data-bs-dismiss="modal">Selanjutnya</button>
-                            </a>
+                            <form
+                                action="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}"
+                                method="post">
+                                <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
+                                <p class="m-auto my-2" id="katajawaban"></p>
+                                <button type="submit" class="buttonselanjutnya mt-2"
+                                    data-bs-dismiss="modal">Selanjutnya</button>
+                            </form>
                         </div>
                     </div>
                 </div>

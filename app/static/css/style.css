@@ -11,6 +11,16 @@ body {
   box-sizing: border-box;
 }
 
+.disabled-link {
+  cursor: not-allowed;
+  color: gray;
+  text-decoration: none;
+}
+
+.disable-colors {
+  filter: grayscale(100%) contrast(100%);
+}
+
 /* home */
 .menu .menu-item img {
   width: 70px;
@@ -223,10 +233,6 @@ body {
   color: #ffffff;
 }
 
-.buttonnamaemosi:disabled {
-  filter: grayscale(100%) contrast(100%);
-}
-
 /* pilih user */
 
 .header .pilih-user img {
@@ -245,14 +251,13 @@ body {
 }
 
 .timer-bar {
-  background-color: #30FF2B;
+  background-color: #30ff2b;
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
   transition: width 1s linear, background-color 0.5s ease;
 }
-
 
 .latihan-emosi .frame-img {
   width: 140px;
@@ -270,13 +275,11 @@ body {
   border: 3px solid #a47533;
 }
 
-
 .buttonpilihgambar {
   width: 140px;
   height: 140px;
   cursor: pointer;
 }
-
 
 .button-inner {
   position: relative;
@@ -299,8 +302,14 @@ body {
 }
 
 .button-front {
-  border: 3px solid #A47533;
   background-color: #dfa24e;
+  border-radius: 17px;
+  border: 3px solid #a47533;
+  background-image: url(/static/img/button/logo.png);
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -310,15 +319,16 @@ body {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 20px;
-}
+  background-size: cover;
+  border-radius: 17px;
+  border: 3px solid #a47533;
 
+}
 
 .button-back {
-  border: 3px solid #A47533;
+  border: 3px solid #a47533;
   transform: rotateY(180deg);
 }
-
 
 #emosigabungan img {
   object-fit: cover;
@@ -579,7 +589,6 @@ body {
   }
 
   /* materi-opsi */
-
 
   /* materi-emosi */
   .materi-emosi .materi-img .frame-img {
