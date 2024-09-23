@@ -16,14 +16,18 @@ body {
   width: 70px;
 }
 
+.title .menu-item img {
+  width: 50px;
+}
+
 .button-menu button {
   font-family: comic;
   letter-spacing: 3px;
-  width: 110px;
+  width: 120px;
   height: 50px;
   background-image: url(/static/img/button/flat-design-leaves-collection.png);
   border: 3px solid #007419;
-  filter: brightness(120%);
+  color: #fff;
   background-position: 200px 110px;
   background-size: 300px;
   border-radius: 10px;
@@ -77,6 +81,8 @@ body {
   border: 2px solid #000;
 }
 
+
+
 /* components */
 
 /* materi */
@@ -129,6 +135,11 @@ body {
   background-color: #0fd40f;
 } */
 
+.emosi a{
+  text-decoration: none;
+  color: #000;
+}
+
 .materi-emosi .materi-img .frame-img {
   width: 150px;
   height: 150px;
@@ -147,6 +158,21 @@ body {
   width: 330px;
   border-radius: 20px;
   border: 3px solid #A47533;
+}
+
+.menu-item select, .menu-item option{
+  font-family: comic;
+  font-size: 16px;
+  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+  filter: brightness(110%);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 15px 10px;
+  padding: 10px;
+
 }
 
 /* materi emosi */
@@ -203,7 +229,7 @@ body {
   width: 150px;
   height: 60px;
   background-image: url(/static/img/button/flat-design-leaves-collection.png);
-  filter: brightness(120%);
+  color: #fff;
   background-position: 200px 110px;
   background-size: 300px;
   border: 3px solid #007419;
@@ -229,6 +255,10 @@ body {
 @media (min-width: 768px) {
   .menu .menu-item img {
     width: 110px;
+  }
+  
+  .title .menu-item img {
+    width: 70px;
   }
 
   .button-menu button {
@@ -318,12 +348,20 @@ body {
     width: 480px;
   }
 
+  .menu-item select, .menu-item option{
+    width: 160px;
+    height: 70px;
+    font-size: 23px;
+    margin: 30px 20px;
+    padding: 20px;
+  }
+
   /* materi emosi */
 
   /* latihan options */
 
   .card .card-title {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .header .title-text {

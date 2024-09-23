@@ -3,61 +3,28 @@
 {% block content %}
 <div class="container">
     <div class="header vh-100 d-flex flex-column">
-        <div class="title d-flex justify-content-between align-items-center">
-            <div class="title-text d-flex justify-content-center align-items-center text-uppercase">materi</div>
+        <div class="title d-flex justify-content-around align-items-center">
+            <div class="menu-item d-flex align-items-center gap-1">
+                <img src="{{ url_for('static', filename='img/beranda/materi.png') }}" alt="">
+                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <p class="mt-3">materi</p>
+                </div>
+            </div>
             <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi dasar</div>
         </div>
 
-        <div
-            class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='bahagia') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">bahagia</button>
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='jijik') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">jijik</button>
-                    </div>
-
-                </a>
-            </div>
-        </div>
-        <div
-            class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='marah') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">marah</button>
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='sedih') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">sedih</button>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div
-            class="menu m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-lg-5 mb-0 text-center flex-grow-1">
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='takut') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">takut</button>
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item d-flex align-items-center">
-                <a href="{{ url_for('materi_emosi', emosi='terkejut') }}">
-                    <div class="btn-materi-opsi">
-                        <button class="text-uppercase">terkejut</button>
-                    </div>
-                </a>
+        <div class="menu-btn m-auto d-flex justify-content-center">
+            <div class="emosi m-auto d-flex flex-wrap justify-content-center align-items-center gap-4">
+                {% for emosi in list_nama_emosi %}
+                <div class="card">
+                    <a href="{{url_for('materi_emosi', emosi = emosi.nama_emosi )}}">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center ">
+                            <img src="/static/img/emoji/{{ emosi.jenis_emosi_rel.jenis }}/{{ emosi.emoji }}" alt="">
+                            <h5 class="card-title">{{ emosi.nama_emosi }}</h5>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="footer-back d-flex justify-content-end align-items-end">
