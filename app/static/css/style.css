@@ -253,6 +253,7 @@ body {
   transition: width 1s linear, background-color 0.5s ease;
 }
 
+
 .latihan-emosi .frame-img {
   width: 140px;
   height: 140px;
@@ -273,6 +274,7 @@ body {
 .buttonpilihgambar {
   width: 140px;
   height: 140px;
+  cursor: pointer;
 }
 
 
@@ -324,12 +326,12 @@ body {
 }
 
 .modal .modal-content {
-  padding: 50px 20px;
+  /* padding: 30px 20px; */
   background-color: #ffffff;
 }
 
 .modal .modal-content img {
-  width: 60%;
+  width: 50%;
 }
 
 .modal .modal-content p {
@@ -339,7 +341,7 @@ body {
 
 .modal .modal-content button {
   width: 150px;
-  height: 60px;
+  height: 50px;
   background-color: #63df63;
   border-radius: 10px;
   border: 2px solid #000;
@@ -348,6 +350,7 @@ body {
   font-weight: 500;
   font-family: comic;
   letter-spacing: 1px;
+  margin: 10px 0;
 }
 
 /* latihan emosi */
@@ -567,13 +570,14 @@ body {
     width: 90%;
     /* pilih user */
   }
+
   /* materi-opsi*/
-    .header .menu-item .btn-menu button {
+  .header .menu-item .btn-menu button {
     width: 240px;
     height: 80px;
     font-size: 23px;
   }
-  
+
   /* materi-opsi */
 
 

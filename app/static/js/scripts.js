@@ -6,7 +6,11 @@ const totalWidth = timerBar.parentElement.offsetWidth;
 let timerInterval;
 let selectedButton1 = null;
 let selectedButton2 = null;
-let jenisEmosi = "emosi-dasar"; // Tambahkan ini di awal agar bisa diakses
+
+const shopElement = document.getElementById("emosi-data");
+const shopName = shopElement.getAttribute("data-name");
+const shopLocation = shopElement.getAttribute("data-location");
+let jenisEmosi = shopName; // Tambahkan ini di awal agar bisa diakses
 
 function runConfetti() {
   const canvas = document.getElementById("confetti");
@@ -93,23 +97,21 @@ function checkEmosi(button) {
     selectedButton2 = button;
     const emotion1 = selectedButton1.getAttribute("data-emotion");
     const emotion2 = selectedButton2.getAttribute("data-emotion");
-    const namaEmosi = "Bahagia";
-    console.log(emotion1, emotion2, namaEmosi);
+    const namaEmosi = shopLocation;
 
     if (emotion1 === namaEmosi && emotion2 === namaEmosi) {
-      console.log("sama");
       setTimeout(() => {
         clearInterval(timerInterval);
         if (jenisEmosi === "emosi-gabungan") {
-          showFeedbackGabungan("Berhasil", "berhasil");
           runConfetti();
+          showFeedbackGabungan("Berhasil", "berhasil");
         } else {
+          runConfetti();
           showFeedback(
             "Wah, jawaban kamu sempurna!",
             "/static/img/emoji/jawabanbenar.png",
             "berhasil"
           );
-          runConfetti();
         }
         selectedButton1 = null;
         selectedButton2 = null;

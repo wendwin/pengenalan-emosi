@@ -55,6 +55,18 @@ class Materi(db.Model):
 
     def __repr__(self):
         return f'{self.jenis_emosi} - {self.nama_emosi}'
+    
+class Laporan(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user = db.Column(db.String(50))
+    jenis_emosi = db.Column(db.String(50))
+    nama_emosi = db.Column(db.String(50))
+    status = db.Column(db.String(50))
+
+    def __repr__(self):
+        return f'<Laporan {self.id} - {self.jenis_emosi} - {self.nama_emosi} - {self.status}>'
+
+    
 
 
 @app.route('/')
@@ -120,7 +132,15 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     jenisEmosi = jenisEmosi
     user = session['user']
     
+    emosi = session.get('emosi')
+
+    list_latihanemosi = session.get('list_latihanemosi', [])
+    if emosi not in list_latihanemosi:
+        list_latihanemosi.append(emosi)
+        session['list_latihanemosi'] = list_latihanemosi
+
     if jenisEmosi == 'emosi-dasar':
+    
         jenisLatihan =  Materi.query.filter_by(jenis_emosi=1).all()
         return render_template('latihan/latihan-pemilihan-emosi.html', 
                                rombongan=rombongan,
@@ -144,7 +164,12 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
     urlJenisEmosi = jenisEmosi
     jenisEmosi = session['jenisEmosi']
     rombongan = session['rombongan']
-    emosi = session['emosi']
+    emosi = session['emosi'].capitalize()
+
+    data = {
+        'jenis_emosi': jenisEmosi,
+        'emosi': emosi
+    }
 
     pilihan_emosi = Materi.query.filter_by(nama_emosi=emosi).first()
 
@@ -253,7 +278,8 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
                            rombongan=rombongan,
                            list_emosi=list_emosi,
                            list_emosi_gabungan=list_emosi_gabungan,
-                           urlJenisEmosi=urlJenisEmosi
+                           urlJenisEmosi=urlJenisEmosi,
+                           data=data
                            )    
     return render_template('latihan/latihan-emosi.html',
                            emosi=emosi,
@@ -261,7 +287,8 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
                            jenisEmosi=jenisEmosi,
                            rombongan=rombongan,
                            list_emosi=list_emosi,
-                           urlJenisEmosi=urlJenisEmosi
+                           urlJenisEmosi=urlJenisEmosi,
+                           data=data
                            )    
     
 
