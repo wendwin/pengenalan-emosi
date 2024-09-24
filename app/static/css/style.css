@@ -527,7 +527,7 @@ body {
   /*latihan pilih emosi*/
 
   .header .emosi .card {
-    width: 170px;
+    width: 150px;
     margin-bottom: 10px;
     background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
     background-size: cover;
@@ -540,7 +540,7 @@ body {
   }
 
   .header .emosi img {
-    width: 130px;
+    width: 100px;
     height: 100%;
   }
 
