@@ -11,6 +11,16 @@ body {
   box-sizing: border-box;
 }
 
+.disabled-link {
+  cursor: not-allowed;
+  color: gray;
+  text-decoration: none;
+}
+
+.disable-colors {
+  filter: grayscale(100%) contrast(100%);
+}
+
 /* home */
 .menu .menu-item img {
   width: 70px;
@@ -151,13 +161,13 @@ body {
   border-radius: 20px;
   object-fit: cover;
   border-radius: 20px;
-  border: 3px solid #A47533;
+  border: 3px solid #a47533;
 }
 
 .materi-emosi .materi-video video {
   width: 330px;
   border-radius: 20px;
-  border: 3px solid #A47533;
+  border: 3px solid #a47533;
 }
 
 .menu-item select, .menu-item option{
@@ -180,6 +190,14 @@ body {
 /* latihan options */
 .card .card-title {
   font-family: comic;
+
+  
+}
+.card .card-title-number {
+  font-family: comic;
+  font-size: 25px;
+  font-weight: 800;
+  
 }
 
 .header .title-text {
@@ -244,11 +262,194 @@ body {
   height: 100%;
 }
 
+.header .emosi .card:hover {
+  border: 3px solid #282b28;
+  color: #ffffff;
+}
+
 /* pilih user */
 
 .header .pilih-user img {
   width: 50px;
+  margin-top: 10px;
 }
+
+/* latihan emosi */
+.timer-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.timer-bar {
+  background-color: #30ff2b;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: width 1s linear, background-color 0.5s ease;
+}
+
+.latihan-emosi .frame-img {
+  width: 140px;
+  height: 140px;
+  background-color: #a47533;
+  border-radius: 20px;
+}
+
+.latihan-emosi .frame-img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #a47533;
+}
+
+.buttonpilihgambar {
+  width: 140px;
+  height: 140px;
+  cursor: pointer;
+}
+
+.button-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.buttonpilihgambar.flipped .button-inner {
+  transform: rotateY(180deg);
+}
+
+.button-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.button-front {
+  background-color: #dfa24e;
+  border-radius: 17px;
+  border: 3px solid #a47533;
+  background-image: url(/static/img/button/logo.png);
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.buttonpilihgambar img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 17px;
+  border: 3px solid #a47533;
+
+}
+
+.button-back {
+  border: 3px solid #a47533;
+  transform: rotateY(180deg);
+}
+
+#emosigabungan img {
+  object-fit: cover;
+  background-size: cover;
+}
+
+.modal .modal-content {
+  /* padding: 30px 20px; */
+  background-color: #ffffff;
+}
+
+.modal .modal-content img {
+  width: 50%;
+}
+
+.modal .modal-content p {
+  font-family: comic;
+  font-size: 18px;
+}
+
+.modal .modal-content button {
+  width: 150px;
+  height: 50px;
+  background-color: #63df63;
+  border-radius: 10px;
+  border: 2px solid #000;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: comic;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+/* latihan emosi */
+
+/*laporan*/
+.laporan-field{
+  position: relative;
+  width: 420px;
+  height: 620px;
+  background-image: url(/static/img/background/backgroundkayu.png);
+  background-size: 100% 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  font-family: comic ;
+}
+
+.laporan-field h4{
+  position: absolute;
+  font-size: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+  top: 23%;
+  right: 35%;
+}
+.emosilaporan-field{
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+.jenisemosilaporan{
+  margin-top: 10px;
+}
+.jenisemosilaporan h5{
+  color: #000;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.statusemosi{
+  margin-bottom: -20px;
+}
+.statuslatihan h6,p{
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.statuslatihan h6{
+  width: 70px;
+}
+
+
+/*laporan*/
 
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
@@ -341,7 +542,6 @@ body {
   .materi-emosi .frame-img img {
     width: 200px;
     height: 200px;
-
   }
 
   .materi-emosi .materi-video video {
@@ -414,6 +614,95 @@ body {
   }
 
   /* pilih user */
+
+  /* latihan emosi */
+
+  .buttonpilihgambar {
+    width: 170px;
+    height: 170px;
+  }
+
+  .buttonpilihgambar img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .latihan-emosi .frame-img {
+    width: 170px;
+    height: 170px;
+    background-color: #0fd40f;
+  }
+
+  .latihan-emosi .frame-img img {
+    width: 170px;
+    height: 170px;
+  }
+
+  /* .modal .modal-content {
+    padding: 50px 30px;
+  }
+
+  .modal .modal-content img {
+    width: 70%;
+  }
+
+  .modal .modal-content p {
+    font-size: 20px;
+  } */
+
+  /* latihan emosi */
+
+  /*laporan*/
+  .laporan-field{
+    position: relative;
+    width: 600px;
+    height: 620px;
+    background-image: url(/static/img/background/backgroundkayu.png);
+    background-size: 100% 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    font-family: comic ;
+  }
+  
+  .laporan-field h4{
+    position: absolute;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #000;
+    top: 27%;
+    right: 40%;
+  }
+  .emosilaporan-field{
+    position: absolute;
+    width: 400px;
+    top: 40%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .jenisemosilaporan{
+    margin-top: 0px;
+  }
+
+  .jenisemosilaporan h5{
+    color: #000;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  .statusemosi{
+    margin-bottom: -17px;
+  }
+  .statuslatihan h6,p{
+    color: #000;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .statuslatihan h6{
+    width: 70px;
+  }
+  /*laporan*/
 }
 
 @media (min-width: 1200px) {
@@ -441,15 +730,15 @@ body {
     width: 90%;
     /* pilih user */
   }
+
   /* materi-opsi*/
-    .header .menu-item .btn-menu button {
+  .header .menu-item .btn-menu button {
     width: 240px;
     height: 80px;
     font-size: 23px;
   }
-  
-  /* materi-opsi */
 
+  /* materi-opsi */
 
   /* materi-emosi */
   .materi-emosi .materi-img .frame-img {
@@ -460,8 +749,97 @@ body {
   .materi-emosi .frame-img img {
     width: 250px;
     height: 250px;
-
   }
 
   /* materi-emosi */
+
+  /* latihan emosi */
+
+  /* .timer-bar {
+    background-color: #30FF2B;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: width 1s linear, background-color 0.5s ease;
+  } */
+
+  .header .container-latihan {
+    width: 60%;
+  }
+
+  .buttonpilihgambar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .buttonpilihgambar img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* .latihan-emosi .latihan-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .latihan-emosi .frame-img img {
+    width: 180px;
+    height: 180px;
+  } */
+
+  /* latihan emosi */
+
+    /*laporan*/
+    .laporan-field{
+      position: relative;
+      width: 800px;
+      height: 620px;
+      background-image: url(/static/img/background/backgroundkayu.png);
+      background-size: 100% 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      font-family: comic ;
+    }
+    
+    .laporan-field h4{
+      position: absolute;
+      font-size: 25px;
+      text-transform: capitalize;
+      color: #000;
+      top: 16%;
+      right: 42%;
+    }
+    .emosilaporan-field{
+      position: absolute;
+      width: 600px;
+      top: 35%;
+      left: 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .jenisemosilaporan{
+      margin-top: 0px;
+    }
+  
+    .jenisemosilaporan h5{
+      color: #000;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+    .statusemosi{
+      margin-bottom: -17px;
+    }
+    .statuslatihan h6,p{
+      color: #000;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+    .statuslatihan h6{
+      width: 70px;
+    }
+    /*laporan*/
+
 }
