@@ -141,7 +141,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     if request.method == 'POST':
         statuslatihan=request.form['statuslatihan']
     
-        emosi = session.get('emosi').capitalize()
+        emosi = session.get('emosi')
     
 
         list_latihanemosi = session.get('list_latihanemosi', [])
@@ -158,8 +158,8 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if Laporan.status != 'berhasil':
-                        Laporan.status = 'berhasil'
+                    if laporan.status != 'berhasil':
+                        laporan.status = 'berhasil'
                         db.session.commit()  
                     else:
                         pass
@@ -187,8 +187,8 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if Laporan.status != 'berhasil':
-                        Laporan.status = 'berhasil'
+                    if laporan.status != 'berhasil':
+                        laporan.status = 'berhasil'
                         db.session.commit()  
                     else:
                         pass
@@ -239,9 +239,9 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
 
                 session.pop('list_latihanemosi')
                 session.pop('rombongan')
-                session.pop('namaemosi')
-                session.pop('jenisemosi')
-                session.pop('siswa')
+                session.pop('emosi')
+                session.pop('jenisEmosi')
+                session.pop('user')
                 return render_template('index.html')
             else:
                 laporan = Laporan.query.filter_by(
@@ -258,7 +258,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                     else:
                         pass
                 else:
-                    new_laporan = laporan(
+                    new_laporan = Laporan(
                         user=user,
                         # rombongan=rombongan,
                         jenis_emosi=jenisEmosi,
@@ -358,53 +358,53 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
     random.shuffle(list_emosi)
 
     
-    if jenisEmosi == 'emosi-gabungan':
-        if emosi == 'bingung':
+    if urlJenisEmosi == 'emosi-gabungan':
+        if emosi == 'Bingung':
             list_emosi_gabungan = []
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='terkejut').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='sedih').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
-        elif emosi == 'benci':
+        elif emosi == 'Benci':
             list_emosi_gabungan = []
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='marah').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='takut').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
-        elif emosi == 'kagum':
+        elif emosi == 'Kagum':
             list_emosi_gabungan = []
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='terkejut').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
             pilihan_emosi1 = Materi.query.filter_by(nama_emosi='takut').first()
             if pilihan_emosi1:
                 list_emosi_gabungan.append({
                     'nama_emosi': pilihan_emosi1.nama_emosi,
-                    'jenis_emosi': pilihan_emosi1.jenis_emosi,
+                    'jenis_emosi': pilihan_emosi1.jenis_emosi_rel.jenis,
                     'gambar_emosi': pilihan_emosi1.gambar_satu
                 })
 
