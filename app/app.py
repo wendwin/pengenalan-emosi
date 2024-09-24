@@ -433,7 +433,7 @@ def laporan_rombel(rombel):
     return render_template('/laporan/laporan-rombel.html', rombel=rombel, users=users)
 
 @app.route('/laporan/rombel/<rombel>/<user>')
-def laporan_rombel(rombel, user):
+def laporan_rombel_user(rombel, user):
 
     return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
 
