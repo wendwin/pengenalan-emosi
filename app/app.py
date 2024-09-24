@@ -434,7 +434,6 @@ def laporan_rombel(rombel):
 
 @app.route('/laporan/rombel/<rombel>/<user>')
 def laporan_rombel_user(rombel, user):
-
     return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
 
 if __name__ == '__main__':
