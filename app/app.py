@@ -440,24 +440,12 @@ def laporan_rombel(rombel):
     users = User.query.filter_by(rombel_id=rombel).all()
     return render_template('/laporan/laporan-rombel.html', rombel=rombel, users=users)
 
-@app.route('/laporan/rombel/<rombongan>')
-def laporan_pilih_user(rombongan):
-    session['rombongan'] = rombongan 
-    users = User.query.filter_by(rombel_id=rombongan).all()
-    
-    return render_template('laporan/laporan-pemilihan-user.html',
-                               users=users, rombongan=rombongan)
 
+@app.route('/laporan/rombel/<rombel>/<user>')
+def laporan_rombel_user(rombel, user):
 
-@app.route('/laporan/rombel/<rombongan>/<user>')
-def laporan_hasil(user, rombongan):
-    # session['user'] = user.capitalize()
+    return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
 
-    # laporan-dasar =  Materi.query.filter_by(jenis_emosi=1).all()
-    # laporan-gabungan =  Materi.query.filter_by(jenis_emosi=2).all()
-
-    return render_template('laporan/laporan-hasil.html',
-                               rombongan=rombongan)  
 
 if __name__ == '__main__':
     app.run(debug=True)
