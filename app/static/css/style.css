@@ -75,6 +75,28 @@ body {
   padding: 10px;
 }
 
+.dropup-center{
+  margin: 0px 10px;
+}
+.dropup-center button{
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  font-family: comic;
+}
+.dropup-center .dropdown-menu li{
+  font-size: 16px;
+}
+.dropup-center .dropdown-menu a:hover{
+  transition: 0.1s ease-in-out;
+}
+.dropup-center .dropdown-menu a:hover{
+  background-color: #c7c7c7;
+}
+
 .footer-back a {
   text-decoration: none;
 }
@@ -89,6 +111,11 @@ body {
   height: 40px;
   border-radius: 10px;
   border: 2px solid #000;
+  transition: 0.1s ease-in-out;
+}
+.footer-back button:hover{
+  color: #fff;
+  background-color: #4e4e4e;
 }
 
 
@@ -490,13 +517,26 @@ body {
     margin: 30px 20px;
     padding: 20px;
   }
-
+  
   .footer-back button {
     width: 160px;
     height: 70px;
     font-size: 23px;
     font-family: comic;
   }
+  .dropup-center {
+    /* background-color: #0fd40f; */
+    margin: 0px 20px;
+    padding: 20px;
+  }
+  .dropup-center button{
+    height: 70px;
+    font-size: 23px;
+  }
+  .dropup-center .dropdown-menu li{
+    font-size: 23px;
+  }
+  
 
   .footer-back img {
     width: 55px;

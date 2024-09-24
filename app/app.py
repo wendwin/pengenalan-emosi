@@ -80,6 +80,10 @@ def materi():
 @app.route('/materi/emosi-dasar')
 def materi_emosi_dasar():
     list_nama_emosi =  Materi.query.filter_by(jenis_emosi=1).all()
+    if 'remaining_emosi' not in session:
+        pass
+    else:
+        session.pop('remaining_emosi')
     return render_template('materi/materi-emosi-dasar.html', 
                                list_nama_emosi=list_nama_emosi
                                )
@@ -87,18 +91,23 @@ def materi_emosi_dasar():
 @app.route('/materi/emosi-gabungan')
 def materi_emosi_gabungan():
     list_nama_emosi =  Materi.query.filter_by(jenis_emosi=2).all()
+    if 'remaining_emosi' not in session:
+        pass
+    else:
+        session.pop('remaining_emosi')
     return render_template('materi/materi-emosi-gabungan.html', 
                                list_nama_emosi=list_nama_emosi
                                )
 
-@app.route('/materi/emosi-dasar/<emosi>')
-def materi_emosi(emosi):
+@app.route('/materi/emosi-dasar/<emosi>/<jenisEmosi>')
+def materi_emosi(emosi,jenisEmosi):
     emosi = emosi.capitalize()
-    materi = Materi.query.filter_by(nama_emosi=emosi)
-    return render_template('materi/materi-emosi.html', emosi=emosi, materi=materi)
+    materi = Materi.query.filter_by(nama_emosi=emosi)  
+    list_nama_emosi = Materi.query.filter_by(jenis_emosi=jenisEmosi)  
+    return render_template('materi/materi-emosi.html', emosi=emosi, jenisEmosi=jenisEmosi ,materi=materi, list_nama_emosi=list_nama_emosi)
 
 @app.route('/latihan')
-def latihan():
+def latihan():  
     return render_template('latihan/latihan.html')
 
 @app.route('/latihan/<jenisEmosi>/rombel')
@@ -440,11 +449,10 @@ def laporan_pilih_user(rombongan):
                                users=users, rombongan=rombongan)
 
 
-
 @app.route('/laporan/rombel/<rombongan>/<user>')
 def laporan_hasil(user, rombongan):
     laporan_dasar =  Laporan.query.filter_by(jenis_emosi='emosi-dasar', user=user).all()
-    laporan_gabungan =  Laporan.query.filter_by(jenis_emosi=2, user=user).all()
+    laporan_gabungan =  Laporan.query.filter_by(jenis_emosi='emosi-gabungan', user=user).all()
 
     return render_template('laporan/laporan-hasil.html',
                                rombongan=rombongan,
