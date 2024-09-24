@@ -420,7 +420,22 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
                            urlJenisEmosi=urlJenisEmosi,
                            data=data
                            )    
-    
+
+
+@app.route('/laporan/rombel')
+def laporan():
+    rombel = Rombel.query.all()
+    return render_template('/laporan/laporan.html', rombel=rombel)
+
+@app.route('/laporan/rombel/<rombel>')
+def laporan_rombel(rombel):
+    users = User.query.filter_by(rombel_id=rombel).all()
+    return render_template('/laporan/laporan-rombel.html', rombel=rombel, users=users)
+
+@app.route('/laporan/rombel/<rombel>/<user>')
+def laporan_rombel(rombel, user):
+
+    return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
 
 if __name__ == '__main__':
     app.run(debug=True)
