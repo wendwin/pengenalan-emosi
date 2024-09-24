@@ -79,11 +79,17 @@ def materi():
 
 @app.route('/materi/emosi-dasar')
 def materi_emosi_dasar():
-    return render_template('materi/materi-emosi-dasar.html')
+    list_nama_emosi =  Materi.query.filter_by(jenis_emosi=1).all()
+    return render_template('materi/materi-emosi-dasar.html', 
+                               list_nama_emosi=list_nama_emosi
+                               )
 
 @app.route('/materi/emosi-gabungan')
 def materi_emosi_gabungan():
-    return render_template('materi/materi-emosi-gabungan.html')
+    list_nama_emosi =  Materi.query.filter_by(jenis_emosi=2).all()
+    return render_template('materi/materi-emosi-gabungan.html', 
+                               list_nama_emosi=list_nama_emosi
+                               )
 
 @app.route('/materi/emosi-dasar/<emosi>')
 def materi_emosi(emosi):
@@ -350,6 +356,7 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
             })
 
     random.shuffle(list_emosi)
+
     
     if jenisEmosi == 'emosi-gabungan':
         if emosi == 'bingung':
@@ -423,18 +430,34 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
 
 
 @app.route('/laporan/rombel')
-def laporan():
+def laporan_pilih_rombel():
     rombel = Rombel.query.all()
-    return render_template('/laporan/laporan.html', rombel=rombel)
+    return render_template('laporan/laporan-pemilihan-rombel.html', rombel=rombel)
+
 
 @app.route('/laporan/rombel/<rombel>')
 def laporan_rombel(rombel):
     users = User.query.filter_by(rombel_id=rombel).all()
     return render_template('/laporan/laporan-rombel.html', rombel=rombel, users=users)
 
-@app.route('/laporan/rombel/<rombel>/<user>')
-def laporan_rombel_user(rombel, user):
-    return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
+@app.route('/laporan/rombel/<rombongan>')
+def laporan_pilih_user(rombongan):
+    session['rombongan'] = rombongan 
+    users = User.query.filter_by(rombel_id=rombongan).all()
+    
+    return render_template('laporan/laporan-pemilihan-user.html',
+                               users=users, rombongan=rombongan)
+
+
+@app.route('/laporan/rombel/<rombongan>/<user>')
+def laporan_hasil(user, rombongan):
+    # session['user'] = user.capitalize()
+
+    # laporan-dasar =  Materi.query.filter_by(jenis_emosi=1).all()
+    # laporan-gabungan =  Materi.query.filter_by(jenis_emosi=2).all()
+
+    return render_template('laporan/laporan-hasil.html',
+                               rombongan=rombongan)  
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,3 +1,11 @@
+const colors = ["green", "blue", "yellow"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+const elements = document.querySelectorAll(".randomcolor");
+elements.forEach((element) => {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  element.style.color = randomColor;
+});
+
 let timerDuration = 10;
 let currentTime = timerDuration;
 const interval = 1000;
