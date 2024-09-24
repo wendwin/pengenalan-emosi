@@ -46,6 +46,12 @@ body {
   font-weight: 600;
 }
 
+.button-menu button:hover {
+  border: 3px solid #40ae1b;
+  color: #ffffff;
+  filter: brightness(120%)
+}
+
 /* home */
 
 /* components */
@@ -106,6 +112,12 @@ body {
   border: 3px solid #000;
 }
 
+.menu-item button:hover {
+  border: 3px solid #40ae1b;
+  color: #ffffff;
+  filter: brightness(120%)
+}
+
 /* materi */
 
 /* materi options*/
@@ -142,6 +154,11 @@ body {
 /* .materi-emosi {
   background-color: #0fd40f;
 } */
+.rombel .card:hover {
+  border: 3px solid rgb(201, 137, 49);
+  color: #ffffff;
+  filter: brightness(120%)
+}
 
 .emosi a {
   text-decoration: none;
@@ -388,6 +405,62 @@ body {
 
 /* latihan emosi */
 
+/* laporan */
+
+.laporan-field {
+  position: relative;
+  width: 420px;
+  height: 620px;
+  background-image: url(/static/img/background/backgroundkayu.png);
+  background-size: 100% 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  font-family: comic;
+}
+
+.laporan-field h4 {
+  position: absolute;
+  font-size: 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+  top: 23%;
+  right: 35%;
+}
+
+.emosilaporan-field {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+
+.jenisemosilaporan {
+  margin-top: 10px;
+}
+
+.jenisemosilaporan h5 {
+  color: #000;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.statusemosi {
+  margin-bottom: -20px;
+}
+
+.statuslatihan h6 {
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.statuslatihan h6 {
+  width: 70px;
+}
+
+/* laporan */
+
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
@@ -589,6 +662,63 @@ body {
   } */
 
   /* latihan emosi */
+
+  /* laporan */
+  .laporan-field {
+    position: relative;
+    width: 600px;
+    height: 620px;
+    background-image: url(/static/img/background/backgroundkayu.png);
+    background-size: 100% 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    font-family: comic;
+  }
+
+  .laporan-field h4 {
+    position: absolute;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #000;
+    top: 27%;
+    right: 40%;
+  }
+
+  .emosilaporan-field {
+    position: absolute;
+    width: 400px;
+    top: 40%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .jenisemosilaporan {
+    margin-top: 0px;
+  }
+
+  .jenisemosilaporan h5 {
+    color: #000;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .statusemosi {
+    margin-bottom: -17px;
+  }
+
+  .statuslatihan h6 {
+    color: #000;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .statuslatihan h6 {
+    width: 70px;
+  }
+
+  /* laporan */
 }
 
 @media (min-width: 1200px) {
@@ -675,4 +805,61 @@ body {
   } */
 
   /* latihan emosi */
+
+  /* laporan */
+  .laporan-field {
+    position: relative;
+    width: 800px;
+    height: 620px;
+    background-image: url(/static/img/background/backgroundkayu.png);
+    background-size: 100% 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    font-family: comic;
+  }
+
+  .laporan-field h4 {
+    position: absolute;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #000;
+    top: 16%;
+    right: 42%;
+  }
+
+  .emosilaporan-field {
+    position: absolute;
+    width: 600px;
+    top: 35%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .jenisemosilaporan {
+    margin-top: 0px;
+  }
+
+  .jenisemosilaporan h5 {
+    color: #000;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .statusemosi {
+    margin-bottom: -17px;
+  }
+
+  .statuslatihan h6 {
+    color: #000;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .statuslatihan h6 {
+    width: 70px;
+  }
+
+  /* laporan */
 }

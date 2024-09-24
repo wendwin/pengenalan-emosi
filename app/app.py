@@ -436,15 +436,22 @@ def laporan_pilih_rombel():
 
 
 @app.route('/laporan/rombel/<rombel>')
-def laporan_rombel(rombel):
+def laporan_pilih_user(rombel):
     users = User.query.filter_by(rombel_id=rombel).all()
-    return render_template('/laporan/laporan-rombel.html', rombel=rombel, users=users)
+    return render_template('/laporan/laporan-pemilihan-user.html', rombel=rombel, users=users)
 
 
 @app.route('/laporan/rombel/<rombel>/<user>')
-def laporan_rombel_user(rombel, user):
+def laporan_hasil(rombel, user):
+    laporan_dasar =  Laporan.query.filter_by(jenis_emosi='emosi-dasar', user=user).all()
+    laporan_gabungan =  Laporan.query.filter_by(jenis_emosi='emosi-gabungan', user=user).all()
 
-    return render_template('/laporan/laporan-rombel.html', rombel=rombel, user=user)
+    return render_template('laporan/laporan-hasil.html',
+                               rombel=rombel,
+                               user=user,
+                               laporan_dasar=laporan_dasar,
+                               laporan_gabungan=laporan_gabungan)
+    
 
 
 if __name__ == '__main__':
