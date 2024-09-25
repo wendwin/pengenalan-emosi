@@ -78,6 +78,7 @@ def materi():
     return render_template('materi/materi.html')
 
 @app.route('/materi/emosi-dasar')
+
 def materi_emosi_dasar():
     list_nama_emosi =  Materi.query.filter_by(jenis_emosi=1).all()
     return render_template('materi/materi-emosi-dasar.html', 
@@ -201,7 +202,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                     )
                     db.session.add(new_laporan)
                     db.session.commit()
-                    print(new_laporan.id) 
+
             jenisLatihan =  Materi.query.filter_by(jenis_emosi=1).all()
             return render_template('latihan/latihan-pemilihan-emosi.html', 
                                    rombongan=rombongan,
@@ -221,8 +222,8 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if Laporan.status != 'berhasil':
-                        Laporan.status = 'berhasil'
+                    if laporan.status != 'berhasil':
+                        laporan.status = 'berhasil'
                         db.session.commit()  
                     else:
                         pass
@@ -252,8 +253,8 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                     ).first()
 
                 if laporan:
-                    if Laporan.status != 'berhasil':
-                        Laporan.status = 'berhasil'
+                    if laporan.status != 'berhasil':
+                        laporan.status = 'berhasil'
                         db.session.commit()  
                     else:
                         pass

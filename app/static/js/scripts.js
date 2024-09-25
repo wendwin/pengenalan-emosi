@@ -1,10 +1,20 @@
-const colors = ["green", "blue", "yellow"];
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
-const elements = document.querySelectorAll(".randomcolor");
-elements.forEach((element) => {
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  element.style.color = randomColor;
-});
+// const colors = ["green", "blue", "yellow", "green", "blue", "yellow"];
+// const colors = [
+//   "#ffa500",
+//   "#faeb36",
+//   "#79c314",
+//   "#487de7",
+//   "#4b369d",
+//   "#70369d",
+// ];
+// const randomColor = colors;
+// const elements = document.querySelectorAll(".randomcolor");
+
+// for (var i = 0; i < colors.length; i++) {
+//   elements[i].style.color = colors[i];
+//   elements[i].style.fontweight = "bold";
+//   elements[i].style.fontsize = "30px";
+// }
 
 let timerDuration = 10;
 let currentTime = timerDuration;
@@ -18,7 +28,7 @@ let selectedButton2 = null;
 const shopElement = document.getElementById("emosi-data");
 const shopName = shopElement.getAttribute("data-name");
 const shopLocation = shopElement.getAttribute("data-location");
-let jenisEmosi = shopName; // Tambahkan ini di awal agar bisa diakses
+let jenisEmosi = shopName;
 
 function runConfetti() {
   const canvas = document.getElementById("confetti");

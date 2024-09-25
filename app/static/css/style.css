@@ -36,8 +36,9 @@ body {
   width: 120px;
   height: 50px;
   background-image: url(/static/img/button/flat-design-leaves-collection.png);
-  border: 3px solid #007419;
+  border: 3px solid #40ae1b;
   color: #fff;
+  filter: brightness(120%);
   background-position: 200px 110px;
   background-size: 300px;
   border-radius: 10px;
@@ -47,9 +48,8 @@ body {
 }
 
 .button-menu button:hover {
-  border: 3px solid #40ae1b;
+  border: 3px solid #007419;
   color: #ffffff;
-  filter: brightness(120%)
 }
 
 /* home */
@@ -76,9 +76,15 @@ body {
 }
 
 .footer-back {
-  /* background-color: #0fd40f; */
+  /* background-color: #266ebb; */
   margin: 15px 10px;
   padding: 10px;
+}
+
+.footer-back button:hover {
+  filter: brightness(120%);
+  background-color: #266ebb;
+  color: #ffffff;
 }
 
 .footer-back a {
@@ -91,8 +97,8 @@ body {
 
 .footer-back button {
   font-size: 16px;
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   border-radius: 10px;
   border: 2px solid #000;
 }
@@ -113,7 +119,7 @@ body {
 }
 
 .menu-item button:hover {
-  border: 3px solid #40ae1b;
+  border: 3px solid #007419;
   color: #ffffff;
   filter: brightness(120%)
 }
@@ -271,6 +277,10 @@ body {
 
 .header .emosi .card:hover {
   border: 3px solid #282b28;
+  color: #ffffff;
+}
+
+.header .emosi .card .card-body:hover {
   color: #ffffff;
 }
 
