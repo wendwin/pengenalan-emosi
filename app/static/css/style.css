@@ -294,11 +294,16 @@ body {
   color: #ffffff;
 }
 
+
 /* pilih user */
 
 .header .pilih-user img {
   width: 50px;
   margin-top: 10px;
+}
+.header .pilih-user .card:hover {
+  color: #fff;
+  border: 3px solid #000;
 }
 
 /* latihan emosi */
