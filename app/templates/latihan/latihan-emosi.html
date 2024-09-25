@@ -80,7 +80,10 @@
             <div class="modal-dialog">
                 <div class="modal-content w-1000">
                     <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                        <div class="d-flex flex-column align-items-center justify-content-center" method="post">
+                        <form
+                            action="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}"
+                            class="d-flex flex-column align-items-center justify-content-center" method="post">
+
                             {% if jenisEmosi == 'Dasar' %}
                             <img class="m-auto" id="emojijawaban" src="">
                             {% elif jenisEmosi == 'Gabungan' %}
@@ -102,15 +105,13 @@
                             </div>
                             <img class="m-auto" id="emojijawaban" src="">
                             {% endif %}
-                            <form
-                                action="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}"
-                                method="post">
-                                <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
-                                <p class="m-auto my-2" id="katajawaban"></p>
-                                <button type="submit" class="buttonselanjutnya mt-2"
-                                    data-bs-dismiss="modal">Selanjutnya</button>
-                            </form>
-                        </div>
+
+                            <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
+                            <p class="m-auto my-2" id="katajawaban"></p>
+                            <button type="submit" class="buttonselanjutnya mt-2"
+                                data-bs-dismiss="modal">Selanjutnya</button>
+                        </form>
+
                     </div>
                 </div>
             </div>

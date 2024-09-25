@@ -43,7 +43,7 @@
                 <ul class="dropdown-menu">
                     {% for emosi in list_nama_emosi %}
                     <li><a class="dropdown-item"
-                            href="{{url_for('materi_emosi', emosi = emosi.nama_emosi, jenisEmosi=emosi.jenis_emosi )}}">{{emosi.nama_emosi}}</a>
+                            href="{{url_for('materi_emosi', emosi = emosi.nama_emosi.lower(), jenisEmosi=emosi.jenis_emosi )}}">{{emosi.nama_emosi}}</a>
                     </li>
                     {%endfor%}
                 </ul>

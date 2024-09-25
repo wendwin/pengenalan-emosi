@@ -319,6 +319,11 @@ body {
   margin-top: 10px;
 }
 
+.header .pilih-user .card:hover {
+  color: #fff;
+  border: 3px solid #000;
+}
+
 /* latihan emosi */
 .timer-container {
   width: 100%;
