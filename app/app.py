@@ -6,7 +6,7 @@ import random
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'KaVGm31asLwNAlaoG'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emoji'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emojii'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -92,14 +92,15 @@ def materi_emosi_gabungan():
                                list_nama_emosi=list_nama_emosi
                                )
 
-@app.route('/materi/emosi-dasar/<emosi>')
-def materi_emosi(emosi):
+@app.route('/materi/emosi-dasar/<emosi>/<jenisEmosi>')
+def materi_emosi(emosi,jenisEmosi):
     emosi = emosi.capitalize()
-    materi = Materi.query.filter_by(nama_emosi=emosi)
-    return render_template('materi/materi-emosi.html', emosi=emosi, materi=materi)
+    materi = Materi.query.filter_by(nama_emosi=emosi)  
+    list_nama_emosi = Materi.query.filter_by(jenis_emosi=jenisEmosi)  
+    return render_template('materi/materi-emosi.html', emosi=emosi, jenisEmosi=jenisEmosi ,materi=materi, list_nama_emosi=list_nama_emosi)
 
 @app.route('/latihan')
-def latihan():
+def latihan():  
     return render_template('latihan/latihan.html')
 
 @app.route('/latihan/<jenisEmosi>/rombel')
@@ -302,7 +303,7 @@ def latihan_emosi(jenisEmosi, user, rombongan, emosi):
     jenisEmosi = session['jenisEmosi']
     rombongan = session['rombongan']
     emosi = session['emosi'].capitalize()
-
+    
     data = {
         'jenis_emosi': jenisEmosi,
         'emosi': emosi
@@ -453,6 +454,29 @@ def laporan_hasil(rombel, user):
                                laporan_dasar=laporan_dasar,
                                laporan_gabungan=laporan_gabungan)
     
+@app.route('/laporan/rombel')
+def laporan_pilih_rombel():
+    rombel = Rombel.query.all()
+    return render_template('laporan/laporan-pemilihan-rombel.html', rombel=rombel)
+
+@app.route('/laporan/rombel/<rombongan>')
+def laporan_pilih_user(rombongan):
+    users = User.query.filter_by(rombel_id=rombongan).all()
+    
+    return render_template('laporan/laporan-pemilihan-user.html',
+                               users=users, rombongan=rombongan)
+
+
+@app.route('/laporan/rombel/<rombongan>/<user>')
+def laporan_hasil(user, rombongan):
+    laporan_dasar =  Laporan.query.filter_by(jenis_emosi='emosi-dasar', user=user).all()
+    laporan_gabungan =  Laporan.query.filter_by(jenis_emosi='emosi-gabungan', user=user).all()
+
+    return render_template('laporan/laporan-hasil.html',
+                               rombongan=rombongan,
+                               user=user,
+                               laporan_dasar=laporan_dasar,
+                               laporan_gabungan=laporan_gabungan)  
 
 
 if __name__ == '__main__':

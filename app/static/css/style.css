@@ -36,9 +36,8 @@ body {
   width: 120px;
   height: 50px;
   background-image: url(/static/img/button/flat-design-leaves-collection.png);
-  border: 3px solid #40ae1b;
+  border: 3px solid #007419;
   color: #fff;
-  filter: brightness(120%);
   background-position: 200px 110px;
   background-size: 300px;
   border-radius: 10px;
@@ -81,10 +80,31 @@ body {
   padding: 10px;
 }
 
-.footer-back button:hover {
-  filter: brightness(120%);
-  background-color: #266ebb;
-  color: #ffffff;
+
+.dropup-center {
+  margin: 0px 10px;
+}
+
+.dropup-center button {
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  font-family: comic;
+}
+
+.dropup-center .dropdown-menu li {
+  font-size: 16px;
+}
+
+.dropup-center .dropdown-menu a:hover {
+  transition: 0.1s ease-in-out;
+}
+
+.dropup-center .dropdown-menu a:hover {
+  background-color: #c7c7c7;
 }
 
 .footer-back a {
@@ -101,7 +121,15 @@ body {
   height: 50px;
   border-radius: 10px;
   border: 2px solid #000;
+  transition: 0.1s ease-in-out;
 }
+
+.footer-back button:hover {
+  color: #fff;
+  background-color: #4e4e4e;
+}
+
+
 
 /* components */
 
@@ -171,6 +199,11 @@ body {
   color: #000;
 }
 
+.emosi a {
+  text-decoration: none;
+  color: #000;
+}
+
 .materi-emosi .materi-img .frame-img {
   width: 150px;
   height: 150px;
@@ -191,26 +224,21 @@ body {
   border: 3px solid #a47533;
 }
 
-.menu-item select,
-.menu-item option {
-  font-family: comic;
-  font-size: 16px;
-  background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
-  filter: brightness(110%);
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  margin: 15px 10px;
-  padding: 10px;
-}
 
 /* materi emosi */
 
 /* latihan options */
 .card .card-title {
   font-family: comic;
+
+
+}
+
+.card .card-title-number {
+  font-family: comic;
+  font-size: 25px;
+  font-weight: 800;
+
 }
 
 .header .title-text {
@@ -288,6 +316,7 @@ body {
 
 .header .pilih-user img {
   width: 50px;
+  margin-top: 10px;
 }
 
 /* latihan emosi */
@@ -415,8 +444,7 @@ body {
 
 /* latihan emosi */
 
-/* laporan */
-
+/*laporan*/
 .laporan-field {
   position: relative;
   width: 420px;
@@ -459,7 +487,8 @@ body {
   margin-bottom: -20px;
 }
 
-.statuslatihan h6 {
+.statuslatihan h6,
+p {
   color: #000;
   font-size: 16px;
   text-transform: capitalize;
@@ -469,13 +498,18 @@ body {
   width: 70px;
 }
 
-/* laporan */
+
+/*laporan*/
 
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
   .menu .menu-item img {
     width: 110px;
+  }
+
+  .title .menu-item img {
+    width: 70px;
   }
 
   .title .menu-item img {
@@ -517,6 +551,22 @@ body {
     font-size: 23px;
     font-family: comic;
   }
+
+  .dropup-center {
+    /* background-color: #0fd40f; */
+    margin: 0px 20px;
+    padding: 20px;
+  }
+
+  .dropup-center button {
+    height: 70px;
+    font-size: 23px;
+  }
+
+  .dropup-center .dropdown-menu li {
+    font-size: 23px;
+  }
+
 
   .footer-back img {
     width: 55px;
@@ -566,15 +616,6 @@ body {
 
   .materi-emosi .materi-video video {
     width: 480px;
-  }
-
-  .menu-item select,
-  .menu-item option {
-    width: 160px;
-    height: 70px;
-    font-size: 23px;
-    margin: 30px 20px;
-    padding: 20px;
   }
 
   /* materi emosi */
@@ -673,7 +714,8 @@ body {
 
   /* latihan emosi */
 
-  /* laporan */
+
+  /*laporan*/
   .laporan-field {
     position: relative;
     width: 600px;
@@ -815,8 +857,7 @@ body {
   } */
 
   /* latihan emosi */
-
-  /* laporan */
+  /*laporan*/
   .laporan-field {
     position: relative;
     width: 800px;
@@ -861,7 +902,8 @@ body {
     margin-bottom: -17px;
   }
 
-  .statuslatihan h6 {
+  .statuslatihan h6,
+  p {
     color: #000;
     font-size: 18px;
     text-transform: capitalize;
@@ -871,5 +913,6 @@ body {
     width: 70px;
   }
 
-  /* laporan */
+  /*laporan*/
+
 }
