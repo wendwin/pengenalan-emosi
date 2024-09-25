@@ -92,11 +92,17 @@ def materi_emosi_gabungan():
                                list_nama_emosi=list_nama_emosi
                                )
 
-@app.route('/materi/emosi-dasar/<emosi>/<jenisEmosi>')
+@app.route('/materi/<jenisEmosi>/<emosi>')
 def materi_emosi(emosi,jenisEmosi):
+    JenisEmosiurl=jenisEmosi
     emosi = emosi.capitalize()
     materi = Materi.query.filter_by(nama_emosi=emosi)  
+    if jenisEmosi == 'emosi-dasar':
+        jenisEmosi = 1
+    else:
+        jenisEmosi = 2
     list_nama_emosi = Materi.query.filter_by(jenis_emosi=jenisEmosi)  
+    jenisEmosi = JenisEmosiurl
     return render_template('materi/materi-emosi.html', emosi=emosi, jenisEmosi=jenisEmosi ,materi=materi, list_nama_emosi=list_nama_emosi)
 
 @app.route('/latihan')
@@ -160,9 +166,12 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if laporan.status != 'berhasil':
-                        laporan.status = 'berhasil'
-                        db.session.commit()  
+                    if statuslatihan == 'berhasil':
+                        if laporan.status != 'berhasil':
+                            laporan.status = 'berhasil'
+                            db.session.commit()  
+                        else:
+                            pass
                     else:
                         pass
                 else:
@@ -189,9 +198,12 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if laporan.status != 'berhasil':
-                        laporan.status = 'berhasil'
-                        db.session.commit()  
+                    if statuslatihan == 'berhasil':
+                        if laporan.status != 'berhasil':
+                            laporan.status = 'berhasil'
+                            db.session.commit()  
+                        else:
+                            pass
                     else:
                         pass
                 else:
@@ -223,9 +235,12 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 ).first()
 
                 if laporan:
-                    if laporan.status != 'berhasil':
-                        laporan.status = 'berhasil'
-                        db.session.commit()  
+                    if statuslatihan == 'berhasil':
+                        if laporan.status != 'berhasil':
+                            laporan.status = 'berhasil'
+                            db.session.commit()  
+                        else:
+                            pass
                     else:
                         pass
                 else:
@@ -254,9 +269,12 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                     ).first()
 
                 if laporan:
-                    if laporan.status != 'berhasil':
-                        laporan.status = 'berhasil'
-                        db.session.commit()  
+                    if statuslatihan == 'berhasil':
+                        if laporan.status != 'berhasil':
+                            laporan.status = 'berhasil'
+                            db.session.commit()  
+                        else:
+                            pass
                     else:
                         pass
                 else:

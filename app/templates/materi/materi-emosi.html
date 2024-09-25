@@ -42,19 +42,25 @@
                 </button>
                 <ul class="dropdown-menu">
                     {% for emosi in list_nama_emosi %}
-                    <li><a class="dropdown-item"
-                            href="{{url_for('materi_emosi', emosi = emosi.nama_emosi.lower(), jenisEmosi=emosi.jenis_emosi )}}">{{emosi.nama_emosi}}</a>
+                    <li class="{% if request.path == '/' %}active{% endif %}">
+                        <a class="dropdown-item"
+                            href="{{url_for('materi_emosi', emosi = emosi.nama_emosi.lower(), jenisEmosi=jenisEmosi )}}">{{emosi.nama_emosi}}
+                        </a>
                     </li>
                     {%endfor%}
                 </ul>
             </div>
             <div class="footer-back d-flex justify-content-end align-items-end">
+                {% if jenisEmosi == 'emosi-dasar' %}
                 <a href="{{ url_for('materi_emosi_dasar') }}">
-                    <div class="menu-back d-flex align-items-center">
-                        <img src="/static/img/button/reply.png" alt="">
-                        <button class="text-uppercase ">kembali</button>
-                    </div>
-                </a>
+                    {% elif jenisEmosi == 'emosi-gabungan' %}
+                    <a href="{{ url_for('materi_emosi_gabungan') }}">
+                        {% endif %}
+                        <div class="menu-back d-flex align-items-center">
+                            <img src="/static/img/button/reply.png" alt="">
+                            <button class="text-uppercase ">kembali</button>
+                        </div>
+                    </a>
             </div>
         </div>
     </div>

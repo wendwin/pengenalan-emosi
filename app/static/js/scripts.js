@@ -75,19 +75,24 @@ function updateTimer() {
     timerBar.style.backgroundColor = "red";
   }
 
-  if (currentTime <= 0) {
-    clearInterval(timerInterval);
-    timerBar.style.backgroundColor = "red";
-    if (jenisEmosi === "emosi-gabungan") {
-      showFeedbackGabungan("Gagal, waktu habis", "belum berhasil");
-    } else {
-      showFeedback(
-        "Gagal, waktu habis",
-        "/static/img/emoji/jawabansalah.png",
-        "belum berhasil"
-      );
-    }
-  }
+  if (currentTime <= 0)
+    setTimeout(() => {
+      clearInterval(timerInterval);
+      timerBar.style.backgroundColor = "red";
+      if (jenisEmosi === "Gabungan") {
+        showFeedbackGabunganSalah(
+          "Gagal, waktu habis",
+          "/static/img/emoji/jawabansalah.png",
+          "belum berhasil"
+        );
+      } else {
+        showFeedback(
+          "Gagal, waktu habis",
+          "/static/img/emoji/jawabansalah.png",
+          "belum berhasil"
+        );
+      }
+    }, 1000);
 }
 
 function showFeedback(message, imageUrl, statusLatihan) {
@@ -96,10 +101,19 @@ function showFeedback(message, imageUrl, statusLatihan) {
   document.getElementById("statuslatihan").value = statusLatihan;
   new bootstrap.Modal(document.getElementById("feedbackModal")).show();
 }
-
 function showFeedbackGabungan(message, statusLatihan) {
   document.getElementById("katajawaban").innerText = message;
   document.getElementById("statuslatihan").value = statusLatihan;
+  document.getElementById("emojijawaban").classList.add("d-none");
+  document.getElementById("emosigabungan").classList.remove("d-none");
+  new bootstrap.Modal(document.getElementById("feedbackModal")).show();
+}
+function showFeedbackGabunganSalah(message, imageUrl, statusLatihan) {
+  document.getElementById("katajawaban").innerText = message;
+  document.getElementById("emojijawaban").src = imageUrl;
+  document.getElementById("statuslatihan").value = statusLatihan;
+  document.getElementById("emojijawaban").classList.remove("d-none");
+  document.getElementById("emosigabungan").classList.add("d-none");
   new bootstrap.Modal(document.getElementById("feedbackModal")).show();
 }
 
@@ -120,9 +134,9 @@ function checkEmosi(button) {
     if (emotion1 === namaEmosi && emotion2 === namaEmosi) {
       setTimeout(() => {
         clearInterval(timerInterval);
-        if (jenisEmosi === "emosi-gabungan") {
+        if (jenisEmosi === "Gabungan") {
           runConfetti();
-          showFeedbackGabungan("Berhasil", "berhasil");
+          showFeedbackGabungan("Wah, jawaban kamu sempurna!", "berhasil");
         } else {
           runConfetti();
           showFeedback(

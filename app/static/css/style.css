@@ -415,8 +415,12 @@ body {
 }
 
 #emosigabungan img {
+  width: 120px;
+  height: 130px;
   object-fit: cover;
   background-size: cover;
+  border-radius: 10px;
+  border: 3px solid #000;
 }
 
 .modal .modal-content {
@@ -684,6 +688,10 @@ p {
 
   /* latihan emosi */
 
+  /* .header .container-latihan {
+    width: 0%;
+  } */
+
   .buttonpilihgambar {
     width: 170px;
     height: 170px;
@@ -703,6 +711,13 @@ p {
   .latihan-emosi .frame-img img {
     width: 170px;
     height: 170px;
+  }
+
+  #emosigabungan img {
+    width: 170px;
+    height: 180px;
+    object-fit: cover;
+    background-size: cover;
   }
 
   /* .modal .modal-content {
@@ -746,7 +761,7 @@ p {
     position: absolute;
     width: 400px;
     top: 40%;
-    left: 10%;
+    left: 17%;
     display: flex;
     justify-content: space-between;
   }
@@ -851,6 +866,13 @@ p {
     height: 180px;
   }
 
+  #emosigabungan img {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+    background-size: cover;
+  }
+
   /* .latihan-emosi .latihan-img {
     width: 180px;
     height: 180px;
@@ -865,10 +887,10 @@ p {
   /*laporan*/
   .laporan-field {
     position: relative;
-    width: 800px;
-    height: 620px;
+    /* width: 550px; */
+    /* height: 350px; */
     background-image: url(/static/img/background/backgroundkayu.png);
-    background-size: 100% 400px;
+    background-size: 100% 325px;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -881,14 +903,14 @@ p {
     text-transform: capitalize;
     color: #000;
     top: 16%;
-    right: 42%;
+    right: 40%;
   }
 
   .emosilaporan-field {
     position: absolute;
-    width: 600px;
+    width: 400px;
     top: 35%;
-    left: 10%;
+    left: 15%;
     display: flex;
     justify-content: space-between;
   }
