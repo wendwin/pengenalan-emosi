@@ -20,15 +20,15 @@
             {% for m in materi %}
             <div class="materi-img d-flex gap-4 gap-md-5">
                 <div class="frame-img">
-                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.gambar_satu}}" alt="">
+                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis.lower()}}/{{m.nama_emosi.lower()}}/{{m.gambar_satu}}" alt="">
                 </div>
                 <div class="frame-img">
-                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.gambar_dua}}" alt="">
+                    <img src="/static/img/emosi/{{m.jenis_emosi_rel.jenis.lower()}}/{{m.nama_emosi.lower()}}/{{m.gambar_dua}}" alt="">
                 </div>
             </div>
             <div class="materi-video">
                 <video controls>
-                    <source src="/static/video/{{m.jenis_emosi_rel.jenis}}/{{m.nama_emosi}}/{{m.vidio}}"
+                    <source src="/static/video/{{m.jenis_emosi_rel.jenis.lower()}}/{{m.nama_emosi.lower()}}/{{m.vidio}}"
                         type="video/mp4">
                 </video>
             </div>
