@@ -11,6 +11,10 @@ body {
   box-sizing: border-box;
 }
 
+.active {
+  background-color: #cacaca;
+}
+
 .disabled-link {
   cursor: not-allowed;
   color: gray;
@@ -387,10 +391,10 @@ body {
 }
 
 .button-front {
-  background-color: #dfa24e;
+  background-color: #e9b265;
   border-radius: 17px;
   border: 3px solid #a47533;
-  background-image: url(/static/img/button/logo.png);
+  background-image: url(/static/img/button/logo-slb.png);
   background-size: 100px;
   background-position: center;
   background-repeat: no-repeat;
