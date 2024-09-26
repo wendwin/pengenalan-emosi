@@ -462,8 +462,8 @@ body {
 /*laporan*/
 .laporan-field {
   position: relative;
-  width: 420px;
-  height: 620px;
+  width: 400px;
+  height: 600px;
   background-image: url(/static/img/background/backgroundkayu.png);
   background-size: 100% 500px;
   background-position: center;
@@ -893,10 +893,10 @@ p {
   /*laporan*/
   .laporan-field {
     position: relative;
-    /* width: 550px; */
-    /* height: 350px; */
+    width: 560px;
+    height: 350px;
     background-image: url(/static/img/background/backgroundkayu.png);
-    background-size: 100% 325px;
+    background-size: 100% 330px;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
