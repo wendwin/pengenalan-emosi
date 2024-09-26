@@ -117,6 +117,7 @@ body {
 
 .footer-back img {
   width: 40px;
+  filter: contrast(70%);
 }
 
 .footer-back button {
@@ -130,7 +131,8 @@ body {
 
 .footer-back button:hover {
   color: #fff;
-  background-color: #4e4e4e;
+  background-color: #565e64;
+  border: none;
 }
 
 
