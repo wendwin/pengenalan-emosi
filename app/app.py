@@ -296,6 +296,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                user=user,
                                list_latihanemosi=list_latihanemosi)
     else:
+        session['list_latihanemosi']= []
         if jenisEmosi == 'emosi-dasar':
             jenisLatihan =  Materi.query.filter_by(jenis_emosi=1).all()
             return render_template('latihan/latihan-pemilihan-emosi.html', 

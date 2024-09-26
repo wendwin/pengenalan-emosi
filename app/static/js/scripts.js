@@ -132,8 +132,8 @@ function checkEmosi(button) {
     const namaEmosi = shopLocation;
 
     if (emotion1 === namaEmosi && emotion2 === namaEmosi) {
+      clearInterval(timerInterval);
       setTimeout(() => {
-        clearInterval(timerInterval);
         if (jenisEmosi === "Gabungan") {
           runConfetti();
           showFeedbackGabungan("Wah, jawaban kamu sempurna!", "berhasil");
