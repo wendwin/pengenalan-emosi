@@ -462,8 +462,8 @@ body {
 /*laporan*/
 .laporan-field {
   position: relative;
-  width: 420px;
-  height: 620px;
+  width: 400px;
+  height: 600px;
   background-image: url(/static/img/background/backgroundkayu.png);
   background-size: 100% 500px;
   background-position: center;
@@ -893,10 +893,10 @@ p {
   /*laporan*/
   .laporan-field {
     position: relative;
-    /* width: 550px; */
-    /* height: 350px; */
+    width: 560px;
+    height: 350px;
     background-image: url(/static/img/background/backgroundkayu.png);
-    background-size: 100% 325px;
+    background-size: 100% 330px;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -908,7 +908,7 @@ p {
     font-size: 25px;
     text-transform: capitalize;
     color: #000;
-    top: 20%;
+    top: 16%;
     right: 40%;
   }
 
@@ -944,257 +944,6 @@ p {
 
   .statuslatihan h6 {
     width: 70px;
-  }
-
-  /*laporan*/
-
-}
-@media (min-width: 1500px) {
-  /* Gaya khusus untuk layar lebih besar */
-
-  .button-menu button {
-    background-position: 330px 170px;
-    background-size: 470px;
-    width: 230px;
-    height: 100px;
-    border-radius: 17px;
-    font-size: 28px;
-    margin: 10px 0px;
-  }
-
-  .title .menu-item img {
-    width: 85px;
-  }
-
-  .title .title-text {
-    width: 210px;
-    height: 100px;
-    font-size: 28px;
-  }
-
-  .header .card {
-    width: 190px;
-    margin-bottom: 10px;
-    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
-    background-size: cover;
-    background-position: center;
-    border: 3px solid #a47533;
-  }
-
-  .card .card-title-number {
-    font-family: comic;
-    font-size: 28px;
-    font-weight: 800;
-  
-  }
-
-
-  .header .emosi {
-    width: 900px;
-  }
-
-  .header .emosi img {
-    width: 120px;
-    height: 100%;
-  }
-
-  .header .emosi .card {
-    width: 170px;
-    margin-bottom: 10px;
-  }
-  .header .emosi .card .card-title{
-    font-size: 28px;
-    margin-top: 5px;
-  }
-
-  .footer-back button {
-    font-size: 28px;
-    width: 200px;
-    height: 80px;
-  }
-  
-  .dropup-center button {
-    height: 80px;
-    font-size: 28px;
-  }
-  .dropup-center .dropdown-menu li {
-    font-size: 28px;
-  }
-
-
-  /* pilih user */
-  .header .pilih-user img {
-    width: 100px;
-    margin-top: 10px;
-  }
-    /* pilih user */
-
-  /* materi-opsi*/
-  .header .menu-item .btn-menu button {
-    background-position: 330px 170px;
-    background-size: 470px;
-    width: 230px;
-    height: 100px;
-    font-size: 25px;
-  }
-
-  .title .title-materi {
-    width: 220px;
-    height: 100px;
-    font-size: 28px;
-    padding: 5px;
-  }
-
-  /* materi-opsi */
-
-  /* materi-emosi */
-  .materi-emosi .materi-img .frame-img {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .materi-emosi .frame-img img {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid #a47533;
-  }
-  
-  .materi-emosi .materi-video video {
-    width: 730px;
-    border-radius: 20px;
-    border: 3px solid #a47533;
-  }
-
-  /* materi-emosi */
-
-  /* latihan emosi */
-
-  /* .timer-bar {
-    background-color: #30FF2B;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    transition: width 1s linear, background-color 0.5s ease;
-  } */
-  .header .container-latihan {
-    width: 80%;
-  }
-  .button-front {
-    background-size: 150px;
-  }
-  
-
-  .buttonpilihgambar {
-    width: 250px;
-    height: 250px;
-  }
-
-  .buttonpilihgambar img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .latihan-emosi .frame-img {
-    width: 250px;
-    height: 250px;
-    background-color: #0fd40f;
-  }
-
-  .latihan-emosi .frame-img img {
-    width: 250px;
-    height: 250px;
-  }
-
-  #emosigabungan img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    background-size: cover;
-  }
-
-  .modal .modal-content p {
-    font-family: comic;
-    font-size: 28px;
-  }
-
-  .modal .modal-content button {
-    width: 230px;
-    height: 80px;
-    font-size: 28px;
-    font-weight: 500;
-  }
-  
-
-
-  /* .latihan-emosi .latihan-img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .latihan-emosi .frame-img img {
-    width: 180px;
-    height: 180px;
-  } */
-
-  /* latihan emosi */
-  /*laporan*/
-  .laporan-field {
-    position: relative;
-    /* width: 550px; */
-    /* height: 350px; */
-    background-image: url(/static/img/background/backgroundkayu.png);
-    background-size: 100% 375px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    font-family: comic;
-  }
-
-  .laporan-field h4 {
-    position: absolute;
-    font-size: 28px;
-    text-transform: capitalize;
-    color: #000;
-    top: 29%;
-    right: 37%;
-  }
-
-  .emosilaporan-field {
-    position: absolute;
-    width: 400px;
-    top: 40%;
-    left: 15%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .jenisemosilaporan {
-    margin-top: 0px;
-  }
-
-  .jenisemosilaporan h5 {
-    color: #000;
-    font-size: 25px;
-    text-transform: capitalize;
-  }
-
-  .statusemosi {
-    margin-bottom: -17px;
-  }
-
-  .statuslatihan h6,
-  p {
-    color: #000;
-    font-size: 23px;
-    text-transform: capitalize;
-  }
-
-  .statuslatihan h6 {
-    width: 90px;
   }
 
   /*laporan*/
