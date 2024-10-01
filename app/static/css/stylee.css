@@ -1,0 +1,81 @@
+@font-face {
+    font-family: comic;
+    src: url(/static/font/comic.ttf);
+}
+
+body {
+    background-image: url(/static/img/beranda/langit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* home */
+.home .logo img {
+    width: 100px;
+}
+
+.home .menu-logo img {
+    width: 30%;
+}
+
+/* 
+.home .menu-button {
+    gap: 150px;
+} */
+
+.home .menu-button img {
+    width: 100px;
+}
+
+.home .menu-button button {
+    font-family: comic;
+    letter-spacing: 3px;
+    width: 130px;
+    height: 50px;
+    background-image: url(/static/img/button/flat-design-leaves-collection.png);
+    border: 3px solid #007419;
+    color: #fff;
+    background-position: 200px 110px;
+    background-size: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.home .menu-about button {
+    width: 250px;
+    height: 90px;
+    margin-top: 190px;
+    font-size: 24px;
+    border-radius: 40px;
+    border: 4px solid #75cb39;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-family: comic;
+    font-weight: 600;
+    color: #fff;
+    /* background-image: url(/static/img/button/cartoon-set-wooden-signboards.png); */
+    background-color: rgb(138, 206, 89);
+}
+
+.home .menu-about button:active {
+    border: none;
+}
+
+
+@media (min-width: 1500px) {
+
+    .home .menu-button button {
+        background-position: 330px 170px;
+        background-size: 470px;
+        width: 270px;
+        height: 120px;
+        border-radius: 30px;
+        font-size: 37px;
+        margin: 10px 0px;
+        /* letter-spacing: 5px; */
+    }
+}

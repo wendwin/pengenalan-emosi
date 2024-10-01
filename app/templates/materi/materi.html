@@ -1,18 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="header vh-100 d-flex flex-column">
-        <div class="title">
+<div class="">
+    <div class="vh-100 d-flex flex-column">
+        <div class="header title d-flex justify-content-between align-items-center  mx-md-4 p-md-1">
             <div class="menu-item d-flex align-items-center gap-3">
                 <img src="{{ url_for('static', filename='img/beranda/materi.png') }}" alt="">
                 <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
                     materi
                 </div>
             </div>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
+            </div>
         </div>
 
-        <div class="menu d-flex flex-column justify-content-center align-items-center gap-4 text-center flex-grow-1">
+        <div
+            class="menu d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4 text-center flex-grow-1">
             <div class="menu-item d-flex align-items-center gap-4">
                 <div class="btn-menu">
                     <a href="{{ url_for('materi_emosi_dasar') }}" class="text-decoration-none">
@@ -28,11 +34,17 @@
                 </div>
             </div>
         </div>
-        <div class="footer-back d-flex justify-content-end align-items-end">
+        <div class="footer-back d-flex justify-content-end align-items-end gap-5">
+            <a href="{{ url_for('index') }}">
+                <div class="menu-home d-flex align-items-center">
+                    <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
+                    <button class="text-uppercase "><i class="bi bi-house-door-fill"></i> home</button>
+                </div>
+            </a>
             <a href="{{ url_for('index') }}">
                 <div class="menu-back d-flex align-items-center">
-                    <img src="/static/img/button/arrow-right.png" alt="">
-                    <button class="text-uppercase ">kembali</button>
+                    <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
+                    <button class="text-uppercase "> <i class="bi bi-arrow-left-circle-fill"></i> kembali</button>
                 </div>
             </a>
         </div>

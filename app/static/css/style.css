@@ -25,38 +25,6 @@ body {
   filter: grayscale(100%) contrast(100%);
 }
 
-/* home */
-.menu .menu-item img {
-  width: 70px;
-}
-
-.title .menu-item img {
-  width: 50px;
-}
-
-.button-menu button {
-  font-family: comic;
-  letter-spacing: 3px;
-  width: 120px;
-  height: 50px;
-  background-image: url(/static/img/button/flat-design-leaves-collection.png);
-  border: 3px solid #007419;
-  color: #fff;
-  background-position: 200px 110px;
-  background-size: 300px;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.button-menu button:hover {
-  border: 3px solid #007419;
-  color: #ffffff;
-}
-
-/* home */
-
 /* components */
 .header .title {
   /* background-color: #98eca8; */
@@ -76,6 +44,9 @@ body {
   font-size: 16px;
   font-weight: 600;
   border: 3px solid #007419;
+  background-image: url(/static/img/button/flat-design-leaves-collection.png);
+  background-position: center;
+  color: #fff;
 }
 
 .footer-back {
@@ -90,7 +61,7 @@ body {
 
 .dropup-center button {
   height: 40px;
-  background-color: #fff;
+  background-color: #30ff2b;
   border: 2px solid #000;
   border-radius: 10px;
   color: #000;
@@ -136,17 +107,83 @@ body {
 
 /* components */
 
+/* home */
+.header .logo img {
+  width: 60px;
+  /* height: 60px; */
+}
+
+.logo-emoji {
+  margin-top: 50px;
+}
+
+.logo-emoji img {
+  width: 60%;
+}
+
+.menu-button {
+  height: 55%;
+}
+
+.menu-item img {
+  width: 70px;
+}
+
+.button-menu button {
+  font-family: comic;
+  letter-spacing: 3px;
+  width: 120px;
+  height: 50px;
+  background-image: url(/static/img/button/flat-design-leaves-collection.png);
+  border: 3px solid #007419;
+  color: #fff;
+  background-position: 200px 110px;
+  background-size: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button-menu button:hover {
+  border: 3px solid #007419;
+  color: #ffffff;
+}
+
+.menu-about button {
+  width: 170px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: 4px solid #fff;
+  /* padding: 5px; */
+  letter-spacing: 1px;
+  font-family: comic;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(138, 206, 89);
+  box-shadow: 0px 0px 5px 4px #75cb39;
+}
+
+.menu-about button:active {
+  border: none;
+}
+
+/* home */
+
 /* materi */
 .title .title-text {
   font-family: comic;
   width: 120px;
   height: 50px;
   font-size: 16px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-image: url(/static/img/button/materi-title.png);
+  background-position: center;
+  background-size: 110%;
   text-align: center;
   color: #000;
-  border-radius: 10px;
-  border: 3px solid #000;
+
 }
 
 .menu-item button:hover {
@@ -244,12 +281,11 @@ body {
   font-family: comic;
   width: 120px;
   height: 50px;
-  background-color: #fff;
+  /* background-color: #fff; */
   text-align: center;
   font-size: 16px;
   color: #000;
-  border-radius: 10px;
-  border: 3px solid #000;
+
 }
 
 .header .title-materi {
@@ -286,7 +322,6 @@ body {
 .header .menu-item .btn-menu button {
   width: 150px;
   height: 60px;
-  background-image: url(/static/img/button/flat-design-leaves-collection.png);
   color: #fff;
   background-position: 200px 110px;
   background-size: 300px;
@@ -511,26 +546,6 @@ p {
 /* Layar besar (desktop) */
 /* Layar sedang (tablet atau desktop kecil) */
 @media (min-width: 768px) {
-  .menu .menu-item img {
-    width: 110px;
-  }
-
-  .title .menu-item img {
-    width: 70px;
-  }
-
-  .title .menu-item img {
-    width: 70px;
-  }
-
-  .button-menu button {
-    background-position: 260px 130px;
-    background-size: 350px;
-    width: 180px;
-    height: 80px;
-    border-radius: 17px;
-    font-size: 25px;
-  }
 
   /* components */
   .header .title {
@@ -579,6 +594,36 @@ p {
   }
 
   /* components */
+
+  /* home */
+  .header .logo img {
+    width: 80px;
+  }
+
+
+  .logo-emoji img {
+    width: 40%;
+  }
+
+
+  .menu-button {
+    height: 50%;
+  }
+
+  .menu-item img {
+    width: 80px;
+  }
+
+  .button-menu button {
+    background-position: 260px 130px;
+    background-size: 350px;
+    width: 180px;
+    height: 80px;
+    border-radius: 17px;
+    font-size: 25px;
+  }
+
+  /* home */
 
   /* materi */
   .title .title-text {
@@ -656,14 +701,14 @@ p {
 
   /*latihan pilih emosi*/
 
-  .header .emosi .card {
+  /* .header .emosi .card {
     width: 150px;
     margin-bottom: 10px;
     background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
     background-size: cover;
     background-position: center;
     border: 3px solid #a47533;
-  }
+  } */
 
   .header .emosi .card {
     margin: 0px 10px;
@@ -792,6 +837,15 @@ p {
 @media (min-width: 1200px) {
   /* Gaya khusus untuk layar besar */
 
+  /* home */
+  .logo-emoji {
+    margin-top: 20px;
+  }
+
+  .menu-button {
+    height: 45%;
+  }
+
   .button-menu button {
     background-position: 270px 140px;
     background-size: 370px;
@@ -801,6 +855,9 @@ p {
     font-size: 25px;
   }
 
+  /* home */
+
+  /* emosi */
   .header .emosi {
     width: 900px;
   }
@@ -808,6 +865,8 @@ p {
   .header .emosi .card {
     margin: 0px 30px;
   }
+
+  /* emosi */
 
   /* pilih user */
   .header .menu-btn {
@@ -921,7 +980,7 @@ p {
     text-transform: capitalize;
   }
 
-  .statusemosi {
+  .sta tusemosi {
     margin-bottom: -17px;
   }
 
@@ -937,319 +996,308 @@ p {
   }
 
   /*laporan*/
+}
 
-  @media (min-width: 1500px) {
-    /* Gaya khusus untuk layar lebih besar */
+@media (min-width: 1500px) {
 
-    .button-menu button {
-      background-position: 330px 170px;
-      background-size: 470px;
-      width: 230px;
-      height: 100px;
-      border-radius: 17px;
-      font-size: 28px;
-      margin: 10px 0px;
-    }
+  /* components */
+  .header.title {
+    /* background-color: #98eca8; */
+    margin: 15px 10px;
+    padding: 10px;
+    /* border-radius: 20px; */
+  }
 
-    .title .menu-item img {
-      width: 85px;
-    }
+  .header .title-text {
+    font-family: comic;
+    width: 250px;
+    height: 120px;
+    font-size: 35px;
+    /* background-color: #fff; */
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #2d2d2d;
+    filter: brightness(90%);
+  }
 
-    .title .title-text {
-      width: 210px;
-      height: 100px;
-      font-size: 28px;
-    }
+  .btn-menu button {
+    font-family: comic;
+    letter-spacing: 3px;
+    width: 270px;
+    height: 120px;
+    border-radius: 10px;
+    border: none;
+    font-size: 28px;
+    font-weight: 600;
+    border: 3px solid #007419;
+    /* background-image: url(/static/img/button/flat-design-leaves-collection.png); */
+  }
 
-    .header .card {
-      width: 190px;
-      margin-bottom: 10px;
-      background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
-      background-size: cover;
-      background-position: center;
-      border: 3px solid #a47533;
-    }
+  .footer-back {
+    /* background-color: #266ebb; */
+    margin: 15px 10px;
+    padding: 30px;
+  }
 
-    .card .card-title-number {
-      font-family: comic;
-      font-size: 28px;
-      font-weight: 800;
-    }
+  .dropup-center {
+    margin: 0px 10px;
+  }
 
-    .header .emosi {
-      width: 900px;
-    }
+  .dropup-center button {
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #000;
+    font-size: 35px;
+    font-family: comic;
+  }
 
-    .header .emosi img {
-      width: 130px;
-      height: 100%;
-    }
+  .dropup-center .dropdown-menu li {
+    font-size: 35px;
+  }
 
-    .header .emosi .card {
-      width: 200px;
-      height: 250px;
-      margin-bottom: 10px;
-    }
+  .dropup-center .dropdown-menu a:hover {
+    transition: 0.1s ease-in-out;
+  }
 
-    .header .emosi .card .card-title {
-      font-size: 30px;
-      margin-top: 25px;
-    }
+  .dropup-center .dropdown-menu a:hover {
+    background-color: #c7c7c7;
+  }
 
-    .footer-back button {
-      font-size: 28px;
-      width: 200px;
-      height: 100px;
-    }
+  .footer-back a {
+    text-decoration: none;
+  }
 
-    .dropup-center button {
-      height: 80px;
-      font-size: 28px;
-    }
+  .footer-back img {
+    width: 40px;
+    filter: contrast(70%);
+  }
 
-    .dropup-center .dropdown-menu li {
-      font-size: 28px;
-    }
+  .footer-back .menu-home button {
+    font-size: 35px;
+    width: 250px;
+    height: 100px;
+    border-radius: 50px 50px 25px 25px;
+    font-weight: 700;
+    border: 4px solid #ffffff;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+    background-color: #e3b44c;
+    box-shadow: 0px 0px 5px 4px #dda52d;
+    letter-spacing: 4px;
+  }
 
-    /* pilih user */
-    .header .pilih-user img {
-      width: 100px;
-      margin-top: 10px;
-    }
+  .footer-back .menu-back button {
+    font-size: 33px;
+    width: 260px;
+    height: 100px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 4px solid #ffffff;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+    background-color: #0981e0;
+    box-shadow: 0px 0px 5px 4px #1bbff5;
+    letter-spacing: 4px;
+  }
 
-    /* pilih user */
+  .footer-back button:hover {
+    filter: brightness(120%);
+    color: #fff;
+    border: none;
+  }
 
-    /* materi-opsi*/
-    .header .menu-item .btn-menu button {
-      background-position: 355px 180px;
-      background-size: 470px;
-      width: 300px;
-      height: 125px;
-      font-size: 28px;
-      letter-spacing: 4px;
-      border-radius: 20px;
-      padding: 15px;
-    }
+  /* components */
 
-    .title .title-materi {
-      width: 220px;
-      height: 100px;
-      font-size: 28px;
-      padding: 5px;
-    }
-    .header .title-materi {
-      width: 280px;
-      height: 100px;
-      font-size: 28px;
-      padding: 5px;
-    }
+  /* home */
+  .header .logo img {
+    width: 120px;
+  }
 
-    /* materi-opsi */
+  .menu-item {
+    margin: 0 40px;
+  }
 
-    /* materi-emosi */
-    .materi-emosi .materi-img .frame-img {
-      width: 300px;
-      height: 300px;
-    }
+  .logo-emoji img {
+    width: 40%;
+  }
 
-    .materi-emosi .frame-img img {
-      width: 300px;
-      height: 300px;
-      border-radius: 20px;
-      object-fit: cover;
-      border-radius: 20px;
-      border: 3px solid #a47533;
-    }
+  .menu-item img {
+    width: 100px;
+  }
 
-    .materi-emosi .materi-video video {
-      width: 730px;
-      border-radius: 20px;
-      border: 3px solid #a47533;
-    }
+  .menu-button {
+    height: 40%;
+  }
 
-    /* materi-emosi */
+  .menu-item img {
+    width: 110px;
+  }
 
-    /* latihan emosi */
+  .button-menu button {
+    background-position: 330px 170px;
+    background-size: 470px;
+    width: 270px;
+    height: 120px;
+    border-radius: 20px;
+    font-size: 37px;
+    margin: 10px 0px;
+    letter-spacing: 5px;
+  }
 
-    /* .timer-bar {
-      background-color: #30FF2B;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      transition: width 1s linear, background-color 0.5s ease;
-    } */
-    .header .container-latihan {
-      width: 80%;
-    }
+  .menu-about button {
+    width: 240px;
+    height: 80px;
+    font-size: 22px;
+    border-radius: 40px;
+    letter-spacing: 3px;
+    /* box-shadow: 0px 0px 5px 4px #1bbff5; */
+  }
 
-    .button-front {
-      background-size: 150px;
-    }
+  /* home */
 
-    .buttonpilihgambar {
-      width: 250px;
-      height: 250px;
-    }
+  /* materi */
 
-    .buttonpilihgambar img {
-      width: 250px;
-      height: 250px;
-    }
+  /* materi */
 
-    .latihan-emosi .frame-img {
-      width: 250px;
-      height: 250px;
-      background-color: #0fd40f;
-    }
+  /* materi options */
+  .materi-title button {
+    font-family: comic;
+    font-size: 35px;
+    width: 400px;
+    height: 120px;
+    border-radius: 25px 25px 50px 50px;
+    font-weight: 900;
+    font-weight: 700;
+    border: 4px solid #43b66d;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+    background-color: #34db6c;
+    box-shadow: 0px 0px 5px 4px #69d48c;
+    letter-spacing: 5px;
+  }
 
-    .latihan-emosi .frame-img img {
-      width: 250px;
-      height: 250px;
-    }
+  .emosi {
+    max-width: 60%;
+  }
 
-    #emosigabungan img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      background-size: cover;
-    }
+  .emosi-gabungan {
+    max-width: 100%;
+  }
 
-    .modal .modal-content p {
-      font-family: comic;
-      font-size: 28px;
-    }
+  .emosi .card,
+  .emosi-gabungan .card {
+    width: 240px;
+    height: 270px;
+    margin: 14px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #a47533;
+  }
 
-    .modal .modal-content button {
-      width: 230px;
-      height: 80px;
-      font-size: 28px;
-      font-weight: 500;
-    }
+  .emosi .card img,
+  .emosi-gabungan .card img {
+    width: 70%;
+    /* height: 100%; */
+  }
 
-    /* .latihan-emosi .latihan-img {
-      width: 180px;
-      height: 180px;
-    }
-  
-    .latihan-emosi .frame-img img {
-      width: 180px;
-      height: 180px;
-    } */
+  .emosi .card .card-title,
+  .emosi-gabungan .card .card-title {
+    margin: 35px 0;
+    font-family: comic;
+    font-size: 34px;
+    /* font-weight: 600; */
+    letter-spacing: 4px;
+    /* text-align: center; */
+  }
 
-    /* latihan emosi */
+  .emosi-gabungan .card a {
+    color: #000;
+    text-decoration: none;
+  }
 
-    /* laporan */
-    .laporan-field {
-      position: relative;
-      /* width: 550px; */
-      /* height: 350px; */
-      background-image: url(/static/img/background/backgroundkayu.png);
-      background-size: 100% 375px;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 20px;
-      font-family: comic;
-    }
+  /* materi options */
 
-    .laporan-field h4 {
-      position: absolute;
-      font-size: 28px;
-      text-transform: capitalize;
-      color: #000;
-      top: 29%;
-      right: 37%;
-    }
+  /* materi */
+  .materi-emosi .materi-img .frame-img {
+    width: 350px;
+    height: 350px;
+  }
 
-    .emosilaporan-field {
-      position: absolute;
-      width: 400px;
-      top: 40%;
-      left: 15%;
-      display: flex;
-      justify-content: space-between;
-    }
+  .materi-emosi .frame-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #a47533;
+  }
 
-    .jenisemosilaporan {
-      margin-top: 0px;
-    }
+  .materi-emosi .materi-video video {
+    width: 830px;
+    border-radius: 20px;
+    border: 5px solid #a47533;
+  }
 
-    .jenisemosilaporan h5 {
-      color: #000;
-      font-size: 25px;
-      text-transform: capitalize;
-    }
+  /* materi */
 
-    .statusemosi {
-      margin-bottom: -17px;
-    }
+  /* latihan options */
+  .rombel {
+    width: 85%;
+  }
 
-    .statuslatihan h6,
-    p {
-      color: #000;
-      font-size: 23px;
-      text-transform: capitalize;
-    }
+  .rombel a {
+    text-decoration: none;
+  }
 
-    .statuslatihan h6 {
-      width: 90px;
-    }
+  .rombel .card .card-title-number {
+    font-family: comic;
+    font-size: 70px;
+    font-weight: normal;
+  }
 
-    /* laporan */
+  .rombel .card {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 10px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #a47533;
+  }
 
-    /* home */
-    .home .logo img {
-      width: 100px;
-    }
+  .pilih-user {
+    width: 75%;
+  }
 
-    .home .menu-logo img {
-      width: 30%;
-    }
+  .pilih-user a {
+    text-decoration: none;
+  }
 
-    /* 
-    .home .menu-button {
-        gap: 150px;
-    } */
+  .pilih-user .card .card-title {
+    font-family: comic;
+    font-size: 32px;
+  }
 
-    .home .menu-button img {
-      width: 100px;
-    }
+  .pilih-user img {
+    width: 120px;
+    margin-top: 10px;
+  }
 
-    .home .menu-button button {
-      font-family: comic;
-      letter-spacing: 3px;
-      width: 270px;
-      height: 120px;
-      background-image: url(/static/img/button/flat-design-leaves-collection.png);
-      border: 3px solid #007419;
-      color: #fff;
-      background-position: 330px 170px;
-      background-size: 470px;
-      border-radius: 30px;
-      padding: 5px;
-      font-size: 37px;
-      font-weight: 600;
-      margin: 10px 0px;
-    }
+  .pilih-user .card:hover {
+    color: #fff;
+    border: 3px solid #000;
+  }
 
-    .home .menu-about button {
-      width: 250px;
-      height: 90px;
-      margin-top: 190px;
-      font-size: 24px;
-      border-radius: 40px;
-      border: 4px solid #75cb39;
-      padding: 5px;
-      letter-spacing: 3px;
-      font-family: comic;
-      font-weight: 600;
-      color: #fff;
-      /* background-image: url(/static/img/button/cartoon-set-wooden-signboards.png); */
-      background-color: rgb(138, 206, 89);
-    }
-
-    .home .menu-about button:active {
-      border: none;
-    }
+  .pilih-user .card {
+    width: 170px;
+    margin-bottom: 10px;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #a47533;
   }
 }

@@ -1,30 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="header vh-100 d-flex flex-column">
-        <div class="title d-flex flex-wrap justify-content-around align-items-center gap-3">
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-                <div class="menu-item d-flex align-items-center gap-3">
-                    <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
+<div class="">
+    <div class=" vh-100 d-flex flex-column">
+        <div class="header title d-flex justify-content-between align-items-center  mx-md-4 p-md-1">
+            <div class="menu-item d-flex align-items-center gap-3">
+                <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
+                <a href="{{ url_for('latihan') }}">
                     <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
                         latihan
                     </div>
-                </div>
-                <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi gabungan
-                </div>
+                </a>
             </div>
-            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">rombongan belajar
+            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi {{
+                jenisEmosi }}
             </div>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
+            </div>
+        </div>
+
+        <div class="materi-title d-flex justify-content-center mt-2 mb-5">
+            <button class="title-materi d-flex justify-content-center align-items-center text-uppercase">Rombongan
+                Belajar</button>
         </div>
 
         {% include 'components/rombel.html' %}
 
-        <div class="footer-back d-flex justify-content-end align-items-end m-3 m-md-5">
+        <div class="footer-back d-flex justify-content-end align-items-end gap-5">
+            <a href="{{ url_for('index') }}">
+                <div class="menu-home d-flex align-items-center">
+                    <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
+                    <button class="text-uppercase "><i class="bi bi-house-door-fill"></i> home</button>
+                </div>
+            </a>
             <a href="{{ url_for('latihan') }}">
-                <div class="menu-back">
-                    <img src="/static/img/button/arrow-right.png" alt="">
-                    <button class="text-uppercase">kembali</button>
+                <div class="menu-back d-flex align-items-center">
+                    <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
+                    <button class="text-uppercase "> <i class="bi bi-arrow-left-circle-fill"></i> kembali</button>
                 </div>
             </a>
         </div>
