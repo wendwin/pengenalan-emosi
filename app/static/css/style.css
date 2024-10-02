@@ -1246,7 +1246,7 @@ p {
 
   /* latihan options */
   .rombel {
-    width: 85%;
+    width: 70%;
   }
 
   .rombel a {
@@ -1260,17 +1260,41 @@ p {
   }
 
   .rombel .card {
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
-    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    /* background-image: url(/static/img/button/cartoon-set-wooden-signboards.png); */
+    background-color: #51d1ba;
     background-size: cover;
     background-position: center;
-    border: 3px solid #a47533;
+    border: 3px solid #c9faff;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    /* box-shadow: 0px 0px 5px 4px #1bbff5; */
+  }
+
+  .rombel .card .card-name {
+    width: 100%;
+    height: 50px;
+    background-color: #1bbff5;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .rombel .card .card-name h1 {
+    font-family: comic;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    letter-spacing: 3px;
   }
 
   .pilih-user {
-    width: 75%;
+    width: 70%;
   }
 
   .pilih-user a {
@@ -1293,7 +1317,7 @@ p {
   }
 
   .pilih-user .card {
-    width: 170px;
+    width: 200px;
     margin-bottom: 10px;
     background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
     background-size: cover;

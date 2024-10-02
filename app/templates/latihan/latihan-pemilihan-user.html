@@ -11,6 +11,9 @@
                         latihan
                     </div>
                 </a>
+                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    emosi {{ jenisEmosi_split }}
+                </div>
             </div>
             <div class="logo">
                 <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
@@ -25,7 +28,7 @@
         </div>
 
         <div class="menu-btn m-auto d-flex justify-content-center">
-            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-5">
                 {% for user in users %}
                 <a
                     href="{{ url_for('latihan_pilih_emosi', jenisEmosi=jenisEmosi, rombongan=rombongan, user=user.nama.lower()) }}">

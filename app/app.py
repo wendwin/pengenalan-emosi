@@ -113,17 +113,22 @@ def latihan():
 def latihan_jenis_emosi(jenisEmosi):
     jenisEmosi_split = jenisEmosi.split('-')[1] 
     session['jenisEmosi'] = jenisEmosi_split.capitalize()
+    # session['rombel'] = rombel
     rombel = Rombel.query.all()
     
     if jenisEmosi == 'emosi-dasar':
-        return render_template('latihan/latihan-emosi-dasar.html', rombel=rombel, jenisEmosi=jenisEmosi)
+        return render_template('latihan/latihan-emosi-dasar.html', rombel=rombel,
+                                                                   jenisEmosi=jenisEmosi,
+                                                                   jenisEmosi_split=jenisEmosi_split)
     else:
-        return render_template('latihan/latihan-emosi-gabungan.html', rombel=rombel, jenisEmosi=jenisEmosi)
+        return render_template('latihan/latihan-emosi-gabungan.html', rombel=rombel,
+                                                                      jenisEmosi=jenisEmosi,
+                                                                      jenisEmosi_split=jenisEmosi_split)
 
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>')
 def latihan_rombel(jenisEmosi, rombongan):
     session['rombongan'] = rombongan
-    jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
+    jenisEmosi_split = jenisEmosi.split('-')[1].capitalize()
     jenisEmosi = jenisEmosi 
     users = User.query.filter_by(rombel_id=rombongan).all()
     
@@ -132,17 +137,20 @@ def latihan_rombel(jenisEmosi, rombongan):
                                users=users, 
                                rombongan=rombongan,
                                jenisEmosi=jenisEmosi,
-                               jenisEmosiSplit=jenisEmosiSplit)
+                               jenisEmosi_split=jenisEmosi_split
+                              )
     else:
         return render_template('latihan/latihan-pemilihan-user.html',
-                               users=users, rombongan=rombongan,
+                               users=users,
+                               rombongan=rombongan,
                                jenisEmosi=jenisEmosi,
-                               jenisEmosiSplit=jenisEmosiSplit)
+                               jenisEmosi_split=jenisEmosi_split
+                              )
 
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>/<user>', methods=['GET', 'POST'])
 def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     session['user'] = user
-    jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
+    # jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
     jenisEmosi = jenisEmosi
     user = session['user']
 
@@ -221,7 +229,6 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                    rombongan=rombongan,
                                    jenisLatihan=jenisLatihan,
                                    jenisEmosi=jenisEmosi,
-                                   jenisEmosiSplit=jenisEmosiSplit,
                                    user=user,
                                    list_latihanemosi=list_latihanemosi
                                    )                                   
@@ -291,7 +298,6 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
             return render_template('latihan/latihan-pemilihan-emosi.html',
                                rombongan=rombongan,
                                jenisLatihan=jenisLatihan,
-                               jenisEmosiSplit=jenisEmosiSplit,
                                jenisEmosi=jenisEmosi,
                                user=user,
                                list_latihanemosi=list_latihanemosi)
@@ -303,7 +309,6 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                    rombongan=rombongan,
                                    jenisLatihan=jenisLatihan,
                                    jenisEmosi=jenisEmosi,
-                                   jenisEmosiSplit=jenisEmosiSplit,
                                    user=user
                                    )
         else:
@@ -311,7 +316,6 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
             return render_template('latihan/latihan-pemilihan-emosi.html',
                                rombongan=rombongan,
                                jenisLatihan=jenisLatihan,
-                               jenisEmosiSplit=jenisEmosiSplit,
                                jenisEmosi=jenisEmosi,
                                user=user)
     
