@@ -1116,6 +1116,10 @@ p {
     width: 120px;
   }
 
+  .header .logo .logo-slb {
+    width: 100px;
+  }
+
   .menu-item {
     margin: 0 40px;
   }
