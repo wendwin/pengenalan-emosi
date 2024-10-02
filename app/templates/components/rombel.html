@@ -1,11 +1,14 @@
 <div class="menu-btn m-auto d-flex justify-content-center">
-    <div class="rombel m-auto d-flex flex-wrap justify-content-center align-items-center gap-4">
+    <div class="rombel m-auto d-flex flex-wrap justify-content-center align-items-center gap-5">
         {% for r in rombel %}
         <div class="">
             <a href="{{ url_for('latihan_rombel', jenisEmosi=jenisEmosi ,rombongan=r.id ) }}">
                 <div class="card">
                     <div class="card-body d-flex justify-content-center align-items-center ">
                         <h5 class="randomcolor card-title-number">{{ r.id }}</h5>
+                    </div>
+                    <div class="card-name">
+                        <h1>{{ r.nama }}</h1>
                     </div>
                 </div>
             </a>

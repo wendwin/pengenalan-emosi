@@ -25,7 +25,7 @@
 
         <div class="laporan-field mx-auto">
             <div class="emosilaporan-field">
-                <div class="d-flex flex-column">
+                <div class="laporan-content d-flex flex-column">
                     <div class="jenisemosilaporan">
                         {% if not laporan_dasar%}
                         <h5 class="fw-semibold"></h5>
@@ -40,32 +40,40 @@
                                 <div class="statusemosi d-flex">
                                     {% if emosi.status == 'berhasil'%}
                                     <div class="d-flex">
-                                        <h6>{{emosi.nama_emosi}}</h6>
+                                        <h6 class="fw-bold">{{emosi.nama_emosi}}</h6>
                                         :
-                                        <p style="color: #19B619; margin-left: 5px;">{{emosi.status}}</p>
+                                        <h6 style="color: #19B619; margin-left: 5px;">{{emosi.status}}</h6>
                                     </div>
-                                    <div class="">
-                                        <p>Berhasil</p>
-                                        <p class="text-center">{{emosi.berhasil}}</p>
-                                    </div>
-                                    <div class="">
-                                        <p>Belum Berhasil</p>
-                                        <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                    <div class="ms-3">
+                                        <div class="d-flex laporanberhasil"style="margin-bottom: -20px;">
+                                            <h6 >Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.berhasil}}</p>
+                                        </div>
+                                        <div class="d-flex laporanberhasil">
+                                            <h6 >Belum Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                        </div>
                                     </div>
 
                                     {% elif emosi.status == 'belum berhasil'%}
                                     <div class="d-flex">
-                                        <h6>{{emosi.nama_emosi}}</h6>
+                                        <h6 class="fw-bold">{{emosi.nama_emosi}}</h6>
                                         :
-                                        <p style="color: #FF0000; margin-left: 5px;">{{emosi.status}}</p>
+                                        <h6 style="color: #FF0000; margin-left: 5px;">{{emosi.status}}</h6>
                                     </div>
-                                    <div class="">
-                                        <p>Berhasil</p>
-                                        <p class="text-center">{{emosi.berhasil}}</p>
-                                    </div>
-                                    <div class="">
-                                        <p>Belum Berhasil</p>
-                                        <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                    <div class="ms-3">
+                                        <div class="d-flex laporanberhasil"style="margin-bottom: -20px;">
+                                            <h6 >Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.berhasil}}</p>
+                                        </div>
+                                        <div class="d-flex laporanberhasil">
+                                            <h6 >Belum Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                        </div>
                                     </div>
                                     {%endif%}
                                 </div>
@@ -89,32 +97,40 @@
                                 <div class="statusemosi d-flex">
                                     {% if emosi.status == 'berhasil'%}
                                     <div class="d-flex">
-                                        <h6>{{emosi.nama_emosi}}</h6>
+                                        <h6 class="fw-bold">{{emosi.nama_emosi}}</h6>
                                         :
-                                        <p style="color: #19B619; margin-left: 5px;">{{emosi.status}}</p>
+                                        <h6 style="color: #19B619; margin-left: 5px;">{{emosi.status}}</h6>
                                     </div>
-                                    <div class="">
-                                        <p>Berhasil</p>
-                                        <p class="text-center">{{emosi.berhasil}}</p>
-                                    </div>
-                                    <div class="">
-                                        <p>Belum Berhasil</p>
-                                        <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                    <div class="ms-3">
+                                        <div class="d-flex laporanberhasil" style="margin-bottom: -20px;">
+                                            <h6 >Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.berhasil}}</p>
+                                        </div>
+                                        <div class="d-flex laporanberhasil">
+                                            <h6 >Belum Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                        </div>
                                     </div>
 
                                     {% elif emosi.status == 'belum berhasil'%}
                                     <div class="d-flex">
-                                        <h6>{{emosi.nama_emosi}}</h6>
+                                        <h6 class="fw-bold">{{emosi.nama_emosi}}</h6>
                                         :
-                                        <p style="color: #FF0000; margin-left: 5px;">{{emosi.status}}</p>
+                                        <h6 style="color: #FF0000; margin-left: 5px;">{{emosi.status}}</h6>
                                     </div>
-                                    <div class="">
-                                        <p>Berhasil</p>
-                                        <p class="text-center">{{emosi.berhasil}}</p>
-                                    </div>
-                                    <div class="">
-                                        <p>Belum Berhasil</p>
-                                        <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                    <div class="ms-3">
+                                        <div class="d-flex laporanberhasil" style="margin-bottom: -20px;">
+                                            <h6 >Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.berhasil}}</p>
+                                        </div>
+                                        <div class="d-flex laporanberhasil">
+                                            <h6 >Belum Berhasil</h6>
+                                            :
+                                            <p class="text-center">{{emosi.belum_berhasil}}</p>
+                                        </div>
                                     </div>
                                     {%endif%}
                                 </div>

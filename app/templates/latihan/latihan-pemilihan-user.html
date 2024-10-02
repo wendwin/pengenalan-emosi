@@ -11,11 +11,15 @@
                         latihan
                     </div>
                 </a>
+                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    emosi {{ jenisEmosi_split }}
+                </div>
             </div>
-            <div class="logo">
+            <div
+                class="logo d-flex justify-content-center justify-content-md-end align-items-center gap-3 mx-md-4 p-md-1">
                 <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
+                <img class="logo-slb" src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
                 <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
-                <img src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
             </div>
         </div>
 
@@ -25,7 +29,7 @@
         </div>
 
         <div class="menu-btn m-auto d-flex justify-content-center">
-            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-5">
                 {% for user in users %}
                 <a
                     href="{{ url_for('latihan_pilih_emosi', jenisEmosi=jenisEmosi, rombongan=rombongan, user=user.nama.lower()) }}">

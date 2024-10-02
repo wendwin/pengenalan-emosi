@@ -11,23 +11,29 @@
                         latihan
                     </div>
                 </a>
+                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    {{ user }}
+                </div>
             </div>
-            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi {{
-                jenisEmosiSplit }}
-            </div>
-            <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">rombongan
-                belajar
-                {{ rombongan }}
-            </div>
-            <div class="logo">
+            <!-- <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi
+                
+            </div> -->
+            <div
+                class="logo d-flex justify-content-center justify-content-md-end align-items-center gap-3 mx-md-4 p-md-1">
                 <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
+                <img class="logo-slb" src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
                 <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
-                <img src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
             </div>
         </div>
 
+        <div class="materi-title d-flex justify-content-center mt-2 mb-5">
+            <button class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi {{
+                jenisEmosiSplit }}</button>
+        </div>
+
         <div class="menu-btn m-auto d-flex justify-content-center">
-            <div class="emosi m-auto d-flex flex-wrap justify-content-center align-items-center gap-4">
+            <div
+                class="{% if jenisEmosi == 'emosi-dasar' %}emosi{% else%}emosi-gabungan{% endif %} m-auto d-flex flex-wrap justify-content-center align-items-center gap-4">
                 {% for latihan in jenisLatihan %}
                 {% if latihan.nama_emosi.lower() in list_latihanemosi %}
                 <a href="#" class="disabled-link">
@@ -63,7 +69,7 @@
                     <button class="text-uppercase "><i class="bi bi-house-door-fill"></i> home</button>
                 </div>
             </a>
-            <a href="{{ url_for('index')  }}">
+            <a href="{{ url_for('latihan_rombel', jenisEmosi=jenisEmosi, rombongan=rombongan)  }}">
                 <div class="menu-back d-flex align-items-center">
                     <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
                     <button class="text-uppercase "> <i class="bi bi-arrow-left-circle-fill"></i> kembali</button>
