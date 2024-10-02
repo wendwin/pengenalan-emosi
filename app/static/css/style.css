@@ -360,7 +360,7 @@ body {
 
 /* latihan emosi */
 .timer-container {
-  width: 100%;
+  width: 90%;
   background-color: #f3f3f3;
   height: 30px;
   border-radius: 20px;
@@ -421,9 +421,9 @@ body {
 }
 
 .button-front {
-  background-color: #e9b265;
+  background-color: #f4f1ec;
   border-radius: 17px;
-  border: 3px solid #a47533;
+  border: 3px solid #50b795;
   background-image: url(/static/img/button/logo-slb.png);
   background-size: 100px;
   background-position: center;
@@ -440,11 +440,11 @@ body {
   object-fit: cover;
   background-size: cover;
   border-radius: 17px;
-  border: 3px solid #a47533;
+  border: 3px solid #50b795;
 }
 
 .button-back {
-  border: 3px solid #a47533;
+  border: 3px solid #50b795;
   transform: rotateY(180deg);
 }
 
@@ -1218,7 +1218,7 @@ p {
     /* text-align: center; */
   }
 
-  .emosi-gabungan .card a {
+  .emosi-gabungan a {
     color: #000;
     text-decoration: none;
   }
@@ -1327,5 +1327,34 @@ p {
     background-size: cover;
     background-position: center;
     border: 3px solid #a47533;
+  }
+
+  .container-latihan {
+    width: 60%;
+  }
+
+  .buttonpilihgambar {
+    width: 280px;
+    height: 280px;
+  }
+
+  .buttonpilihgambar img {
+    width: 280px;
+    height: 280px;
+  }
+
+  #emosigabungan img {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+    background-size: cover;
+  }
+
+  .button-front {
+    background-size: 180px;
+  }
+
+  .timer-container {
+    height: 40px;
   }
 }

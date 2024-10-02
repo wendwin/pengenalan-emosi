@@ -150,7 +150,7 @@ def latihan_rombel(jenisEmosi, rombongan):
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>/<user>', methods=['GET', 'POST'])
 def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     session['user'] = user
-    # jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
+    jenisEmosiSplit = jenisEmosi.split('-')[1].capitalize()
     jenisEmosi = jenisEmosi
     user = session['user']
 
@@ -229,6 +229,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                    rombongan=rombongan,
                                    jenisLatihan=jenisLatihan,
                                    jenisEmosi=jenisEmosi,
+                                   jenisEmosiSplit=jenisEmosiSplit,
                                    user=user,
                                    list_latihanemosi=list_latihanemosi
                                    )                                   
@@ -299,6 +300,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                rombongan=rombongan,
                                jenisLatihan=jenisLatihan,
                                jenisEmosi=jenisEmosi,
+                               jenisEmosiSplit=jenisEmosiSplit,
                                user=user,
                                list_latihanemosi=list_latihanemosi)
     else:
@@ -309,6 +311,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                    rombongan=rombongan,
                                    jenisLatihan=jenisLatihan,
                                    jenisEmosi=jenisEmosi,
+                                   jenisEmosiSplit=jenisEmosiSplit,
                                    user=user
                                    )
         else:
@@ -317,6 +320,7 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                rombongan=rombongan,
                                jenisLatihan=jenisLatihan,
                                jenisEmosi=jenisEmosi,
+                               jenisEmosiSplit=jenisEmosiSplit,
                                user=user)
     
 @app.route('/latihan/<jenisEmosi>/rombel/<rombongan>/<user>/<emosi>')
