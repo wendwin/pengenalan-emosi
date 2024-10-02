@@ -6,7 +6,7 @@ import random
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'KaVGm31asLwNAlaoG'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emoji'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/emojii'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -149,40 +149,29 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
     if request.method == 'POST':
         statuslatihan=request.form['statuslatihan']
     
-        emosi = session.get('emosi')
+        emosi = session['emosi']
     
 
         list_latihanemosi = session.get('list_latihanemosi', [])
-        if emosi not in list_latihanemosi:
-            list_latihanemosi.append(emosi)
-            session['list_latihanemosi'] = list_latihanemosi
-            
+        if statuslatihan == 'berhasil':
+            if emosi not in list_latihanemosi:
+                list_latihanemosi.append(emosi)
+                session['list_latihanemosi'] = list_latihanemosi
+        else:
+            pass
+        
+        emosi = emosi.capitalize()    
         if jenisEmosi == 'emosi-dasar':
             if len(list_latihanemosi) == 6:
-                laporan = Laporan.query.filter_by(
-                    user=user,
-                    jenis_emosi=jenisEmosi,
-                    nama_emosi=emosi
-                ).first()
 
-                if laporan:
-                    if statuslatihan == 'berhasil':
-                        if laporan.status != 'berhasil':
-                            laporan.status = 'berhasil'
-                            db.session.commit()  
-                        else:
-                            pass
-                    else:
-                        pass
-                else:
-                    new_laporan = Laporan(
+                new_laporan = Laporan(
                         user=user,
                         jenis_emosi=jenisEmosi,
                         nama_emosi=emosi,
                         status=statuslatihan
                     )
-                    db.session.add(new_laporan)
-                    db.session.commit()
+                db.session.add(new_laporan)
+                db.session.commit()
 
                 session.pop('list_latihanemosi')
                 session.pop('rombongan')
@@ -191,30 +180,14 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 session.pop('user')
                 return redirect(url_for('index'))
             else:
-                laporan = Laporan.query.filter_by(
-                    user=user,
-                    jenis_emosi=jenisEmosi,
-                    nama_emosi=emosi
-                ).first()
-
-                if laporan:
-                    if statuslatihan == 'berhasil':
-                        if laporan.status != 'berhasil':
-                            laporan.status = 'berhasil'
-                            db.session.commit()  
-                        else:
-                            pass
-                    else:
-                        pass
-                else:
-                    new_laporan = Laporan(
+                new_laporan = Laporan(
                         user=user,
                         jenis_emosi=jenisEmosi,
                         nama_emosi=emosi,
                         status=statuslatihan
                     )
-                    db.session.add(new_laporan)
-                    db.session.commit()
+                db.session.add(new_laporan)
+                db.session.commit()
 
             jenisLatihan =  Materi.query.filter_by(jenis_emosi=1).all()
             return render_template('latihan/latihan-pemilihan-emosi.html', 
@@ -227,32 +200,15 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                                    )                                   
         else:
             if len(list_latihanemosi) == 3:
-                laporan = Laporan.query.filter_by(
-                    user=user,
-                    # rombongan=rombongan,
-                    jenis_emosi=jenisEmosi,
-                    nama_emosi=emosi
-                ).first()
-
-                if laporan:
-                    if statuslatihan == 'berhasil':
-                        if laporan.status != 'berhasil':
-                            laporan.status = 'berhasil'
-                            db.session.commit()  
-                        else:
-                            pass
-                    else:
-                        pass
-                else:
-                    new_laporan = Laporan(
+                new_laporan = Laporan(
                         user=user,
                         # rombongan=rombongan,
                         jenis_emosi=jenisEmosi,
                         nama_emosi=emosi,
                         status=statuslatihan
                     )
-                    db.session.add(new_laporan)
-                    db.session.commit()
+                db.session.add(new_laporan)
+                db.session.commit()
 
                 session.pop('list_latihanemosi')
                 session.pop('rombongan')
@@ -261,32 +217,15 @@ def latihan_pilih_emosi(user, rombongan, jenisEmosi):
                 session.pop('user')
                 return render_template('index.html')
             else:
-                laporan = Laporan.query.filter_by(
-                    user=user,
-                    # rombongan=rombongan,
-                    jenis_emosi=jenisEmosi,
-                    nama_emosi=emosi
-                    ).first()
-
-                if laporan:
-                    if statuslatihan == 'berhasil':
-                        if laporan.status != 'berhasil':
-                            laporan.status = 'berhasil'
-                            db.session.commit()  
-                        else:
-                            pass
-                    else:
-                        pass
-                else:
-                    new_laporan = Laporan(
+                new_laporan = Laporan(
                         user=user,
                         # rombongan=rombongan,
                         jenis_emosi=jenisEmosi,
                         nama_emosi=emosi,
                         status=statuslatihan
                     )
-                    db.session.add(new_laporan)
-                    db.session.commit()
+                db.session.add(new_laporan)
+                db.session.commit()
             jenisLatihan =  Materi.query.filter_by(jenis_emosi=2).all()
             return render_template('latihan/latihan-pemilihan-emosi.html',
                                rombongan=rombongan,
@@ -464,14 +403,54 @@ def laporan_pilih_user(rombel):
 
 @app.route('/laporan/rombel/<rombel>/<user>')
 def laporan_hasil(rombel, user):
-    laporan_dasar =  Laporan.query.filter_by(jenis_emosi='emosi-dasar', user=user).all()
-    laporan_gabungan =  Laporan.query.filter_by(jenis_emosi='emosi-gabungan', user=user).all()
+    list_emosi_dasar = Materi.query.filter_by(jenis_emosi='1').all()
+    list_emosi_gabungan = Materi.query.filter_by(jenis_emosi='2').all()
+    list_emosi_dasar_nama = [materi.nama_emosi for materi in list_emosi_dasar]
+    list_emosi_gabungan_nama = [materi.nama_emosi for materi in list_emosi_gabungan]
+
+    laporan_dasar = Laporan.query.filter(
+        Laporan.jenis_emosi == 'emosi-dasar', 
+        Laporan.nama_emosi.in_(list_emosi_dasar_nama), 
+        Laporan.user == user
+    ).all()
+
+    laporan_dasar_terpilih = []
+
+    for emosi_nama in list_emosi_dasar_nama:
+        jumlah_berhasil = len([lap for lap in laporan_dasar if lap.nama_emosi == emosi_nama and lap.status == 'berhasil'])
+        jumlah_belum_berhasil = len([lap for lap in laporan_dasar if lap.nama_emosi == emosi_nama and lap.status == 'belum berhasil'])
+
+        laporan_dasar_terpilih.append({
+            'nama_emosi': emosi_nama,
+            'status': 'berhasil' if jumlah_berhasil > 0 else 'belum berhasil',
+            'berhasil': jumlah_berhasil,
+            'belum_berhasil': jumlah_belum_berhasil
+        })
+
+    laporan_gabungan = Laporan.query.filter(
+        Laporan.jenis_emosi == 'emosi-gabungan', 
+        Laporan.nama_emosi.in_(list_emosi_gabungan_nama), 
+        Laporan.user == user
+    ).all()
+
+    laporan_gabungan_terpilih = []
+
+    for emosi_nama in list_emosi_gabungan_nama:
+        jumlah_berhasil = len([lap for lap in laporan_gabungan if lap.nama_emosi == emosi_nama and lap.status == 'berhasil'])
+        jumlah_belum_berhasil = len([lap for lap in laporan_gabungan if lap.nama_emosi == emosi_nama and lap.status == 'belum berhasil'])
+
+        laporan_gabungan_terpilih.append({
+            'nama_emosi': emosi_nama,
+            'status': 'berhasil' if jumlah_berhasil > 0 else 'belum berhasil',
+            'berhasil': jumlah_berhasil,
+            'belum_berhasil': jumlah_belum_berhasil
+        })
 
     return render_template('laporan/laporan-hasil.html',
-                               rombel=rombel,
-                               user=user,
-                               laporan_dasar=laporan_dasar,
-                               laporan_gabungan=laporan_gabungan)
+                           rombel=rombel,
+                           user=user,
+                           laporan_dasar=laporan_dasar_terpilih,
+                           laporan_gabungan=laporan_gabungan_terpilih)
     
 
 

@@ -1255,7 +1255,7 @@ p {
 
   .rombel .card .card-title-number {
     font-family: comic;
-    font-size: 70px;
+    font-size: 30px;
     font-weight: normal;
   }
 
@@ -1300,4 +1300,62 @@ p {
     background-position: center;
     border: 3px solid #a47533;
   }
+    /*laporan*/
+    .laporan-field {
+      position: relative;
+      width: 1060px;
+      height: 350px;
+      background-image: url(/static/img/background/backgroundkayu.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      border: 5px solid #a47533;
+      font-family: comic;
+    }
+  
+    .laporan-field h4 {
+      position: absolute;
+      font-size: 25px;
+      text-transform: capitalize;
+      color: #000;
+      top: 16%;
+      right: 40%;
+    }
+  
+    .emosilaporan-field {
+      position: absolute;
+      width: 400px;
+      top: 35%;
+      left: 15%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .jenisemosilaporan {
+      margin-top: 0px;
+    }
+  
+    .jenisemosilaporan h5 {
+      color: #000;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  
+    .sta tusemosi {
+      margin-bottom: -17px;
+    }
+  
+    .statuslatihan h6,
+    p {
+      color: #000;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  
+    .statuslatihan h6 {
+      width: 70px;
+    }
+  
+    /*laporan*/
 }
