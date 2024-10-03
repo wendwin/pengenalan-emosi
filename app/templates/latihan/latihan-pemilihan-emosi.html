@@ -7,12 +7,15 @@
             <div class="menu-item d-flex align-items-center gap-3">
                 <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
                 <a href="{{ url_for('latihan') }}">
-                    <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <div
+                        class="title-text-latihan d-flex flex-column justify-content-center align-items-center text-uppercase">
                         latihan
                     </div>
                 </a>
-                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
-                    {{ user }}
+                <div
+                    class="title-text-user d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    {{ user.split(' ')[:2]
+                    | join(' ') }}
                 </div>
             </div>
             <!-- <div class="title-materi d-flex justify-content-center align-items-center text-uppercase">emosi

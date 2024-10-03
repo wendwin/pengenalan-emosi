@@ -25,10 +25,10 @@ let timerInterval;
 let selectedButton1 = null;
 let selectedButton2 = null;
 
-const shopElement = document.getElementById("emosi-data");
-const shopName = shopElement.getAttribute("data-name");
-const shopLocation = shopElement.getAttribute("data-location");
-let jenisEmosi = shopName;
+const emosiData = document.getElementById("emosi-data");
+const dataName = emosiData.getAttribute("data-name");
+const emosi = emosiData.getAttribute("data-location");
+let jenisEmosi = dataName;
 
 function runConfetti() {
   const canvas = document.getElementById("confetti");
@@ -129,7 +129,7 @@ function checkEmosi(button) {
     selectedButton2 = button;
     const emotion1 = selectedButton1.getAttribute("data-emotion");
     const emotion2 = selectedButton2.getAttribute("data-emotion");
-    const namaEmosi = shopLocation;
+    const namaEmosi = emosi;
 
     if (emotion1 === namaEmosi && emotion2 === namaEmosi) {
       clearInterval(timerInterval);

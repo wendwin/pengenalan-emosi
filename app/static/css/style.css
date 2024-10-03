@@ -12,7 +12,7 @@ body {
 }
 
 .active {
-  background-color: #cacaca;
+  background-color: #28c4b9;
 }
 
 .disabled-link {
@@ -77,9 +77,9 @@ body {
   transition: 0.1s ease-in-out;
 }
 
-.dropup-center .dropdown-menu a:hover {
+/* .dropup-center .dropdown-menu a:hover {
   background-color: #c7c7c7;
-}
+} */
 
 .footer-back a {
   text-decoration: none;
@@ -173,6 +173,34 @@ body {
 
 /* materi */
 .title .title-text {
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  /* background-color: #fff; */
+  background-image: url(/static/img/button/materi-title.png);
+  background-position: center;
+  background-size: 110%;
+  text-align: center;
+  color: #000;
+
+}
+
+.title .title-text-latihan {
+  font-family: comic;
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  /* background-color: #fff; */
+  background-image: url(/static/img/button/latihan-title.png);
+  background-position: center;
+  background-size: 110%;
+  text-align: center;
+  color: #000;
+
+}
+
+.title .title-text-user {
   font-family: comic;
   width: 120px;
   height: 50px;
@@ -423,11 +451,12 @@ body {
 .button-front {
   background-color: #f4f1ec;
   border-radius: 17px;
-  border: 3px solid #50b795;
+  border: 4px solid #0981e0;
   background-image: url(/static/img/button/logo-slb.png);
-  background-size: 100px;
+  background-size: 80px;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 0px 5px 0px #0981e0;
 
   /* display: flex;
   align-items: center;
@@ -444,7 +473,11 @@ body {
 }
 
 .button-back {
-  border: 3px solid #50b795;
+  border: 4px solid #0981e0;
+}
+
+.button-back {
+  border: 4px solid #0981e0;
   transform: rotateY(180deg);
 }
 
@@ -1021,14 +1054,41 @@ p {
     filter: brightness(90%);
   }
 
+  .header .title-text-latihan {
+    font-family: comic;
+    width: 250px;
+    height: 120px;
+    font-size: 35px;
+    /* background-color: #fff; */
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #2d2d2d;
+    filter: brightness(90%);
+  }
+
+  .header .title-text-user {
+    font-family: comic;
+    width: 250px;
+    height: 120px;
+    font-size: 25px;
+    /* background-color: #fff; */
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #2d2d2d;
+    filter: brightness(90%);
+    ;
+  }
+
   .btn-menu button {
     font-family: comic;
     letter-spacing: 3px;
-    width: 270px;
-    height: 120px;
+    width: 350px;
+    height: 170px;
     border-radius: 10px;
     border: none;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 600;
     border: 3px solid #007419;
     /* background-image: url(/static/img/button/flat-design-leaves-collection.png); */
@@ -1046,25 +1106,39 @@ p {
 
   .dropup-center button {
     height: 100px;
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 10px;
-    color: #000;
+    width: 350px;
+    padding: 20px;
+    background-color: #28c4b9;
+    border: 4px solid #ffffff;
+    border-radius: 20px;
+    color: #ffffff;
     font-size: 35px;
     font-family: comic;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-shadow: 0px 0px 5px 4px #28c4b9;
+  }
+
+  .dropup-center button:hover {
+    background-color: #2bd6cb;
+    border: 4px solid #2bd6cb;
   }
 
   .dropup-center .dropdown-menu li {
-    font-size: 35px;
+    width: 300px;
+    font-size: 30px;
+    font-family: comic;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 
   .dropup-center .dropdown-menu a:hover {
     transition: 0.1s ease-in-out;
   }
 
-  .dropup-center .dropdown-menu a:hover {
-    background-color: #c7c7c7;
-  }
+  /* .dropup-center .dropdown-menu a {
+    color: #222222; */
+
 
   .footer-back a {
     text-decoration: none;
@@ -1178,8 +1252,8 @@ p {
     border: 4px solid #43b66d;
     color: #fff;
     transition: 0.1s ease-in-out;
-    background-color: #34db6c;
-    box-shadow: 0px 0px 5px 4px #69d48c;
+    background-color: #51eb84;
+    box-shadow: 0px 0px 0px 5px #69d48c;
     letter-spacing: 5px;
   }
 
@@ -1193,8 +1267,8 @@ p {
 
   .emosi .card,
   .emosi-gabungan .card {
-    width: 240px;
-    height: 270px;
+    width: 200px;
+    height: 230px;
     margin: 14px;
     background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
     background-size: cover;
@@ -1248,6 +1322,7 @@ p {
 
   /* materi */
 
+
   /* latihan options */
   .rombel {
     width: 70%;
@@ -1298,7 +1373,7 @@ p {
   }
 
   .pilih-user {
-    width: 70%;
+    width: 80%;
   }
 
   .pilih-user a {
@@ -1307,7 +1382,7 @@ p {
 
   .pilih-user .card .card-title {
     font-family: comic;
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .pilih-user img {
@@ -1321,13 +1396,15 @@ p {
   }
 
   .pilih-user .card {
-    width: 200px;
+    width: 210px;
+    height: 230px;
     margin-bottom: 10px;
     background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
     background-size: cover;
     background-position: center;
     border: 3px solid #a47533;
   }
+
 
     /*laporan*/
     .laporan-field {
@@ -1389,32 +1466,71 @@ p {
 
 
   .container-latihan {
-    width: 60%;
+
+    width: 50%;
   }
 
   .buttonpilihgambar {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 230px;
   }
 
   .buttonpilihgambar img {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 230px;
   }
 
   #emosigabungan img {
-    width: 160px;
-    height: 170px;
+    width: 200px;
+    height: 210px;
     object-fit: cover;
     background-size: cover;
+    margin-bottom: 20px;
   }
 
   .button-front {
-    background-size: 180px;
+    background-size: 150px;
   }
 
   .timer-container {
     height: 40px;
   }
+
+  /* modal */
+
+  .modal .modal-content {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+
+  .modal .modal-content img {
+    width: 60%;
+  }
+
+  #emojijawaban,
+  #welcomeModal img {
+    margin-bottom: 20px;
+  }
+
+  .modal .modal-content p {
+    font-family: comic;
+    font-size: 25px;
+  }
+
+  .modal .modal-content button {
+    width: 200px;
+    height: 70px;
+    background-color: #63df63;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: comic;
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+
 
 }

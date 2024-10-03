@@ -4,15 +4,19 @@
 <div class="">
     <div class=" vh-100 d-flex flex-column">
         <div class="header title d-flex justify-content-between align-items-center  mx-md-4 p-md-1">
-            <div class="menu-item d-flex align-items-center gap-3">
+            <div id="emosi-data" class="menu-item d-flex align-items-center gap-3" data-name="{{ data['jenis_emosi'] }}"
+                data-location="{{ data['emosi'] }}">
                 <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
                 <a href="{{ url_for('latihan') }}">
-                    <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <div
+                        class="title-text-latihan d-flex flex-column justify-content-center align-items-center text-uppercase">
                         latihan
                     </div>
                 </a>
-                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
-                    {{ user }}
+                <div
+                    class="title-text-user d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    {{ user.split(' ')[:2]
+                    | join(' ') }}
                 </div>
             </div>
             <div
@@ -57,7 +61,7 @@
 
         <canvas id="confetti" class="visually-hidden"></canvas>
 
-            <!-- <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
+            <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
                 data-bs-backdrop="static" data-bs-keyboard="false">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -71,49 +75,49 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div> 
 
-            <!-- <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true"
-                data-bs-backdrop="static" data-bs-keyboard="false">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                            <form
-                                action="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}"
-                                class="d-flex flex-column align-items-center justify-content-center" method="post">
 
-                                {% if jenisEmosi == 'Dasar' %}
-                                <img class="m-auto" id="emojijawaban" src="">
-                                {% elif jenisEmosi == 'Gabungan' %}
-                                <div id="emosigabungan" class="">
-                                    <p class="text-center">{{nama_emosi}}</p>
-                                    <div class="d-flex justify-content-around align-items-center">
-                                        <div class="text-center">
-                                            <p>{{ list_emosi_gabungan[0].nama_emosi }}</p>
-                                            <img src="/static/img/emosi/{{ list_emosi_gabungan[0].jenis_emosi.lower() }}/{{ list_emosi_gabungan[0].nama_emosi.lower() }}/{{ list_emosi_gabungan[0].gambar_emosi }}"
-                                                alt="Emosi Gabungan 1">
-                                        </div>
-                                        <p style="font-size: 40px; margin: 0px 10px;">+</p>
-                                        <div class="text-center">
-                                            <p>{{ list_emosi_gabungan[1].nama_emosi }}</p>
-                                            <img src="/static/img/emosi/{{ list_emosi_gabungan[1].jenis_emosi.lower() }}/{{ list_emosi_gabungan[1].nama_emosi.lower() }}/{{ list_emosi_gabungan[1].gambar_emosi }}"
-                                                alt="Emosi Gabungan 2">
-                                        </div>
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <form
+                            action="{{ url_for('latihan_pilih_emosi', jenisEmosi=urlJenisEmosi, rombongan=rombongan, user=user) }}"
+                            class="d-flex flex-column align-items-center justify-content-center" method="post">
+
+                            {% if jenisEmosi == 'Dasar' %}
+                            <img class="m-auto" id="emojijawaban" src="">
+                            {% elif jenisEmosi == 'Gabungan' %}
+                            <div id="emosigabungan" class="">
+                                <p class="text-center">{{emosi}}</p>
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <div class="text-center">
+                                        <p>{{ list_emosi_gabungan[0].nama_emosi }}</p>
+                                        <img src="/static/img/emosi/{{ list_emosi_gabungan[0].jenis_emosi.lower() }}/{{ list_emosi_gabungan[0].nama_emosi.lower() }}/{{ list_emosi_gabungan[0].gambar_emosi }}"
+                                            alt="Emosi Gabungan 1">
+                                    </div>
+                                    <p style="font-size: 40px; margin: 0px 10px;">+</p>
+                                    <div class="text-center">
+                                        <p>{{ list_emosi_gabungan[1].nama_emosi }}</p>
+                                        <img src="/static/img/emosi/{{ list_emosi_gabungan[1].jenis_emosi.lower() }}/{{ list_emosi_gabungan[1].nama_emosi.lower() }}/{{ list_emosi_gabungan[1].gambar_emosi }}"
+                                            alt="Emosi Gabungan 2">
                                     </div>
                                 </div>
                                 <img class="m-auto" id="emojijawaban" src="">
                                 {% endif %}
 
-                                <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
-                                <p class="m-auto my-2" id="katajawaban"></p>
-                                <button type="submit" class="buttonselanjutnya mt-2"
-                                    data-bs-dismiss="modal">Selanjutnya</button>
-                            </form>
+                            <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
+                            <p class="m-auto my-3" id="katajawaban"></p>
+                            <button type="submit" class="buttonselanjutnya mt-2"
+                                data-bs-dismiss="modal">Selanjutnya</button>
+                        </form>
 
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div> 
 
 
     </div>
