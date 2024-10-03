@@ -44,8 +44,27 @@
         </div>
 
         <div class="menu-about d-flex justify-content-center align-items-center mt-5">
-            <button>Tentang Game</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalInfo">Tentang Game</button>
         </div>
+
+        <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center mb-4">
+                            <img style="width:500px;" src="/static/img/logo/emojiku1.png" alt="">
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, placeat pariatur. Vitae neque magnam cupiditate quam. Quam quaerat harum consectetur perspiciatis culpa corrupti expedita? Earum cumque vel aliquid repellat cupiditate.
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" data-bs-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
     </div>
 </div>

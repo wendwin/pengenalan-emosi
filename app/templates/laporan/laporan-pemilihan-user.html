@@ -7,31 +7,35 @@
             <div class="menu-item d-flex align-items-center gap-3">
                 <img src="{{ url_for('static', filename='img/beranda/laporan.png') }}" alt="">
                 <a href="{{ url_for('laporan_pilih_rombel') }}">
-                    <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <div class="title-text-laporan d-flex flex-column justify-content-center align-items-center text-uppercase">
                         laporan
                     </div>
                 </a>
             </div>
-            <div class="logo">
+            <div
+                class="logo d-flex justify-content-center justify-content-md-end align-items-center gap-3 mx-md-4 p-md-1">
                 <img src="{{ url_for('static', filename='img/logo/unjaya.png') }}" alt="">
+                <img class="logo-slb" src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
                 <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
-                <img src="{{ url_for('static', filename='img/logo/logo-slb.png') }}" alt="">
             </div>
         </div>
 
         <div class="materi-title d-flex justify-content-center mt-2 mb-5">
             <button class="title-materi d-flex justify-content-center align-items-center text-uppercase">Rombongan
-                Belajar {{ rombongan }}</button>
+                Belajar {{ rombel }}</button>
         </div>
 
         <div class="menu-btn m-auto d-flex justify-content-center">
-            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+            <div class="pilih-user m-auto d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-5">
                 {% for user in users %}
-                <a href="{{ url_for('laporan_hasil', rombel=rombel, user=user.nama.lower()) }}">
+                <a
+                    href="{{ url_for('laporan_hasil', rombel=rombel, user=user.nama.lower()) }}">
                     <div class="card">
-                        <div class="d-flex flex-column justify-content-center align-items-center ">
+                        <div class="d-flex flex-column justify-content-center align-items-center pt-2">
                             <img src="/static/img/user/{{ user.gambar }}" alt="">
-                            <h5 class=" card-title mt-1 mt-md-3">{{ user.nama }}</h5>
+                            <h6 class=" card-title mt-1 mt-md-3 text-capitalize text-center">{{ user.nama.split(' ')[:2]
+                                | join(' ')
+                                }}</h6>
                         </div>
                     </div>
                 </a>
@@ -46,7 +50,7 @@
                     <button class="text-uppercase "><i class="bi bi-house-door-fill"></i> home</button>
                 </div>
             </a>
-            <a href="{{ url_for('laporan_pilih_rombel') }}">
+            <a href="{{ url_for('laporan_pilih_rombel', rombongan=rombongan)  }}">
                 <div class="menu-back d-flex align-items-center">
                     <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
                     <button class="text-uppercase "> <i class="bi bi-arrow-left-circle-fill"></i> kembali</button>
