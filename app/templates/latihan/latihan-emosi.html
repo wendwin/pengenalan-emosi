@@ -4,15 +4,19 @@
 <div class="">
     <div class=" vh-100 d-flex flex-column">
         <div class="header title d-flex justify-content-between align-items-center  mx-md-4 p-md-1">
-            <div class="menu-item d-flex align-items-center gap-3">
+            <div id="emosi-data" class="menu-item d-flex align-items-center gap-3" data-name="{{ data['jenis_emosi'] }}"
+                data-location="{{ data['emosi'] }}">
                 <img src="{{ url_for('static', filename='img/beranda/bermain.png') }}" alt="">
                 <a href="{{ url_for('latihan') }}">
-                    <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <div
+                        class="title-text-latihan d-flex flex-column justify-content-center align-items-center text-uppercase">
                         latihan
                     </div>
                 </a>
-                <div class="title-text d-flex flex-column justify-content-center align-items-center text-uppercase">
-                    {{ user }}
+                <div
+                    class="title-text-user d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    {{ user.split(' ')[:2]
+                    | join(' ') }}
                 </div>
             </div>
             <div
@@ -86,7 +90,7 @@
                             <img class="m-auto" id="emojijawaban" src="">
                             {% elif jenisEmosi == 'Gabungan' %}
                             <div id="emosigabungan" class="">
-                                <p class="text-center">{{nama_emosi}}</p>
+                                <p class="text-center">{{emosi}}</p>
                                 <div class="d-flex justify-content-around align-items-center">
                                     <div class="text-center">
                                         <p>{{ list_emosi_gabungan[0].nama_emosi }}</p>
@@ -105,7 +109,7 @@
                             {% endif %}
 
                             <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
-                            <p class="m-auto my-2" id="katajawaban"></p>
+                            <p class="m-auto my-3" id="katajawaban"></p>
                             <button type="submit" class="buttonselanjutnya mt-2"
                                 data-bs-dismiss="modal">Selanjutnya</button>
                         </form>
