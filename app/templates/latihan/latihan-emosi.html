@@ -26,25 +26,25 @@
                 <img src="{{ url_for('static', filename='img/logo/kampus-merdeka.png') }}" alt="">
             </div>
         </div>
-        
-        <div class="materi-title d-flex justify-content-between align-items-center mt-2 mb-5" style="width: 60.5%;">
-            <!-- Footer Back Button (Posisi Kiri) -->
-            <div class="footer-back d-flex justify-content-start gap-5">
-                {% if jenisEmosi == 'Dasar' %}
-                <a href="{{ url_for('latihan_pilih_emosi', jenisEmosi='emosi-dasar', rombongan=rombongan, user=user.lower() )}}">
-                {% elif jenisEmosi == 'Gabungan' %}
-                <a href="{{ url_for('latihan_pilih_emosi', jenisEmosi='emosi-gabungan', rombongan=rombongan, user=user.lower() )}}">
-                {% endif %}
-                    <div class="menu-back d-flex align-items-center">
-                        <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
-                        <button class="text-uppercase"> <i class="bi bi-arrow-left-circle-fill"></i> kembali</button>
-                    </div>
-                </a>
-            </div>
-        
-            <!-- Title Materi (Posisi Tengah) -->
+
+        <div class="materi-title d-flex justify-content-center align-items-center mt-2 mb-5 position-relative">
             <div class="title-materi text-center d-flex justify-content-center align-items-center">
                 <button class="text-uppercase">{{ emosi }}</button>
+            </div>
+            <div class="footer-back d-flex justify-content-start gap-5 position-absolute end-0">
+                {% if jenisEmosi == 'Dasar' %}
+                <a
+                    href="{{ url_for('latihan_pilih_emosi', jenisEmosi='emosi-dasar', rombongan=rombongan, user=user.lower() )}}">
+                    {% elif jenisEmosi == 'Gabungan' %}
+                    <a
+                        href="{{ url_for('latihan_pilih_emosi', jenisEmosi='emosi-gabungan', rombongan=rombongan, user=user.lower() )}}">
+                        {% endif %}
+                        <div class="menu-exit d-flex align-items-center">
+                            <!-- <img src="/static/img/button/arrow-right.png" alt=""> -->
+                            <button class="text-uppercase"> <i class="bi bi-x-circle fs-3"></i> keluar
+                            </button>
+                        </div>
+                    </a>
             </div>
         </div>
 
@@ -77,21 +77,21 @@
 
         <canvas id="confetti" class="visually-hidden"></canvas>
 
-            <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
-                data-bs-backdrop="static" data-bs-keyboard="false">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                            <img src="/static/img/emoji/timer.png" alt="">
-                            <p class="text-center">Kamu punya 10 detik untuk menjawab, <br> kamu pasti bisa!</p>
-                            <div class="text-center">
-                                <button type="button" class="buttonselanjutnya mt-2" data-bs-dismiss="modal"
-                                    id="startButton">Mulai Latihan</button>
-                            </div>
+        <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="/static/img/emoji/timer.png" alt="">
+                        <p class="text-center">Kamu punya 10 detik untuk menjawab, <br> kamu pasti bisa!</p>
+                        <div class="text-center">
+                            <button type="button" class="buttonselanjutnya mt-2" data-bs-dismiss="modal"
+                                id="startButton">Mulai Latihan</button>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div>
 
 
         <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true"
@@ -124,16 +124,16 @@
                                 <img class="m-auto" id="emojijawaban" src="">
                                 {% endif %}
 
-                            <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
-                            <p class="m-auto my-3" id="katajawaban"></p>
-                            <button type="submit" class="buttonselanjutnya mt-2"
-                                data-bs-dismiss="modal">Selanjutnya</button>
+                                <input type="hidden" name="statuslatihan" id="statuslatihan" value="">
+                                <p class="m-auto my-3" id="katajawaban"></p>
+                                <button type="submit" class="buttonselanjutnya mt-2"
+                                    data-bs-dismiss="modal">Selanjutnya</button>
                         </form>
 
-                        </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        </div>
 
 
     </div>

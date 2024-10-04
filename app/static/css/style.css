@@ -213,6 +213,7 @@ body {
   color: #000;
 
 }
+
 .title .title-text-laporan {
   font-family: comic;
   width: 120px;
@@ -1093,6 +1094,7 @@ p {
     filter: brightness(90%);
     ;
   }
+
   .header .title-text-laporan {
     font-family: comic;
     width: 250px;
@@ -1193,6 +1195,20 @@ p {
     font-size: 33px;
     width: 260px;
     height: 100px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 4px solid #ffffff;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+    background-color: #0981e0;
+    box-shadow: 0px 0px 5px 4px #1bbff5;
+    letter-spacing: 4px;
+  }
+
+  .footer-back .menu-exit button {
+    font-size: 25px;
+    width: 200px;
+    height: 80px;
     border-radius: 10px;
     font-weight: 700;
     border: 4px solid #ffffff;
@@ -1360,7 +1376,7 @@ p {
 
   .rombel .card .card-title-number {
     font-family: comic;
-    font-size: 30px;
+    font-size: 70px;
     font-weight: normal;
   }
 
@@ -1368,22 +1384,22 @@ p {
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
-    /* background-image: url(/static/img/button/cartoon-set-wooden-signboards.png); */
-    background-color: #51d1ba;
+    background-image: url(/static/img/button/cartoon-set-wooden-signboards.png);
+    /* background-color: #51d19c; */
     background-size: cover;
     background-position: center;
-    border: 3px solid #c9faff;
+    border: 4px solid #d47420;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     color: #fff;
-    /* box-shadow: 0px 0px 5px 4px #1bbff5; */
+    box-shadow: 0px 0px 5px #f5a25e;
   }
 
   .rombel .card .card-name {
     width: 100%;
     height: 50px;
-    background-color: #1bbff5;
+    background-color: #d47420;
     position: absolute;
     bottom: 0;
   }
@@ -1433,63 +1449,65 @@ p {
   }
 
 
-    /*laporan*/
-    .laporan-field {
-      position: relative;
-      width: 71%;
-      height: 100%;
-      background-image: url(/static/img/background/backgroundkayu.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      font-family: comic;
-    }
-  
-  
-    .emosilaporan-field {
-      position: absolute;
-      width: 740px;
-      top: 5%;
-      left: 23%;
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .jenisemosilaporan {
-      margin: 0px;
-    }
-  
-    .jenisemosilaporan h5 {
-      color: #000;
-      font-size: 25px;
-      text-transform: capitalize;
-    }
-  
-    .statusemosi {
-      margin-bottom: 0px;
-    }
-  
-    .statuslatihan h6,
-    p {
-      color: #000;
-      font-size: 18px;
-      text-transform: capitalize;
-    }
-  
-    .statuslatihan h6 {
-      width: 70px;
-      font-size: 18px;
-    }
-    .statuslatihan p{
-      width: 20px;
-      font-size: 18px;
-    }
-    .laporanberhasil h6{
-      width: 160px;
-    }
+  /*laporan*/
+  .laporan-field {
+    position: relative;
+    width: 71%;
+    height: 100%;
+    background-image: url(/static/img/background/backgroundkayu.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: comic;
+  }
 
-  
-    /*laporan*/
+
+  .emosilaporan-field {
+    position: absolute;
+    width: 740px;
+    top: 5%;
+    left: 23%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .jenisemosilaporan {
+    margin: 0px;
+  }
+
+  .jenisemosilaporan h5 {
+    color: #000;
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+
+  .statusemosi {
+    margin-bottom: 0px;
+  }
+
+  .statuslatihan h6,
+  p {
+    color: #000;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .statuslatihan h6 {
+    width: 70px;
+    font-size: 18px;
+  }
+
+  .statuslatihan p {
+    width: 20px;
+    font-size: 18px;
+  }
+
+  .laporanberhasil h6 {
+    width: 160px;
+  }
+
+
+  /*laporan*/
 
 
   .container-latihan {
@@ -1534,7 +1552,7 @@ p {
   .modal .modal-content img {
     width: 60%;
   }
-  
+
   #emojijawaban,
   #welcomeModal img {
     margin-bottom: 20px;

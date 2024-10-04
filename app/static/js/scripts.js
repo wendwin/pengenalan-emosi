@@ -16,6 +16,27 @@
 //   elements[i].style.fontsize = "30px";
 // }
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (!sessionStorage.getItem("modalShown")) {
+    setTimeout(function () {
+      var modalInfo = new bootstrap.Modal(document.getElementById("modalInfo"));
+      modalInfo.show();
+
+      // localStorage.setItem("modalShown", "true");
+      sessionStorage.setItem("modalShown", "true");
+    }, 2000);
+  }
+});
+
+setTimeout(function () {
+  // Jika belum pernah, tampilkan modal setelah 3 detik
+  var myModal = new bootstrap.Modal(document.getElementById("myModal"));
+  myModal.show();
+
+  // Simpan status modal ke local storage agar tidak muncul lagi
+  localStorage.setItem("modalShown", "true");
+}, 3000); // Waktu tunggu 3 detik (3000 ms)
+
 let timerDuration = 10;
 let currentTime = timerDuration;
 const interval = 1000;
