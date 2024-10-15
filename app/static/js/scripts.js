@@ -140,6 +140,8 @@ function showFeedbackGabunganSalah(message, imageUrl, statusLatihan) {
 
 function checkEmosi(button) {
   console.log("diklik");
+  console.log(button.attributes.id);
+
   if (selectedButton2) return;
 
   button.classList.add("flipped");
@@ -148,11 +150,26 @@ function checkEmosi(button) {
     selectedButton1 = button;
   } else {
     selectedButton2 = button;
+    const idbutton1 = selectedButton1.getAttribute("id");
+    const idbutton2 = selectedButton2.getAttribute("id");
     const emotion1 = selectedButton1.getAttribute("data-emotion");
     const emotion2 = selectedButton2.getAttribute("data-emotion");
     const namaEmosi = emosi;
 
-    if (emotion1 === namaEmosi && emotion2 === namaEmosi) {
+    // if (idbutton1 === idbutton2) {
+    //   selectedButton1.classList.remove("flipped");
+    //   selectedButton2.classList.remove("flipped");
+    //   selectedButton1 = null;
+    //   selectedButton2 = null;
+    //   console.log("kok samaa");
+    //   return false;
+    // }
+
+    if (
+      emotion1 === namaEmosi &&
+      emotion2 === namaEmosi &&
+      idbutton1 !== idbutton2
+    ) {
       clearInterval(timerInterval);
       setTimeout(() => {
         if (jenisEmosi === "Gabungan") {
@@ -170,6 +187,7 @@ function checkEmosi(button) {
         selectedButton2 = null;
       }, 1000);
     } else {
+      console.log("sama");
       setTimeout(() => {
         selectedButton1.classList.remove("flipped");
         selectedButton2.classList.remove("flipped");
